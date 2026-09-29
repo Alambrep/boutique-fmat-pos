@@ -4,6 +4,8 @@
 >
 > Each requirement cites its origin: client requirement (`CR`), project requirement (`PRJ`), hypothesis (`H`), open question (`Q`) and the design implication (`DI`) from the [scenarios](../03-user-modeling/scenarios.md) where it appeared. Requirements that rest only on hypotheses are marked **(H)** and may change after validation.
 >
+> Numbering: FR-30…FR-34 were added on 2026-09-29 after an internal review; IDs are not renumbered so existing references stay valid.
+>
 > **Priority (MoSCoW `[R11]`, see [`references.md`](../references.md)):** **Must** = stated by the client or project brief · **Should** = strongly supported by scenarios · **Could** = useful, low cost · **Deferred** = *Won't have this time*: depends on an open question.
 
 ## 1. Access and profiles
@@ -11,7 +13,8 @@
 | ID | The system shall… | Priority | Origin | Scenario |
 |---|---|---|---|---|
 | FR-01 | Provide four profiles with these permissions: **CDU** — modify, query and charge; **Central Administration** — query and charge; **Social Sciences Campus** and **Exact Sciences Campus** — charge only. | Must | CR-01, CR-02, CR-03, CR-04 | All |
-| FR-02 | Require each user to sign in with a personal account and keep the session usable offline after the first sign-in. | Must | CR-01…CR-04, PRJ-02, Q-11 | S-01 |
+| FR-02 | Require the user to sign in with one of the four client profiles before selling. Whether accounts are personal or shared per point of sale depends on Q-11 (the client's document speaks of "4 sessions or users"). | Must | CR-01…CR-04, Q-11 | S-01 |
+| FR-30 | Keep the session usable without connectivity after the first successful sign-in on the device. | Must | PRJ-02 | S-01 |
 | FR-03 | Open directly on the sales screen for charge-only profiles. **(H)** | Should | H-01, DI-01 | S-01 |
 
 ## 2. Catalog and inventory
@@ -33,16 +36,19 @@
 | ID | The system shall… | Priority | Origin | Scenario |
 |---|---|---|---|---|
 | FR-13 | Show, on the sales screen, the products of the user's warehouse with image, code, product name and sale price, preloaded. | Must | CR-10, DI-01 | S-01 |
-| FR-14 | Let the user find a product by browsing photos or by searching by name. | Must | CR-10, H-01, DI-10 | S-01, S-03 |
+| FR-14 | Let the user find a product by browsing photos or by searching by name. | Should | CR-10, H-01, DI-10 | S-01, S-03 |
 | FR-15 | Let the user add a product by scanning its barcode with an external scanner or the phone camera. | Should | CR-16, DI-10 | S-03 |
 | FR-16 | Let the user change the quantity of each product before confirming the sale. | Must | CR-11, DI-02 | S-01, S-02 |
 | FR-17 | Offer three payment methods: cash, card and Interuady. | Must | CR-12 | S-01, S-02, S-03 |
 | FR-18 | Calculate change for cash payments from the amount received. **(H)** | Could | H-05, DI-03 | S-01 |
-| FR-19 | Record card payments by payment method only, without capturing any card data. | Must | CR-12, H-10, Q-06, DI-11 | S-03 |
+| FR-19 | Record card payments by payment method only, without capturing any card data. **(H)** | Must | CR-12, H-10, Q-06, DI-11 | S-03 |
 | FR-20 | When Interuady is selected, display three mandatory fields — unit (*departamento o dependencia*), C.P. responsible for the payment, requester or authorizer — and prevent confirming the sale until all three are filled. | Must | CR-13, DI-06, DI-07 | S-02 |
 | FR-21 | Offer a selectable list of UADY units for the unit field. **(H)** | Could | H-08, DI-08 | S-02 |
-| FR-22 | Deduct the sold quantities automatically from the stock of the warehouse where the sale took place. | Must | CR-15, DI-05 | S-01 |
+| FR-22 | Deduct the sold quantities automatically from the stock of the warehouse where the sale took place, only when the sale is confirmed. | Must | CR-15, DI-05, DI-24 | S-01, S-07 |
 | FR-23 | Issue a receipt, printed on a thermal printer or shown on screen. The receipt content (VAT breakdown) depends on Q-05. | Should | CR-17, CR-18, Q-05 | S-01 |
+| FR-31 | Show on each product card of the sales screen whether the product is available at the user's warehouse (in stock / few left / out of stock), without showing the inventory table. **Proposal pending client confirmation (Q-14)**, since charge-only profiles have no query permission. **(H)** | Should | CR-03, CR-04, CR-15, H-04, DI-05, Q-14 | S-01 |
+| FR-32 | When the recorded stock of a product at the user's warehouse is 0, allow the sale only after the user confirms a warning, and flag it for CDU review (FR-12). **(H)** | Should | CR-15, PRJ-02, H-04, DI-18 | S-05 |
+| FR-33 | Before a sale is confirmed, show a summary (products, quantities, total, payment method) where the user can remove a product, change its quantity or change the payment method. | Must | CR-11, CR-12, DI-22, DI-23 | S-03, S-07 |
 
 ## 4. Accounts receivable
 
@@ -56,9 +62,10 @@
 
 | ID | The system shall… | Priority | Origin | Scenario |
 |---|---|---|---|---|
-| FR-27 | Allow every sales function (FR-13…FR-24) to work without connectivity, storing sales locally in a queue. | Must | PRJ-02, DI-04 | S-01 |
+| FR-27 | Allow every sales function (FR-13…FR-24, FR-31…FR-33) to work without connectivity, storing sales locally in a queue. | Must | PRJ-02, DI-04 | S-01 |
 | FR-28 | Synchronize automatically when connectivity returns: send queued sales and receive catalog, price and stock updates published by CDU. | Must | PRJ-02, CR-09, CR-15 | S-01, S-04, S-05 |
 | FR-29 | Show the synchronization status in plain language (e.g. "Saved on this phone — it will be sent when there is internet"), without blocking any sale. | Must | PRJ-02, PRJ-03, H-01, DI-04 | S-01 |
+| FR-34 | Allow CDU to register and edit products without connectivity; changes are published to the other warehouses at the next synchronization. | Should | PRJ-02, CR-01, CR-09 | S-04 |
 
 ## 6. Deferred (depend on client answers)
 
