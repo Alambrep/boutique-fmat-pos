@@ -133,9 +133,9 @@ boutique-fmat-pos/
 |---|---|---|---|---|
 | 1 | Client requirements and open questions | `client/client-requirements.md` | 1, 4 | Done |
 | 2 | Project definition | `docs/01-definition/project-definition.md` | 1 | Done |
-| 3 | User hypotheses | `docs/02-research/hypotheses.md` | 2 | Pending |
-| 4 | Proto-personas (primary and secondary) | `docs/03-user-modeling/proto-personas.md` | 2 | Pending |
-| 5 | Scenarios | `docs/03-user-modeling/scenarios.md` | 2 | Pending |
+| 3 | User hypotheses | `docs/02-research/hypotheses.md` | 2 | Done |
+| 4 | Proto-personas (primary and secondary) | `docs/03-user-modeling/proto-personas.md` | 2 | Done |
+| 5 | Scenarios | `docs/03-user-modeling/scenarios.md` | 2 | Done |
 | 6 | Functional requirements | `docs/04-requirements/functional-requirements.md` | 4 | Pending |
 | 7 | Non-functional requirements | `docs/04-requirements/non-functional-requirements.md` | 4 | Pending |
 | 8 | Traceability matrix | `docs/04-requirements/traceability-matrix.md` | 2, 4 | Pending |
