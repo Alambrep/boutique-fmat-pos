@@ -136,9 +136,9 @@ boutique-fmat-pos/
 | 3 | User hypotheses | `docs/02-research/hypotheses.md` | 2 | Done |
 | 4 | Proto-personas (primary and secondary) | `docs/03-user-modeling/proto-personas.md` | 2 | Done |
 | 5 | Scenarios | `docs/03-user-modeling/scenarios.md` | 2 | Done |
-| 6 | Functional requirements | `docs/04-requirements/functional-requirements.md` | 4 | Pending |
-| 7 | Non-functional requirements | `docs/04-requirements/non-functional-requirements.md` | 4 | Pending |
-| 8 | Traceability matrix | `docs/04-requirements/traceability-matrix.md` | 2, 4 | Pending |
+| 6 | Functional requirements | `docs/04-requirements/functional-requirements.md` | 4 | Done |
+| 7 | Non-functional requirements | `docs/04-requirements/non-functional-requirements.md` | 4 | Done |
+| 8 | Traceability matrix | `docs/04-requirements/traceability-matrix.md` | 2, 4 | Done |
 | 9 | Research and validation plan | `docs/02-research/validation-plan.md` | 2 | Pending |
 | 10 | Schedule | `docs/00-management/schedule.md` | 3 | Pending |
 | 11 | Logbook and task log | `docs/00-management/` | 3, 6 | In progress |
