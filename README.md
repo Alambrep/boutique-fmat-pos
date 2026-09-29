@@ -40,6 +40,7 @@ Recommended order (follows the product process):
 6. [Research and validation plan](docs/02-research/validation-plan.md) — what gets validated in delivery 2.
 7. [Management](docs/00-management/): schedule, logbook, task log and contribution metrics.
 8. [Presentation](docs/05-presentation/script.md).
+9. [References](docs/references.md) — every external source used, with how to verify it.
 
 ## 3. Delivery 1 approach
 
@@ -60,6 +61,7 @@ Every statement in this repository carries one of these labels:
 | `H-xx` | **Hypothesis** — unvalidated assumption | `docs/02-research/hypotheses.md` |
 | `Q-xx` | **Open question** for the client | `client/client-requirements.md` |
 | `V-xx` | Planned **validation activity** | `docs/02-research/validation-plan.md` |
+| `[Rn]` | **External source**, checked against the original | `docs/references.md` |
 
 Rule: **nothing is presented as a finding** until a `V-xx` activity confirms it; the hypothesis then changes status to *validated* or *refuted* and the evidence is recorded.
 
@@ -119,8 +121,9 @@ boutique-fmat-pos/
 │   │   ├── functional-requirements.md
 │   │   ├── non-functional-requirements.md
 │   │   └── traceability-matrix.md
-│   └── 05-presentation/
-│       └── script.md                        # + slides (PDF) and video link
+│   ├── 05-presentation/
+│   │   └── script.md                        # + slides (PDF) and video link
+│   └── references.md                        # external sources [Rn], verified
 ├── design/
 │   └── README.md                            # links to Figma, sketches and wireframes
 └── src/
