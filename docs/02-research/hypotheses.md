@@ -1,6 +1,6 @@
 # User hypotheses
 
-> **Task:** T-03 · **Rubric criterion:** 2 · **Status:** draft for delivery 1 — **no hypothesis in this document has been validated.**
+> **Task:** T-03 · **Rubric criteria:** 2, 3 · **Status:** draft for delivery 1 — **no hypothesis in this document has been validated.**
 
 ## 1. How these hypotheses were produced
 

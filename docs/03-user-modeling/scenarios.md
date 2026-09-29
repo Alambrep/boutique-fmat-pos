@@ -1,6 +1,6 @@
 # Scenarios
 
-> **Task:** T-05 · **Rubric criterion:** 2 · **Status:** draft for delivery 1
+> **Task:** T-05 · **Rubric criterion:** 3 · **Status:** draft for delivery 1
 >
 > ⚠️ **Hypothetical scenarios.** They describe how the [proto-personas](proto-personas.md) are *expected* to use the system, based on client requirements (`CR`, `PRJ`) and unvalidated [hypotheses](../02-research/hypotheses.md) (`H`). They are not observations. Each one ends with **design implications** that feed the [requirements](../04-requirements/).
 

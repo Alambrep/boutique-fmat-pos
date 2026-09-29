@@ -1,6 +1,6 @@
 # Traceability matrix
 
-> **Task:** T-08 · **Rubric criteria:** 2, 4 · **Status:** delivery 1
+> **Task:** T-08 · **Rubric criteria:** 3, 4 · **Status:** delivery 1
 >
 > Shows, for every client requirement (`CR`), project requirement (`PRJ`) and hypothesis (`H`), which proto-personas (`P`), scenarios (`S`), functional requirements (`FR`) and non-functional requirements (`NFR`) depend on it. It was generated from the origin columns of each artifact, so it reflects exactly what those documents cite.
 >

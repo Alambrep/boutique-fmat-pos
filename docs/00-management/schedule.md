@@ -1,6 +1,6 @@
 # Schedule
 
-> **Task:** T-10 · **Rubric criterion:** 3 · **Owner of every task:** Alancete (individual project)
+> **Task:** T-10 · **Rubric criterion:** 2 · **Owner of every task:** Alancete (individual project)
 >
 > Actual dates and times come from the git history and GitHub issues; see the [task log](task-log.md) and [logbook](logbook/).
 
