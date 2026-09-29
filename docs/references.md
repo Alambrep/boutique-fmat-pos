@@ -55,7 +55,20 @@
 | R20 | INEGI (2026). *Encuesta Nacional sobre Disponibilidad y Uso de Tecnologías de la Información en los Hogares (ENDUTIH) 2025 — Reporte de resultados 19/26.* https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2026/endutih/ENDUTIH_25_RR.pdf | In 2025, 86.1% of the population aged 6+ used the internet (p. 3), and 97.0% of cell phone users used a smartphone (p. 16). | "86.1", "97.0" |
 | R21 | INEGI (2025). *Estadísticas a propósito del Día de las Micro, Pequeñas y Medianas Empresas*, based on Censos Económicos 2024 (resultados oportunos). https://www.inegi.org.mx/contenidos/saladeprensa/aproposito/2025/EAP_MIPYMES_25.pdf | Only 22.3% of micro establishments used computers and 23.5% used the internet (p. 3). | "22.3", "23.5" |
 
+## Commercial POS comparison
+
+| ID | Reference | Supports | Where to look |
+|---|---|---|---|
+| R22 | Loyverse Help Center. *Offline Use of Loyverse POS.* https://help.loyverse.com/help/offline-work-of-pos | Sales and shifts work offline; refunds, stock levels, card terminal payments and email receipts do not; offline receipts sync later. | "Unsynced" |
+| R23 | Loyverse Help Center. *How to Create and Manage Multiple Stores under One Account.* https://help.loyverse.com/help/how-create-and-manage-multiple | Price, stock and low-stock alerts can be set per store. | "per store" |
+| R24 | Loyverse. *Pricing.* https://loyverse.com/pricing | Core POS is free, including multi-store management; paid add-ons per store (Unlimited Sales History, Employee Management, Advanced Inventory). | "Advanced Inventory" |
+| R25 | Loyverse Help Center. *Configuring Payment Types in Loyverse POS.* https://help.loyverse.com/help/configuring-payment-types-loyverse | Custom named payment types that appear in reports. | "custom name" |
+| R26 | Shopify Help Center. *Using Shopify POS offline.* https://help.shopify.com/en/manual/sell-in-person/shopify-pos/selling-offline | Cash and manual payments work offline; card payments need the offline payments feature; syncing with the admin needs internet. | "offline" |
+| R27 | Shopify Help Center. *Managing payment methods for Shopify POS.* https://help.shopify.com/en/manual/sell-in-person/getting-started/setup-payment-method/enable-payments | Custom payment methods for payments not processed by Shopify, used for tracking. | "custom payment" |
+| R28 | Clip. *Clip Total 3 — Punto de venta móvil con inventario.* https://shop.clip.mx/products/clip-total | Dedicated terminal with inventory control and built-in thermal printer; no multi-branch management mentioned. | "inventario" |
+| R29 | Square Support Center. *Accept payment cards with Square — international availability.* https://squareup.com/help/us/en/article/4956-international-availability | Card acceptance available in eight countries; Mexico is not among them. | "currently available" |
+
 ## Still pending
 
-- **Commercial POS comparison** (project definition §3.2): feature claims about specific products must be checked on each product's official site.
+- **Commercial POS comparison:** Shopify POS multi-store and cost, and Clip offline support for specific products, were not reviewed.
 - **Yucatán-specific ENDUTIH figures:** the 2025 national report does not break them out in the text; check INEGI's state tabulations.

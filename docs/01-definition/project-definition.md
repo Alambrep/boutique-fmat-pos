@@ -65,31 +65,35 @@ Interuady payments require recording people's names (the C.P. responsible for th
 
 ## 3. Innovation
 
-**Honest position:** the innovation is not inventing a point of sale. It lies in **the combination of constraints** that commercial products generally do not address together, and in **a design approach centered on a user with low digital skills**.
+**Honest position:** the innovation is not inventing a point of sale. A review of commercial products (§3.2) shows that **offline sales and multi-store stock already exist** in free tools. The differentiation lies in **the institutional flow no product covers**, in **showing stock and working fully offline on the seller's phone**, and in **a design approach centered on a user with low digital skills**.
 
 ### 3.1 Proposed differentiators
 
-| # | Differentiator | Origin |
-|---|---|---|
-| D1 | **Institutional Interuady → accounts receivable flow**, with mandatory fields and visibility for all profiles. It is an internal UADY mechanism; no commercial POS is expected to support it out of the box. 🔎 | CR-12…CR-14 |
-| D2 | **Image-driven selling**, not text-driven: the seller recognizes the product by its photo and confirms. Text is secondary. | CR-10, PRJ-03, H-01 |
-| D3 | **Offline-first with multiple warehouses and a single catalog publisher** (CDU). Satellite warehouses only generate sales, which reduces synchronization conflicts (see §4.2, challenge 1). | PRJ-02, CR-09, CR-03, CR-04 |
-| D4 | **Optional low-cost hardware**: barcode scanner and thermal printer as aids, not as prerequisites for selling. | CR-16, CR-17, PRJ-01 |
-| D5 | **Two interfaces for two skill levels**: full data entry for CDU `[H-07]` and a minimal sales interface for satellite points `[H-01]`, instead of one interface for everyone. | CR-01…CR-04 |
+| # | Differentiator | Evidence from §3.2 | Origin |
+|---|---|---|---|
+| D1 | **Institutional Interuady → accounts receivable flow**: a payment method with three **mandatory** fields that automatically creates a receivable note visible to all profiles. | The reviewed products allow custom *named* payment types for tracking `[R25, R27]`, but their documentation shows no mandatory fields per payment type nor automatic receivables. | CR-12…CR-14 |
+| D2 | **Image-driven selling**, not text-driven: the seller recognizes the product by its photo and confirms. Text is secondary. | Not evaluated in the reviewed products; to be tested with users (V-07). | CR-10, PRJ-03, H-01 |
+| D3 | **Full offline operation, including local stock**, with a single catalog publisher (CDU). Satellite warehouses only generate sales, which reduces synchronization conflicts (see §4.2, challenge 1). | Loyverse sells offline but does not show stock levels or allow refunds offline `[R22]`. | PRJ-02, CR-09, CR-03, CR-04, CR-15 |
+| D4 | **Optional low-cost hardware**: barcode scanner and thermal printer as aids, not as prerequisites for selling. | Clip's all-in-one terminal integrates printer and inventory in dedicated hardware `[R28]`; this project targets phones already available. | CR-16, CR-17, PRJ-01 |
+| D5 | **Two interfaces for two skill levels**: full data entry for CDU `[H-07]` and a minimal sales interface for satellite points `[H-01]`, instead of one interface for everyone. | Not evaluated in the reviewed products. | CR-01…CR-04 |
 
 ### 3.2 Comparison with existing solutions
 
-🔎 **To complete before presenting.** Check the **official websites** of 3 or 4 commercial POS products used in Mexico and fill in the table with ✔ / ✘ / "paid add-on". Do not claim a feature you have not seen. Candidates to review: Loyverse, Square, Clip, Shopify POS.
+Reviewed on 2026-09-28 using **official documentation only**. "Not documented" means the feature was not found in the pages reviewed, not that it does not exist.
 
-| Criterion | POS A | POS B | POS C | This project |
+| Criterion | Loyverse | Shopify POS | Clip (Total 3) | This project |
 |---|---|---|---|---|
-| Sells offline | | | | Yes `[PRJ-02]` |
-| Multiple warehouses with separate stock | | | | Yes `[CR-08]` |
-| Internal institutional payment method | | | | Yes `[CR-12, CR-13]` |
-| Built-in accounts receivable | | | | Yes `[CR-14]` |
-| Runs on low-end phones | | | | Target `[PRJ-01]` |
-| Designed for low digital skills | | | | Target `[PRJ-03]` |
-| Cost | | | | No license |
+| Sells offline | ✔ Sales and shifts work offline; stock levels, refunds and card terminal payments do not `[R22]` | ✔ Cash and manual payments offline; cards need the offline payments feature `[R26]` | Not confirmed for a specific product (a Clip blog describes offline terminals in general terms) | ✔ All sales functions, including local stock `[PRJ-02]` |
+| Multiple warehouses with separate stock | ✔ Price and stock per store `[R23]` | Not reviewed | Not documented on the product page `[R28]` | ✔ Three warehouses `[CR-08]` |
+| Custom payment method | ✔ Custom named payment types `[R25]` | ✔ Custom payment methods for tracking `[R27]` | Not documented | ✔ Interuady `[CR-12]` |
+| Mandatory data for that payment method | Not documented | Not documented | Not documented | ✔ Three mandatory fields `[CR-13]` |
+| Automatic accounts receivable for that payment | Not documented | Not documented | Not documented | ✔ `[CR-14]` |
+| Hardware | Phone or tablet | Phone, tablet or POS hardware | Dedicated terminal with built-in printer `[R28]` | Low-end phone; scanner and printer optional `[PRJ-01, CR-16, CR-17]` |
+| Cost | Core POS free, including multi-store; paid add-ons per store (e.g. Advanced Inventory) `[R24]` | Not reviewed | Hardware purchase `[R28]` | No license (institutional development) |
+
+**Excluded:** Square — card payment acceptance is not available in Mexico `[R29]`.
+
+**Conclusion.** Loyverse is the strongest existing alternative and covers offline sales and multi-store stock for free. It does not document the institutional payment flow (D1) and limits offline work (D3). This comparison argues for building on a **differentiated scope** rather than on offline or multi-store alone, and suggests reviewing Loyverse's interaction patterns as a design reference in later deliveries.
 
 ---
 
@@ -201,7 +205,7 @@ Working list for the author. Verified items cite their source in [`references.md
 | 1 | Use of digital tools by micro-businesses in Mexico | ✔ Verified | R21 | §2.1 |
 | 2 | Smartphone and internet use | ✔ National figures verified · 🔎 Yucatán pending (INEGI state tabulations) | R20 | §2.1 |
 | 3 | Cash versus digital payment use | Optional, not checked | INEGI/CNBV — ENIF | §2.1 |
-| 4 | Whether commercial POS products sell offline, handle multiple warehouses or custom payment methods | 🔎 Pending | Each product's official website | §3.1, §3.2 |
+| 4 | Whether commercial POS products sell offline, handle multiple warehouses or custom payment methods | ✔ Verified for Loyverse, Shopify POS, Clip and Square (official docs) | R22–R29 | §3.1, §3.2 |
 | 5 | Whether other UADY units already use a POS or similar system | 🔎 Pending | Ask the client | §3.2 |
 | 6 | How barcode scanners connect (keyboard mode) | ✔ Verified | R13 | §4.2, challenge 3 |
 | 7 | Web Bluetooth support by browser | ✔ Verified | R14, R15 | §4.2, challenge 3 |
