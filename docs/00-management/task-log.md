@@ -23,4 +23,5 @@
 **Notes**
 
 - Issues were created at 23:26, after the work had started at 19:35; the tasks worked on earlier (T-01, T-02) were closed right after being registered.
+- The **Closed** column records when each issue was closed, not the last related commit: several tasks received further commits on 2026-09-29 after an internal review (see the [logbook](logbook/2026-09-29.md)).
 - On 2026-09-28 the initial history was rewritten once to translate the repository to English (see the [logbook](logbook/2026-09-28.md)); the commits listed here are the rewritten ones.
