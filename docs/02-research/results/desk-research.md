@@ -19,13 +19,13 @@
 | Result | Sources | Implication |
 |---|---|---|
 | In 2025, 86.1% of people aged 6+ used the internet and 97.0% of cell phone users used a smartphone. | R20 | The phone is the right channel (PRJ-01). |
-| Only 22.3% of micro establishments used computers and 23.5% used the internet (Economic Census 2024). | R21 | Micro-businesses are largely outside digital tools; the gap is skills and fitting tools, not devices (PRJ-03). |
+| Only 22.3% of micro establishments used computers and 23.5% used the internet (Economic Census 2024). | R21 | Micro establishments make little use of digital tools. The data does not measure skills; that the cause is skills and tool fit is H-01, to be validated. |
 
 ## DR-3 — Legal framework for personal data
 
 | Result | Sources | Implication |
 |---|---|---|
-| A new federal general law on personal data held by public entities was published on 2025-03-20. | R17 | Interuady data (names of the C.P. responsible and requester) must follow it (NFR-22). |
+| A new federal general law on personal data held by public entities was published on 2025-03-20. | R17 | Interuady data (the responsible and requester fields, if they hold names; Q-04) must follow it (NFR-22). |
 | Yucatán issued a new state law on 2025-08-28 that covers autonomous bodies; it abrogated the 2017 law. | R18 | Same; privacy notice and minimization (FR-26, NFR-20). |
 | UADY issues its privacy notices under the general law for obligated subjects. | R19 | The project must align with the institution's privacy notices. |
 | PCI DSS applies to entities that store, process or transmit cardholder data. | R16 | Never capture card data (FR-19, NFR-21). |
@@ -42,7 +42,7 @@
 
 | Result | Source | Implication |
 |---|---|---|
-| 12 points are undefined, including the meaning of CDU and C.P., how 4 profiles map to 3 warehouses, VAT, transfers and card payments. | [Client requirements](../../../client/client-requirements.md) | Open questions Q-01…Q-12; six functional requirements deferred (FR-D1…FR-D6). |
+| 14 points are undefined, including the meaning of CDU and C.P., how 4 profiles map to 3 warehouses, whether warehouses are also points of sale, VAT, transfers and card payments. | [Client requirements](../../../client/client-requirements.md) | Open questions Q-01…Q-14; six functional requirements deferred (FR-D1…FR-D6). |
 
 ## Informal evidence (not systematic)
 

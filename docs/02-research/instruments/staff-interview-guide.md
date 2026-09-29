@@ -29,4 +29,4 @@ Only aggregated data; no personal data is copied.
 | Stock discrepancies found in the last count | | | |
 
 ## D. Open questions for the client
-Ask the questions Q-01…Q-12 from [client requirements](../../../client/client-requirements.md#open-questions-for-the-client) and record the answers there.
+Ask the questions Q-01…Q-14 from [client requirements](../../../client/client-requirements.md#open-questions-for-the-client) and record the answers there.
