@@ -10,13 +10,13 @@
 
 | ID | Attribute | Requirement | Tentative target | How it is measured | Origin |
 |---|---|---|---|---|---|
-| NFR-01 | Learnability | A first-time seller (P-01) completes a cash sale without assistance after a short demonstration. | ≥ 80% of test participants complete the task on the first attempt. | Usability test (V-07) | PRJ-03, H-01, H-12 |
+| NFR-01 | Learnability | A first-time seller (P-01) completes a cash sale without assistance after a demonstration of at most 2 minutes. | ≥ 80% of test participants complete the task on the first attempt. | Usability test (V-07) | PRJ-03, H-01, H-12 |
 | NFR-02 | Learnability | The interface uses everyday language, with no technical terms (e.g. "sync", "server", "database") and icons always paired with text labels. | 0 technical terms on the sales screens. | Heuristic inspection | PRJ-03, H-01 |
 | NFR-03 | Efficiency | A one-item cash sale needs few interactions from the sales screen. | ≤ 5 taps, excluding typing the amount received. | Design inspection (task walkthrough) | CR-10, CR-11, H-05 |
-| NFR-04 | Efficiency | A typical sale takes less time than the current process. | Target set after measuring the current time (V-01). | Observation (V-01) vs. usability test (V-07) | H-04, H-05 |
+| NFR-04 | Efficiency | A typical sale takes less time than the current process. | Median time per sale ≥ 20% lower than the current median measured in V-01 (tentative). | Observation (V-01) vs. usability test (V-07) | H-04, H-05 |
 | NFR-05 | Memorability | A seller who has not used the app for two weeks completes a sale without help. | ≥ 80% of returning participants succeed. | Follow-up usability test (V-07) | H-12 |
 | NFR-06 | Errors — prevention | An Interuady sale cannot be confirmed with missing mandatory fields. | 0 incomplete Interuady notes. | Functional test | CR-13, H-08 |
-| NFR-07 | Errors — recovery | Error messages explain what happened and what to do, in plain language; every sale can be reviewed before confirming. | 100% of error messages include a suggested action. | Heuristic inspection | PRJ-03, H-01 |
+| NFR-07 | Errors — recovery | Error messages explain what happened and what to do next, in plain language. | 100% of error messages include a suggested action. | Heuristic inspection | PRJ-03, H-01 |
 | NFR-08 | Satisfaction | Sellers rate the app as easy to use. | SUS score ≥ 68, the average SUS score across published evaluations `[R5]`. | SUS questionnaire after the usability test (V-07) | PRJ-03 |
 
 ## 2. Accessibility and ergonomics
@@ -26,14 +26,14 @@
 | NFR-09 | Touch targets are large enough for fast, error-free use. | ≥ 48 × 48 dp, the Android recommendation for touch targets `[R4]`. | Design inspection | H-01, H-06 |
 | NFR-10 | Text has enough contrast to be read in varied lighting. | ≥ 4.5:1 for normal text and ≥ 3:1 for large text (WCAG 2.2, SC 1.4.3, level AA) `[R3]`. | Contrast checker on Figma designs | H-01 |
 | NFR-11 | The main sales actions (add, quantity, pay, confirm) can be reached with one hand. | Primary actions placed in the lower half of the screen. | Design inspection | H-06 |
-| NFR-12 | The user interface is in Spanish. | 100% of UI text. | Inspection | CR-01…CR-04 (Spanish-speaking client and users) |
+| NFR-12 | The user interface is in Spanish. | 100% of UI text. | Inspection | PRJ-03 (users with limited technology skills are served in their own language) |
 
 ## 3. Performance on low-end devices
 
 | ID | Requirement | Tentative target | How it is measured | Origin |
 |---|---|---|---|---|
 | NFR-13 | The app runs on a low-end Android reference phone. | Reference device defined after V-05 (model, RAM, storage, Android version). | Device test (V-08) | PRJ-01, H-02, Q-12 |
-| NFR-14 | The sales screen opens quickly on the reference device. | ≤ 3 s from tapping the app icon. | Device test (V-08) | PRJ-01, H-02 |
+| NFR-14 | The sales screen opens quickly on the reference device. | ≤ 3 s from tapping the app icon (author's tentative target; no external benchmark verified yet). | Device test (V-08) | PRJ-01, H-02 |
 | NFR-15 | Product photos used for selling are compressed thumbnails. | Size limit defined after V-08; full-size photos kept only at CDU. | Device test (V-08) | CR-06, CR-10, PRJ-01 |
 | NFR-16 | Each device stores only its own warehouse's catalog. | 1 warehouse per satellite device. | Inspection | PRJ-01, CR-08 |
 
@@ -48,8 +48,8 @@
 
 | ID | Requirement | Tentative target | How it is measured | Origin |
 |---|---|---|---|---|
-| NFR-19 | Each user signs in with a personal account; the session locks after a period of inactivity. | Lock after ≤ 5 min of inactivity (to confirm with the client). | Functional test | CR-01…CR-04, H-02 |
-| NFR-20 | Personal data stored on the device (Interuady notes) is encrypted and deleted from the device once synchronized. | 100% of synchronized notes removed from local storage. | Inspection and test | CR-13, PRJ-02, H-02 |
+| NFR-19 | The session locks after a period of inactivity; unlocking is a single step. | Lock after ≤ 5 min of inactivity (to confirm with the client, Q-11). | Functional test | CR-01…CR-04, H-02, Q-11 |
+| NFR-20 | Personal data from Interuady notes stored on a device is encrypted at rest. Devices of charge-only profiles keep only each note's number, unit, amount, date and status; personal details are stored only on devices of profiles with query permission (depends on FR-26). | 100% of locally stored personal data encrypted; 0 personal-detail fields on charge-only devices. | Local storage inspection (V-08) | CR-13, CR-14, PRJ-02, H-02 |
 | NFR-21 | The system never stores card data, to stay outside the scope of PCI DSS `[R16]`. | 0 card data fields in the data model. | Data model review | CR-12, H-10 |
 | NFR-22 | Interuady data handling follows the applicable personal data law for public-sector entities, including a privacy notice. | Compliance checklist based on the current federal and state laws for obligated subjects `[R17, R18]`. | Legal checklist | CR-13, CR-14 |
 
