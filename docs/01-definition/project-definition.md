@@ -5,7 +5,7 @@
 > How to read this document: every statement carries its origin.
 > `CR-xx` / `PRJ-xx` = client or project requirement ([see](../../client/client-requirements.md)) ·
 > `H-xx` = unvalidated hypothesis ([see](../02-research/hypotheses.md)) ·
-> `Q-xx` = open question for the client · 🔎 = data point pending verification against a source (see [§6](#6-data-to-verify)).
+> `Q-xx` = open question for the client · `[Rn]` = verified external source ([see](../references.md)) · 🔎 = data point still pending verification (see [§6](#6-data-to-verify)).
 > **No statement in this document is a research finding.**
 
 ---
@@ -49,7 +49,9 @@ The rubric asks for arguments and evidence that the issue is a social one. There
 The client explicitly requires the system to be usable by "someone with limited technology skills", using a hot dog vendor as an example `[PRJ-03]`. This makes the project more than an internal system: it is a design case for **users who are usually left out** of digital management tools.
 
 - If the design works for the boutique's seller `[H-01]`, the same patterns apply to **micro-businesses with limited resources and skills**, operating on modest phones `[H-02]` with unreliable connectivity `[H-03]`.
-- 🔎 **Missing evidence and where to find it:** share of micro-businesses in Mexico that do not use digital tools for inventory or sales (INEGI — ENAPROCE, latest edition; Economic Census); smartphone and internet use by state, particularly Yucatán (INEGI — ENDUTIH, latest edition). **Do not write any figure until you have the table and the year.**
+- **Evidence of the gap.** According to INEGI's Economic Census 2024, only **22.3%** of micro establishments in Mexico used computers and **23.5%** used the internet `[R21]`. Micro-businesses — the group the client's hot dog vendor example points to — are largely outside digital management tools.
+- **Evidence that the phone is the right channel.** In 2025, **86.1%** of the population aged 6+ used the internet and **97.0%** of cell phone users used a smartphone `[R20]`. Access to a smartphone is widespread; what is missing is tools designed for people with low digital skills. This supports a mobile-first design `[PRJ-01]` focused on simplicity `[PRJ-03]`.
+- 🔎 Yucatán-specific figures are still pending (see §6).
 
 ### 2.2 Responsible management of a public institution's resources
 
@@ -110,6 +112,8 @@ Interuady payments require recording people's names (the C.P. responsible for th
 
 **Problem.** Two offline points could sell the last unit of the same product, or CDU could change a price while a satellite point is disconnected.
 
+**Approach.** Offline-first (*local-first*): each device keeps its own copy of the data it needs, works without connection and synchronizes later `[R12]`.
+
 **Why it is manageable.** The client's permissions shrink the problem:
 
 - Only CDU modifies the catalog `[CR-01, CR-09]`: there is **a single writer** for products and prices.
@@ -139,9 +143,9 @@ flowchart LR
 
 #### Challenge 3 — Barcode scanner and thermal printer `[CR-16, CR-17]`
 
-**Scanner.** Many external scanners (USB or Bluetooth) behave like a keyboard: they "type" the code into the active field. This simplifies integration 🔎. The **phone camera** can serve as a fallback when no scanner is available.
+**Scanner.** Many external scanners (USB or Bluetooth) behave like a keyboard: they "type" the code into the active field. This simplifies integration `[R13]`. The **phone camera** can serve as a fallback when no scanner is available.
 
-**Printer.** Phones usually connect to thermal printers over Bluetooth, and support for this in web apps varies by browser and operating system 🔎. This may decide between a PWA and a native app.
+**Printer.** Phones usually connect to thermal printers over Bluetooth, and support for this in web apps is limited: the Web Bluetooth API is experimental and not supported in all major browsers `[R14]`; it is available in Chrome for Android but iOS is not listed among supported platforms `[R15]`. This may decide between a PWA and a native app.
 
 **Receipt content.** It cannot be finalized until accounting confirms whether VAT must be broken down and how invoicing works `[CR-18, Q-05]`.
 
@@ -155,9 +159,9 @@ flowchart LR
 
 **Data on the phone.** Because of offline mode, notes may remain stored on phones, possibly personal ones `[PRJ-02, H-02]`. This requires per-user sessions, lock on inactivity, local encryption and deletion of data that has already been synchronized.
 
-**Card.** The system **does not capture or store card data**: it only records that the payment was made by card `[H-10, Q-06]`. This keeps card data security obligations out of scope 🔎.
+**Card.** The system **does not capture or store card data**: it only records that the payment was made by card `[H-10, Q-06]`. PCI DSS applies to entities that store, process or transmit cardholder data `[R16]`; by never capturing card data, the system aims to keep those obligations out of its scope (to be confirmed with the client's payment provider).
 
-**Legal framework.** UADY is a public body, so the applicable framework is personal data held by **public-sector entities** (*sujetos obligados*), not by private parties 🔎. The current legal text and the institution's privacy notice must be checked before citing any article.
+**Legal framework.** UADY is a public body, so the applicable framework is personal data held by **public-sector entities** (*sujetos obligados*), not by private parties. The current federal general law for public-sector entities was published on 2025-03-20 `[R17]`, and Yucatán issued a new state law on 2025-08-28 that covers autonomous bodies `[R18]`. UADY already issues its privacy notices under the general law for obligated subjects `[R19]`. Specific articles (privacy notice content, security measures) will be reviewed before implementation.
 
 #### Challenge 5 — Simplicity versus data richness `[PRJ-03, CR-08]`
 
@@ -190,19 +194,19 @@ The inventory table has 10 fields `[CR-08]`, which clashes with an interface for
 
 ## 6. Data to verify
 
-Working list for the author. Each row is a statement that **needs a source before being presented as a fact**. Once verified, record the exact source (title, institution, year, link) and remove the 🔎 from the text.
+Working list for the author. Verified items cite their source in [`references.md`](../references.md); pending items keep the 🔎 in the text.
 
-| # | What to verify | Where to look | Used in |
-|---|---|---|---|
-| 1 | Use of digital tools (inventory, sales) by micro-businesses in Mexico | INEGI — ENAPROCE; Economic Census | §2.1 |
-| 2 | Smartphone and internet use in Yucatán | INEGI — ENDUTIH (latest edition) | §2.1 |
-| 3 | Cash versus digital payment use | INEGI/CNBV — ENIF | §2.1 (optional) |
-| 4 | Whether commercial POS products sell offline, handle multiple warehouses or custom payment methods | Each product's official website | §3.2 |
-| 5 | Whether other UADY units already use a POS or similar system | Ask the client | §3.2 |
-| 6 | How barcode scanners connect (keyboard mode) | Manufacturers' spec sheets | §4.2, challenge 3 |
-| 7 | Web Bluetooth support by browser | MDN Web Docs; caniuse.com | §4.2, challenge 3 |
-| 8 | Obligations when storing card data | PCI Security Standards Council | §4.2, challenge 4 |
-| 9 | Current personal data law for public-sector entities (federal and Yucatán) and UADY's privacy notice | DOF; Yucatán State Congress; UADY transparency portal | §4.2, challenge 4 |
+| # | What to verify | Status | Source | Used in |
+|---|---|---|---|---|
+| 1 | Use of digital tools by micro-businesses in Mexico | ✔ Verified | R21 | §2.1 |
+| 2 | Smartphone and internet use | ✔ National figures verified · 🔎 Yucatán pending (INEGI state tabulations) | R20 | §2.1 |
+| 3 | Cash versus digital payment use | Optional, not checked | INEGI/CNBV — ENIF | §2.1 |
+| 4 | Whether commercial POS products sell offline, handle multiple warehouses or custom payment methods | 🔎 Pending | Each product's official website | §3.1, §3.2 |
+| 5 | Whether other UADY units already use a POS or similar system | 🔎 Pending | Ask the client | §3.2 |
+| 6 | How barcode scanners connect (keyboard mode) | ✔ Verified | R13 | §4.2, challenge 3 |
+| 7 | Web Bluetooth support by browser | ✔ Verified | R14, R15 | §4.2, challenge 3 |
+| 8 | Obligations when handling card data | ✔ Verified | R16 | §4.2, challenge 4 |
+| 9 | Current personal data law for public-sector entities (federal and Yucatán) and UADY's privacy notice | ✔ Verified | R17, R18, R19 | §4.2, challenge 4 |
 
 ---
 

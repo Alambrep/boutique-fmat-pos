@@ -4,7 +4,7 @@
 >
 > Each requirement cites its origin: client requirement (`CR`), project requirement (`PRJ`), hypothesis (`H`), open question (`Q`) and the design implication (`DI`) from the [scenarios](../03-user-modeling/scenarios.md) where it appeared. Requirements that rest only on hypotheses are marked **(H)** and may change after validation.
 >
-> **Priority (MoSCoW):** **Must** = stated by the client or project brief · **Should** = strongly supported by scenarios · **Could** = useful, low cost · **Deferred** = depends on an open question.
+> **Priority (MoSCoW `[R11]`, see [`references.md`](../references.md)):** **Must** = stated by the client or project brief · **Should** = strongly supported by scenarios · **Could** = useful, low cost · **Deferred** = *Won't have this time*: depends on an open question.
 
 ## 1. Access and profiles
 

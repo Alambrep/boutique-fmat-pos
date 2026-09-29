@@ -4,7 +4,7 @@
 
 ## 1. How these hypotheses were produced
 
-Delivery 1 does not include field research (see [README §3](../../README.md#3-delivery-1-approach)). Following a **Lean UX proto-persona** approach, the author:
+Delivery 1 does not include field research (see [README §3](../../README.md#3-delivery-1-approach)). Following a **Lean UX proto-persona** approach — personas built from the team's existing knowledge and assumptions rather than new research `[R6]`, to be treated as testable hypotheses `[R7]` — the author:
 
 1. Extracted every fact stated by the client (`CR-xx`, `PRJ-xx`) from the [client requirements](../../client/client-requirements.md).
 2. Listed the assumptions needed to design for those facts (who the users are, where, with which devices, under what conditions).
@@ -14,6 +14,8 @@ Delivery 1 does not include field research (see [README §3](../../README.md#3-d
 **Inputs used:** client document and project brief only. **Not used:** interviews, observation, surveys or analytics — none were conducted yet.
 
 ## 2. Hypothesis format
+
+Adapted from the Lean UX practice of writing assumptions as testable statements that begin with "We believe…" `[R8]`, adding explicit signals of success and failure:
 
 > **We believe that** [statement].
 > **We will know we are right when** [observable signal].
@@ -59,7 +61,7 @@ Status values: `Unvalidated` → `Validated` / `Refuted` / `Partially validated`
 
 ## 4. Prioritization (assumption map)
 
-Hypotheses with **high risk and low or medium confidence** are validated first in delivery 2.
+Following assumptions mapping `[R9]`, hypotheses that are **important (high risk) and have little evidence (low or medium confidence)** are validated first in delivery 2.
 
 | | **Low confidence** | **Medium confidence** |
 |---|---|---|
@@ -88,7 +90,7 @@ Hypotheses with **high risk and low or medium confidence** are validated first i
 | H-13 | P-02, P-03 | S-06 | — |
 | H-14 | P-03 | S-02 | — |
 
-`V-xx` activities are described in the [validation plan](validation-plan.md).
+`V-xx` activities are described in the [validation plan](validation-plan.md). `[Rn]` sources are listed in [`references.md`](../references.md).
 
 ## 6. Evidence log
 

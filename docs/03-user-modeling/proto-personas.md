@@ -6,6 +6,8 @@
 
 ## 1. User classes
 
+Classification follows Cooper: a **primary** persona needs an interface of its own, while a **secondary** persona can mostly be served by interfaces designed for others `[R10]`. Proto-personas are assumption-based and must be validated with research `[R6, R7]`. Sources: [`references.md`](../references.md).
+
 | Class | Proto-persona | Role in the system | Why this class |
 |---|---|---|---|
 | **Primary** | **P-01 — Satellite seller** | Uses the sales screen every day; charge-only permissions | Most frequent user, lowest digital skills, strictest constraints (device, connectivity). If the design works for P-01, it works for everyone who sells. `[CR-03, CR-04, PRJ-01…PRJ-03]` |

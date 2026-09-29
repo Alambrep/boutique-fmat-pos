@@ -2,9 +2,9 @@
 
 > **Task:** T-07 · **Rubric criterion:** 4 · **Status:** initial requirements for delivery 1
 >
-> Organized by **usability attributes** (Nielsen: learnability, efficiency, memorability, errors, satisfaction), followed by accessibility and quality attributes that affect the user experience.
+> Organized by the five **usability quality components** defined by Nielsen — learnability, efficiency, memorability, errors, satisfaction `[R1]` — and consistent with the ISO 9241-11 view of usability as effectiveness, efficiency and satisfaction for specified users, goals and context of use `[R2]`. Accessibility and quality attributes that affect the user experience follow. `[Rn]` = source in [`references.md`](../references.md).
 >
-> ⚠️ **All numeric targets are tentative design goals proposed by the author**, not measured values or findings. They will be calibrated with the evidence from the [validation plan](../02-research/validation-plan.md). Values taken from external guidelines are marked 🔎 and must be checked against the original source before being cited.
+> ⚠️ **All numeric targets are tentative design goals proposed by the author**, not measured values or findings. They will be calibrated with the evidence from the [validation plan](../02-research/validation-plan.md). Values taken from external guidelines cite their verified source `[Rn]`; items still pending verification are marked 🔎.
 
 ## 1. Usability attributes
 
@@ -17,14 +17,14 @@
 | NFR-05 | Memorability | A seller who has not used the app for two weeks completes a sale without help. | ≥ 80% of returning participants succeed. | Follow-up usability test (V-07) | H-12 |
 | NFR-06 | Errors — prevention | An Interuady sale cannot be confirmed with missing mandatory fields. | 0 incomplete Interuady notes. | Functional test | CR-13, H-08 |
 | NFR-07 | Errors — recovery | Error messages explain what happened and what to do, in plain language; every sale can be reviewed before confirming. | 100% of error messages include a suggested action. | Heuristic inspection | PRJ-03, H-01 |
-| NFR-08 | Satisfaction | Sellers rate the app as easy to use. | SUS score ≥ 68 🔎 (commonly cited average; verify with the SUS literature before citing). | SUS questionnaire after the usability test (V-07) | PRJ-03 |
+| NFR-08 | Satisfaction | Sellers rate the app as easy to use. | SUS score ≥ 68, the average SUS score across published evaluations `[R5]`. | SUS questionnaire after the usability test (V-07) | PRJ-03 |
 
 ## 2. Accessibility and ergonomics
 
 | ID | Requirement | Tentative target | How it is measured | Origin |
 |---|---|---|---|---|
-| NFR-09 | Touch targets are large enough for fast, error-free use. | ≥ 48 × 48 dp 🔎 (Android / Material Design guideline; verify). | Design inspection | H-01, H-06 |
-| NFR-10 | Text has enough contrast to be read in varied lighting. | ≥ 4.5:1 for normal text 🔎 (WCAG 2.x, level AA; verify). | Contrast checker on Figma designs | H-01 |
+| NFR-09 | Touch targets are large enough for fast, error-free use. | ≥ 48 × 48 dp, the Android recommendation for touch targets `[R4]`. | Design inspection | H-01, H-06 |
+| NFR-10 | Text has enough contrast to be read in varied lighting. | ≥ 4.5:1 for normal text and ≥ 3:1 for large text (WCAG 2.2, SC 1.4.3, level AA) `[R3]`. | Contrast checker on Figma designs | H-01 |
 | NFR-11 | The main sales actions (add, quantity, pay, confirm) can be reached with one hand. | Primary actions placed in the lower half of the screen. | Design inspection | H-06 |
 | NFR-12 | The user interface is in Spanish. | 100% of UI text. | Inspection | CR-01…CR-04 (Spanish-speaking client and users) |
 
@@ -50,12 +50,12 @@
 |---|---|---|---|---|
 | NFR-19 | Each user signs in with a personal account; the session locks after a period of inactivity. | Lock after ≤ 5 min of inactivity (to confirm with the client). | Functional test | CR-01…CR-04, H-02 |
 | NFR-20 | Personal data stored on the device (Interuady notes) is encrypted and deleted from the device once synchronized. | 100% of synchronized notes removed from local storage. | Inspection and test | CR-13, PRJ-02, H-02 |
-| NFR-21 | The system never stores card data. | 0 card data fields in the data model. | Data model review | CR-12, H-10 |
-| NFR-22 | Interuady data handling follows the applicable personal data law for public-sector entities, including a privacy notice. | Compliance checklist reviewed. 🔎 (verify the current law) | Legal checklist | CR-13, CR-14 |
+| NFR-21 | The system never stores card data, to stay outside the scope of PCI DSS `[R16]`. | 0 card data fields in the data model. | Data model review | CR-12, H-10 |
+| NFR-22 | Interuady data handling follows the applicable personal data law for public-sector entities, including a privacy notice. | Compliance checklist based on the current federal and state laws for obligated subjects `[R17, R18]`. | Legal checklist | CR-13, CR-14 |
 
 ## 6. Compatibility
 
 | ID | Requirement | Tentative target | How it is measured | Origin |
 |---|---|---|---|---|
-| NFR-23 | Support external barcode scanners that work as a keyboard (USB or Bluetooth). 🔎 | Works with at least one available scanner. | Device test (V-08) | CR-16 |
-| NFR-24 | Support printing receipts on a Bluetooth thermal printer. 🔎 (support depends on the platform decision: PWA or native) | Works with at least one available printer. | Device test (V-08) | CR-17 |
+| NFR-23 | Support external barcode scanners that work as a keyboard (keyboard-wedge / HID mode, USB or Bluetooth) `[R13]`. | Works with at least one available scanner. | Device test (V-08) | CR-16 |
+| NFR-24 | Support printing receipts on a Bluetooth thermal printer (support depends on the platform decision, since Web Bluetooth is experimental and not available on iOS `[R14, R15]`). | Works with at least one available printer. | Device test (V-08) | CR-17 |
