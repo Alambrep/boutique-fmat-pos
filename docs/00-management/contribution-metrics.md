@@ -1,3 +1,58 @@
 # Individual contribution metrics
 
-> Pending — completed in section 6 (T-12).
+> **Task:** T-12 · **Rubric criterion:** 6 · **Contributor:** Alancete (individual project — 100% of the tasks are assigned to the author)
+>
+> Metrics are computed from **objective sources**: git history, GitHub issues and the logbook. Snapshot taken at commit `a54e4bb` (2026-09-29 00:03, UTC−6); it is updated at the close of each delivery.
+
+## 1. Quantitative metrics
+
+| Metric | Value | Source |
+|---|---|---|
+| Tasks completed | **9 of 13** (69%) | GitHub issues, milestone "Delivery 1" |
+| Commits | **16** (13 on 2026-09-28, 3 on 2026-09-29) | `git log` |
+| Commits by type | `docs`: 14 · `chore`: 2 | `git log` |
+| Lines added / removed | **+1,448 / −71** | `git log --numstat` |
+| Artifacts delivered | 9 of 13 deliverables (see [README §7](../../README.md#7-delivery-1-deliverables)) | Repository |
+| Traceable items produced | 18 CR, 3 PRJ, 12 Q, 14 H, 3 P, 6 S, 21 DI, 29 FR, 6 deferred FR, 24 NFR, 8 V, 33 references | Artifacts |
+| Hours logged | **≈ 2.6 h** (3 sessions, approximate) | [Logbook](logbook/) |
+| Commits co-authored with the AI assistant | 16 of 16 | `Co-Authored-By` lines (see [README §12](../../README.md#12-ai-assistance-statement)) |
+
+### Commits per task
+
+| Task | T-01 | T-02 | T-03 | T-04 | T-05 | T-06 | T-07 | T-08 | T-09 | T-11 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Commits referencing it | 2 | 4 | 3 | 2 | 1 | 2 | 2 | 1 | 2 | 1 |
+
+A commit can reference more than one task.
+
+## 2. Author decisions
+
+Because the AI assistant co-authored every commit, the author's contribution is also recorded as the **decisions that directed the work**. Times come from the working session.
+
+| Date and time | Decision | Effect on the project |
+|---|---|---|
+| 2026-09-28 19:35 | Work individually with a Lean UX proto-persona approach, without field research in delivery 1; prioritize speed; require that every assumption be labeled as a hypothesis and traced | Shaped all artifacts and labels (`H`, `CR`, `PRJ`) |
+| 2026-09-28 22:34 | One branch per delivery (`first-delivery`, …) | Branching convention in the README |
+| 2026-09-28 22:45 | All repository content in English | Repository translated; history rewritten once |
+| 2026-09-28 23:17 | Use the AI assistant openly and declare it | AI assistance statement (README §12) |
+| 2026-09-28 23:31 | Mention open questions in the video and send them to the client after the delivery | Presentation content; Q-01…Q-12 kept open |
+| 2026-09-28 23:41 | Provide prior knowledge about connectivity at the FMAT point | Evidence log entry for H-03 |
+| 2026-09-28 23:47 | Back every decision with verified, reliable sources | `references.md` (R1–R33) |
+| 2026-09-29 00:10 | Deliver the presentation as a video; keep the script out of the repository | `docs/05-presentation/` |
+
+## 3. How to recompute
+
+Run in the repository (Git Bash or any shell with `git`):
+
+```bash
+# Commits per day
+git log --date=short --pretty=format:'%ad' | sort | uniq -c
+# Commits per type
+git log --pretty=format:'%s' | cut -d'(' -f1 | cut -d':' -f1 | sort | uniq -c
+# Commits per task
+git log --pretty=format:'%s' | grep -oE 'T-[0-9]+' | sort | uniq -c
+# Lines added and removed
+git log --numstat --pretty=format:'' | awk '{a+=$1; d+=$2} END {print "+"a" -"d}'
+```
+
+Tasks completed: GitHub → Issues → Milestones → "Delivery 1".
