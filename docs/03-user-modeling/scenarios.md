@@ -14,16 +14,17 @@
 | S-04 | P-02 | Registering a new product for the three warehouses | CR-05…CR-09, H-07 |
 | S-05 | P-02 | End-of-day stock check after the points synchronize | CR-08, CR-15, PRJ-02, H-04 |
 | S-06 | P-03 | Reviewing pending Interuady notes and charging a sale | CR-02, CR-14, H-11, H-13 |
+| S-07 | P-01 | Correcting a mistake before confirming a sale | CR-10, CR-11, CR-15, H-05 |
 
 ---
 
 ## S-01 — Cash sale during a rush, without internet
 
-**Proto-persona:** P-01 (Rosa) · **Origins:** CR-03, CR-04, CR-10, CR-11, CR-12, CR-15, PRJ-01, PRJ-02, H-01, H-02, H-03, H-05, H-06, H-09
+**Proto-persona:** P-01 (Luis) · **Origins:** CR-03, CR-04, CR-10, CR-11, CR-12, CR-15, PRJ-01, PRJ-02, H-01, H-02, H-03, H-05, H-06, H-09
 
-**Context.** First week of the semester. There is a queue at the Sociales point `[H-05]`, and the phone has no signal `[H-03]`. Rosa is holding a T-shirt in one hand `[H-06]`.
+**Context.** First week of the semester. There is a queue at the Sociales point `[H-05]`, and the phone has no signal `[H-03]`. Luis is holding a T-shirt in one hand `[H-06]`.
 
-**Narrative.** A student wants two T-shirts of the same design. Rosa opens the app, which starts directly on the sales screen. She recognizes the T-shirt by its photo and taps it `[CR-10]`. She taps "+" once to set the quantity to 2 `[CR-11]` and sees the total. She chooses "Cash" `[CR-12]`, enters the amount received and sees the change. She confirms. The app shows "Sale saved on this phone — it will be sent when there is internet" `[PRJ-02]`. The stock at Sociales drops by two on the phone `[CR-15]`. The next customer is already waiting.
+**Narrative.** A student wants two T-shirts of the same design. Luis opens the app, which starts directly on the sales screen. He recognizes the T-shirt by its photo, sees it is in stock, and taps it `[CR-10, Q-14]`. He taps "+" once to set the quantity to 2 `[CR-11]` and sees the total. He chooses "Cash" `[CR-12]`, enters the amount received and sees the change. He confirms. The app shows "Sale saved on this phone — it will be sent when there is internet" `[PRJ-02]`. The stock at Sociales drops by two on the phone `[CR-15]`. The next customer is already waiting.
 
 **Design implications**
 - DI-01: The sales screen is the home screen for charge-only profiles; the catalog is shown as photos.
@@ -34,11 +35,11 @@
 
 ## S-02 — Sale paid with Interuady
 
-**Proto-persona:** P-01 (Rosa) · **Origins:** CR-03, CR-04, CR-12, CR-13, CR-14, H-01, H-08, H-14
+**Proto-persona:** P-01 (Luis) · **Origins:** CR-03, CR-04, CR-12, CR-13, CR-14, H-01, H-08, H-14
 
 **Context.** A staff member from another UADY unit comes to buy five polos for an event, paid through Interuady `[H-14]`.
 
-**Narrative.** Rosa selects the polo by its photo and sets the quantity to 5. She chooses "Interuady" `[CR-12]`. Three fields appear: unit, C.P. responsible for the payment, and requester `[CR-13]`. Rosa copies the data from the staff member's request. The "Confirm" button stays disabled until the three fields are filled, and the empty fields are highlighted `[CR-13]`. After confirming, the app says the note was added to accounts receivable `[CR-14]`.
+**Narrative.** Luis selects the polo by its photo and sets the quantity to 5. He chooses "Interuady" `[CR-12]`. Three fields appear: unit, C.P. responsible for the payment, and requester `[CR-13]`. Luis copies the data from the staff member's request. The "Confirm" button stays disabled until the three fields are filled, and the empty fields are highlighted `[CR-13]`. After confirming, the app says the note was added to accounts receivable `[CR-14]`.
 
 **Design implications**
 - DI-06: Interuady fields appear only when that payment method is selected, and all three are mandatory.
@@ -48,23 +49,24 @@
 
 ## S-03 — Card sale when the barcode scanner is not available
 
-**Proto-persona:** P-01 (Rosa) · **Origins:** CR-03, CR-04, CR-10, CR-12, CR-16, H-01, H-02, H-06, H-10
+**Proto-persona:** P-01 (Luis) · **Origins:** CR-03, CR-04, CR-10, CR-11, CR-12, CR-16, H-01, H-02, H-06, H-10
 
 **Context.** The Bluetooth scanner at the Matemáticas point has no battery `[CR-16]`. A customer wants to pay by card.
 
-**Narrative.** Rosa cannot scan the code, so she types the first letters of the product name in the search box and chooses it by its photo `[CR-10]`. She selects "Card" `[CR-12]` and charges the amount on the separate bank terminal `[H-10]`. Back in the app, she confirms that the card payment was approved. The sale is recorded as paid by card; no card data is entered.
+**Narrative.** Luis cannot scan the code, so he types the first letters of the product name in the search box and chooses it by its photo `[CR-10]`. He selects "Card" `[CR-12]` and charges the amount on the separate bank terminal `[H-10]`. Back in the app, he confirms that the card payment was approved. The sale is recorded as paid by card; no card data is entered. If the terminal declines the card, he taps "Change payment method" and the customer pays in cash; nothing is recorded until a payment is confirmed.
 
 **Design implications**
 - DI-10: Products can be found by scanning, by browsing photos or by searching by name; the scanner is optional.
 - DI-11: Card payment only records the payment method (no card data), pending confirmation of Q-06.
+- DI-22: The payment method can be changed before confirming; no sale is recorded until a payment is confirmed.
 
 ## S-04 — Registering a new product for the three warehouses
 
-**Proto-persona:** P-02 (Daniel) · **Origins:** CR-01, CR-05, CR-06, CR-07, CR-08, CR-09, H-07, Q-07, Q-08
+**Proto-persona:** P-02 (Daniela) · **Origins:** CR-01, CR-05, CR-06, CR-07, CR-08, CR-09, H-07, Q-07, Q-08
 
 **Context.** A new batch of caps arrives at CDU from the supplier.
 
-**Narrative.** Daniel opens "New product" `[CR-01]`. He enters name, type, color, size, net cost, sale price and supplier `[CR-05, CR-08]`, then takes a photo with the phone `[CR-06]`. The system generates the product code and barcode `[CR-07]`. He enters the initial stock for CDU, Sociales and Matemáticas `[CR-08, CR-09]`, then prints the barcode labels. When the satellite phones connect, they receive the new product.
+**Narrative.** Daniela opens "New product" `[CR-01]`. She enters name, type, color, size, net cost, sale price and supplier `[CR-05, CR-08]`, then takes a photo with the phone `[CR-06]`. The system generates the product code and barcode `[CR-07]`. She enters the initial stock for CDU, Sociales and Matemáticas `[CR-08, CR-09]`, then prints the barcode labels. When the satellite phones connect, they receive the new product.
 
 **Design implications**
 - DI-12: Product registration form with all CR-08 fields, photo capture and automatic code and barcode generation.
@@ -74,11 +76,11 @@
 
 ## S-05 — End-of-day stock check after the points synchronize
 
-**Proto-persona:** P-02 (Daniel) · **Origins:** CR-08, CR-15, PRJ-02, H-03, H-04
+**Proto-persona:** P-02 (Daniela) · **Origins:** CR-08, CR-15, PRJ-02, H-03, H-04
 
-**Context.** At the end of the day, Daniel wants to know how much stock each warehouse has left.
+**Context.** At the end of the day, Daniela wants to know how much stock each warehouse has left.
 
-**Narrative.** Daniel opens the inventory view and filters by warehouse `[CR-08]`. The Matemáticas point shows "last synchronized 2 hours ago" `[PRJ-02, H-03]`. When its phone connects, its sales are applied and stock is updated `[CR-15]`. Daniel notices a product with negative stock at Sociales: two sales happened offline after the stock ran out. The system flags it for review instead of hiding it.
+**Narrative.** Daniela opens the inventory view and filters by warehouse `[CR-08]`. The Matemáticas point shows "last synchronized 2 hours ago" `[PRJ-02, H-03]`. When its phone connects, its sales are applied and stock is updated `[CR-15]`. Daniela notices a product with negative stock at Sociales: two sales were confirmed offline after a warning that the recorded stock was 0 (FR-32). The system flags it for review instead of hiding it.
 
 **Design implications**
 - DI-16: Inventory view per warehouse with all CR-08 fields and filters.
@@ -97,3 +99,15 @@
 - DI-19: Accounts receivable view with filters by unit, status and date, available to all profiles `[CR-14]`; the detail about people is limited by profile (proposal, see [project definition §4.2](../01-definition/project-definition.md)).
 - DI-20: Read-only inventory query for Central Administration.
 - DI-21: The sales flow is the same for every profile that can charge.
+
+## S-07 — Correcting a mistake before confirming a sale
+
+**Proto-persona:** P-01 (Luis) · **Origins:** CR-03, CR-04, CR-10, CR-11, CR-15, PRJ-03, H-01, H-05, H-06
+
+**Context.** A queue at the Matemáticas point `[H-05]`. In a hurry, Luis taps the medium size of a T-shirt instead of the large one.
+
+**Narrative.** Before charging, the app shows the sale summary: photo, size, quantity and total `[CR-10, CR-11]`. Luis notices the wrong size, removes that line with one tap, confirms "Remove this item?", and adds the right one. The total updates. Stock has not changed, because it is only deducted when the sale is confirmed `[CR-15]`.
+
+**Design implications**
+- DI-23: A summary is always shown before confirming; any line can be removed or its quantity changed.
+- DI-24: Stock is deducted only when a sale is confirmed.
