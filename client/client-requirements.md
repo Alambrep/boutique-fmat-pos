@@ -47,7 +47,7 @@ Example record provided by the client (data kept in Spanish):
 
 ## Project requirements (PRJ) — professor's project brief
 
-These do not appear in the written document; they come from the project brief. **Action:** store the written evidence (brief, email or screenshot from the course platform) in `originals/` if available.
+These do not appear in the written document. **Source:** stated by the professor (client) in person, in a conversation at his office at FMAT on 2026-08-14 (see the [meeting log](../docs/00-management/meetings.md)). No written copy is available.
 
 | ID | Requirement |
 |---|---|
@@ -71,3 +71,5 @@ These do not appear in the written document; they come from the project brief. *
 | Q-10 | Are cancellations, returns or size exchanges required? | CR-15 | Open |
 | Q-11 | Does each point of sale use its own device or a shared one? Who creates user accounts? | CR-01…CR-04 | Open |
 | Q-12 | Which specific devices will be used (model, operating system), and is there budget for a scanner and a printer? | PRJ-01, CR-16, CR-17 | Open |
+| Q-13 | The document uses *almacén*, *bodega*, *tienda* and *boutique*. Is each warehouse (CDU, Sociales, Matemáticas) also a point of sale, or are there points of sale separate from the warehouses? | CR-08, CR-09, CR-15 | Open |
+| Q-14 | May charge-only profiles see on the sales screen whether a product is available at their point, or does that count as "query" (*consulta*)? | CR-03, CR-04, FR-31 | Open |
