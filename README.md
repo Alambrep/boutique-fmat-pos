@@ -39,7 +39,7 @@ Recommended order (follows the product process):
 5. [Functional requirements](docs/04-requirements/functional-requirements.md), [non-functional requirements](docs/04-requirements/non-functional-requirements.md) and [traceability matrix](docs/04-requirements/traceability-matrix.md).
 6. [Research and validation plan](docs/02-research/validation-plan.md) — what gets validated in delivery 2.
 7. [Management](docs/00-management/): schedule, logbook, task log and contribution metrics.
-8. [Presentation](docs/05-presentation/script.md).
+8. [Presentation video](docs/05-presentation/README.md).
 9. [References](docs/references.md) — every external source used, with how to verify it.
 
 ## 3. Delivery 1 approach
@@ -122,7 +122,7 @@ boutique-fmat-pos/
 │   │   ├── non-functional-requirements.md
 │   │   └── traceability-matrix.md
 │   ├── 05-presentation/
-│   │   └── script.md                        # + slides (PDF) and video link
+│   │   └── README.md                        # link to the delivery video
 │   └── references.md                        # external sources [Rn], verified
 ├── design/
 │   └── README.md                            # links to Figma, sketches and wireframes
@@ -143,10 +143,10 @@ boutique-fmat-pos/
 | 7 | Non-functional requirements | `docs/04-requirements/non-functional-requirements.md` | 4 | Done |
 | 8 | Traceability matrix | `docs/04-requirements/traceability-matrix.md` | 2, 4 | Done |
 | 9 | Research and validation plan | `docs/02-research/validation-plan.md` | 2 | Done |
-| 10 | Schedule | `docs/00-management/schedule.md` | 3 | Pending |
-| 11 | Logbook and task log | `docs/00-management/` | 3, 6 | In progress |
-| 12 | Individual contribution metrics | `docs/00-management/contribution-metrics.md` | 6 | Pending |
-| 13 | Presentation script and slides | `docs/05-presentation/` | 5 | Pending |
+| 10 | Schedule | `docs/00-management/schedule.md` | 3 | Done |
+| 11 | Logbook and task log | `docs/00-management/` | 3, 6 | Done (updated each session) |
+| 12 | Individual contribution metrics | `docs/00-management/contribution-metrics.md` | 6 | Done (updated each session) |
+| 13 | Presentation video | `docs/05-presentation/` | 5 | Pending |
 
 ## 8. Workflow and contribution evidence
 
