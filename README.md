@@ -50,6 +50,27 @@ Recommended order (follows the product process):
 
 **Consequence:** no artifact in this delivery presents findings. Everything that does not come from the client is labeled as a hypothesis.
 
+### Development process
+
+The project follows the four iterative human-centred design activities of ISO 9241-210 `[R34]`, one cycle per delivery:
+
+| Activity | Delivery 1 | Delivery 2 | Delivery 3 |
+|---|---|---|---|
+| Understand and specify the context of use | Client requirements, desk research, hypotheses | Field research (V-01…V-06) | Refinement |
+| Specify user requirements | Proto-personas, scenarios, FR/NFR | Research-based personas; requirements revised | Refinement |
+| Produce design solutions | — | Low-fidelity prototype | Iterated prototype |
+| Evaluate the design | — | First usability test (V-07) | Usability and technical tests (V-07, V-08) |
+
+### Main findings so far
+
+Delivery 1 has **no user research findings** yet. The [desk research results](docs/02-research/results/desk-research.md) are:
+
+1. **Market:** offline sales and multi-store stock already exist in free tools (Loyverse); the institutional Interuady flow with mandatory data and accounts receivable is not documented in the reviewed products.
+2. **Social relevance:** smartphone use is almost universal among cell phone users in Mexico, but only about a quarter of micro establishments use computers or the internet (INEGI).
+3. **Legal:** new federal (2025) and Yucatán (2025) laws on personal data held by public entities apply to the Interuady data.
+4. **Technical:** keyboard-wedge scanners are easy to integrate; Bluetooth printing from web apps is experimental and not available on iOS, which affects the PWA-or-native decision.
+5. **Requirements analysis:** 12 open questions for the client, including how 4 profiles map to 3 warehouses.
+
 ## 4. Evidence conventions
 
 Every statement in this repository carries one of these labels:
@@ -136,15 +157,16 @@ boutique-fmat-pos/
 |---|---|---|---|---|
 | 1 | Client requirements and open questions | `client/client-requirements.md` | 1, 4 | Done |
 | 2 | Project definition | `docs/01-definition/project-definition.md` | 1 | Done |
-| 3 | User hypotheses | `docs/02-research/hypotheses.md` | 2 | Done |
-| 4 | Proto-personas (primary and secondary) | `docs/03-user-modeling/proto-personas.md` | 2 | Done |
-| 5 | Scenarios | `docs/03-user-modeling/scenarios.md` | 2 | Done |
+| 3 | User hypotheses | `docs/02-research/hypotheses.md` | 2, 3 | Done |
+| 4 | User profiles and proto-personas (primary and secondary) | `docs/03-user-modeling/proto-personas.md` | 3 | Done |
+| 5 | Scenarios | `docs/03-user-modeling/scenarios.md` | 3 | Done |
 | 6 | Functional requirements | `docs/04-requirements/functional-requirements.md` | 4 | Done |
 | 7 | Non-functional requirements | `docs/04-requirements/non-functional-requirements.md` | 4 | Done |
-| 8 | Traceability matrix | `docs/04-requirements/traceability-matrix.md` | 2, 4 | Done |
-| 9 | Research and validation plan | `docs/02-research/validation-plan.md` | 2 | Done |
-| 10 | Schedule | `docs/00-management/schedule.md` | 3 | Done |
-| 11 | Logbook and task log | `docs/00-management/` | 3, 6 | Done (updated each session) |
+| 8 | Traceability matrix | `docs/04-requirements/traceability-matrix.md` | 3, 4 | Done |
+| 9 | Research and validation plan + instruments | `docs/02-research/validation-plan.md`, `instruments/` | 2 | Done |
+| 9b | Desk research results | `docs/02-research/results/desk-research.md` | 1, 2 | Done |
+| 10 | Schedule | `docs/00-management/schedule.md` | 2 | Done |
+| 11 | Logbook and task log | `docs/00-management/` | 2, 6 | Done (updated each session) |
 | 12 | Individual contribution metrics | `docs/00-management/contribution-metrics.md` | 6 | Done (updated each session) |
 | 13 | Presentation video | `docs/05-presentation/` | 5 | Pending |
 
