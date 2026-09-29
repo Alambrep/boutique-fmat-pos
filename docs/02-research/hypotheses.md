@@ -37,7 +37,7 @@ Status values: `Unvalidated` → `Validated` / `Refuted` / `Partially validated`
 | ID | We believe that… | Right if… | Wrong if… | Conf. | Risk | Validation | Status |
 |---|---|---|---|---|---|---|---|
 | H-02 | The sales device is a low- or mid-range Android phone, possibly owned by the seller. | Device checklist shows Android phones with limited storage/RAM; some are personal. | Points have dedicated institutional devices (tablets, PCs) or high-end phones. | Medium | High | V-05, V-04 | Unvalidated |
-| H-03 | Connectivity at the points of sale is intermittent or unavailable at times. | Connectivity tests at each point show drops or no signal at some times. | Stable Wi-Fi or data is available at every point during sales hours. | Medium | High | V-05, V-01 | Unvalidated |
+| H-03 | Connectivity at the points of sale is intermittent or unavailable at times. | Connectivity tests at each point show drops or no signal at some times. | Stable Wi-Fi or data is available at every point during sales hours. | Medium | High | V-05, V-01 | Unvalidated — **challenged for the FMAT point** (see §6) |
 | H-05 | Sales peak at specific times (start of semester, events, graduations), with queues and time pressure. | Sellers and records identify peak periods with queues. | Sales are spread evenly with no queues. | Medium | Medium | V-02, V-06 | Unvalidated |
 | H-06 | The seller works with interruptions and sometimes with only one free hand. | Observation shows sellers handling products, cash or other duties while charging. | Sellers work at a fixed counter with both hands free. | Low | Medium | V-01 | Unvalidated |
 
@@ -89,3 +89,11 @@ Hypotheses with **high risk and low or medium confidence** are validated first i
 | H-14 | P-03 | S-02 | — |
 
 `V-xx` activities are described in the [validation plan](validation-plan.md).
+
+## 6. Evidence log
+
+Every piece of evidence about a hypothesis is recorded here with its type. Only **systematic** evidence (from a `V-xx` activity) can change a hypothesis to *Validated* or *Refuted*.
+
+| Date | Hypothesis | Evidence | Type | Effect |
+|---|---|---|---|---|
+| 2026-09-28 | H-03 | The author, a student at FMAT, reports that institutional Wi-Fi covers the whole faculty and that the boutique point is in the middle of the faculty; the author's own mobile data (Telcel) has signal there. Stability during sales hours was not measured; other carriers were not checked. The Sociales and CDU points were not observed. The FMAT point is assumed to be the Matemáticas warehouse (Q-03). | Author's prior knowledge (informal, not systematic) | H-03 is **challenged for the FMAT point** and remains unvalidated for Sociales and CDU. Offline operation stays a requirement regardless (`PRJ-02`). Systematic check planned in V-05. |
