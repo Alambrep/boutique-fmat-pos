@@ -68,6 +68,15 @@
 | R28 | Clip. *Clip Total 3 — Punto de venta móvil con inventario.* https://shop.clip.mx/products/clip-total | Dedicated terminal with inventory control and built-in thermal printer; no multi-branch management mentioned. | "inventario" |
 | R29 | Square Support Center. *Accept payment cards with Square — international availability.* https://squareup.com/help/us/en/article/4956-international-availability | Card acceptance available in eight countries; Mexico is not among them. | "currently available" |
 
+## Research methods
+
+| ID | Reference | Supports | Where to look |
+|---|---|---|---|
+| R30 | Flaherty, K. (2020). *Contextual Inquiry: Inspire Design by Observing and Interviewing Users in Their Context.* Nielsen Norman Group. https://www.nngroup.com/articles/contextual-inquiry/ | Observing and interviewing users while they do their work in their own environment (V-01). | "master" |
+| R31 | Nielsen, J. (2000). *Why You Only Need to Test with 5 Users.* Nielsen Norman Group. https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/ | Small usability tests of about 5 users, repeated iteratively; separate smaller groups when user types differ (V-07). | "5 users" |
+| R32 | Krause, R., & Pernice, K. (2024). *Affinity Diagramming for Sorting UX Findings and Ideas.* Nielsen Norman Group. https://www.nngroup.com/articles/affinity-diagram/ | Clustering research observations into themes to analyze findings. | "clusters" |
+| R33 | Braun, V., & Clarke, V. (2006). Using thematic analysis in psychology. *Qualitative Research in Psychology, 3*(2), 77–101. https://doi.org/10.1191/1478088706qp063oa | Thematic analysis of qualitative data. | Bibliographic record |
+
 ## Still pending
 
 - **Commercial POS comparison:** Shopify POS multi-store and cost, and Clip offline support for specific products, were not reviewed.
