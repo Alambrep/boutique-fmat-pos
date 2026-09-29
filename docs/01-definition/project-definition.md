@@ -12,7 +12,7 @@
 
 ## 1. Problem
 
-The FMAT-UADY Boutique sells institutional merchandise (clothing and items) across **three warehouses or points of sale** (CDU, Sociales and Matemáticas) `[CR-08]`. It has **four user profiles** with different permissions `[CR-01…CR-04]` and three payment methods, one of them internal to the university (Interuady) `[CR-12]`.
+The FMAT-UADY Boutique sells institutional merchandise (clothing and items) and keeps stock in **three warehouses** (CDU, Sociales and Matemáticas) `[CR-08]`; this document assumes each warehouse is also a point of sale `[H-15, Q-13]`. It has **four user profiles** with different permissions `[CR-01…CR-04]` and three payment methods, one of them internal to the university (Interuady) `[CR-12]`.
 
 The client needs a system that:
 
@@ -46,11 +46,12 @@ The rubric asks for arguments and evidence that the issue is a social one. There
 
 ### 2.1 Digital inclusion of people with low technology skills
 
-The client explicitly requires the system to be usable by "someone with limited technology skills", using a hot dog vendor as an example `[PRJ-03]`. This makes the project more than an internal system: it is a design case for **users who are usually left out** of digital management tools.
+The client explicitly requires the system to be usable by "someone with limited technology skills", using a hot dog vendor as an example `[PRJ-03]`. This makes the project a design case for users with low digital skills, not only an internal system.
 
-- If the design works for the boutique's seller `[H-01]`, the same patterns apply to **micro-businesses with limited resources and skills**, operating on modest phones `[H-02]` with unreliable connectivity `[H-03]`.
-- **Evidence of the gap.** According to INEGI's Economic Census 2024, only **22.3%** of micro establishments in Mexico used computers and **23.5%** used the internet `[R21]`. Micro-businesses — the group the client's hot dog vendor example points to — are largely outside digital management tools.
-- **Evidence that the phone is the right channel.** In 2025, **86.1%** of the population aged 6+ used the internet and **97.0%** of cell phone users used a smartphone `[R20]`. Access to a smartphone is widespread; what is missing is tools designed for people with low digital skills. This supports a mobile-first design `[PRJ-01]` focused on simplicity `[PRJ-03]`.
+- If the design works for the boutique's seller `[H-01]`, its interaction patterns could be reused by other small points of sale with modest phones `[H-02]` and unreliable connectivity `[H-03]`. This transfer is an argument, not a result; this project does not evaluate it.
+- **Evidence of a digital gap in small businesses.** According to INEGI's Economic Census 2024, only **22.3%** of micro establishments used computers and **23.5%** used the internet `[R21]`.
+- **Evidence that the phone is the available channel.** In 2025, **86.1%** of the population aged 6+ used the internet and **97.0%** of cell phone users used a smartphone `[R20]`.
+- **Interpretation, not a finding.** Together, these figures suggest that smartphones are common while digital management tools are not. They do not measure digital skills, and they describe people and establishments separately, so they cannot explain *why* micro establishments do not use digital tools. That the obstacle is skills and the fit of the tools is a hypothesis `[H-01]`; it motivates a mobile-first `[PRJ-01]`, simplicity-first `[PRJ-03]` design.
 - 🔎 Yucatán-specific figures are still pending (see §6).
 
 ### 2.2 Responsible management of a public institution's resources
@@ -59,23 +60,23 @@ UADY is a public university. The boutique handles inventory and payments, includ
 
 ### 2.3 Personal data protection
 
-Interuady payments require recording people's names (the C.P. responsible for the payment and the requester) `[CR-13]`, and those notes are visible to all users `[CR-14]`. A system running on phones, possibly personal ones `[H-02]`, and offline `[PRJ-02]` stores personal data on devices outside institutional control. Designing this correctly is a legal and ethical responsibility, not only a technical one (see §4.2, challenge 4).
+Interuady payments require recording who is responsible for the payment and who requested it `[CR-13]`; if these fields hold people's names (the meaning of "C.P." is still open, Q-04), they are personal data, and those notes are visible to all users `[CR-14]`. A system running on phones, possibly personal ones `[H-02]`, and offline `[PRJ-02]` stores personal data on devices outside institutional control. Designing this correctly is a legal and ethical responsibility, not only a technical one (see §4.2, challenge 4).
 
 ---
 
 ## 3. Innovation
 
-**Honest position:** the innovation is not inventing a point of sale. A review of commercial products (§3.2) shows that **offline sales and multi-store stock already exist** in free tools. The differentiation lies in **the institutional flow no product covers**, in **showing stock and working fully offline on the seller's phone**, and in **a design approach centered on a user with low digital skills**.
+**Honest position:** the innovation is not inventing a point of sale. A review of commercial products (§3.2) shows that **offline sales and multi-store stock already exist** in free tools. The differentiators are **the institutional flow no reviewed product documents (D1)**, **full offline operation including local stock (D3)** and **optional low-cost hardware (D4)**. D2 and D5 are design approaches to be tested, not claimed differentiators.
 
 ### 3.1 Proposed differentiators
 
 | # | Differentiator | Evidence from §3.2 | Origin |
 |---|---|---|---|
 | D1 | **Institutional Interuady → accounts receivable flow**: a payment method with three **mandatory** fields that automatically creates a receivable note visible to all profiles. | The reviewed products allow custom *named* payment types for tracking `[R25, R27]`, but their documentation shows no mandatory fields per payment type nor automatic receivables. | CR-12…CR-14 |
-| D2 | **Image-driven selling**, not text-driven: the seller recognizes the product by its photo and confirms. Text is secondary. | Not evaluated in the reviewed products; to be tested with users (V-07). | CR-10, PRJ-03, H-01 |
+| D2 | **Image-first selling** as the only required path for the seller: recognize, tap, confirm. | The client already requires photos on the sales screen `[CR-10]`, and image display was not evaluated in the reviewed products, so this is **not claimed as a differentiator**; it is a design approach to be tested with low-skill users (V-07). | CR-10, PRJ-03, H-01 |
 | D3 | **Full offline operation, including local stock**, with a single catalog publisher (CDU). Satellite warehouses only generate sales, which reduces synchronization conflicts (see §4.2, challenge 1). | Loyverse sells offline but does not show stock levels or allow refunds offline `[R22]`. | PRJ-02, CR-09, CR-03, CR-04, CR-15 |
 | D4 | **Optional low-cost hardware**: barcode scanner and thermal printer as aids, not as prerequisites for selling. | Clip's all-in-one terminal integrates printer and inventory in dedicated hardware `[R28]`; this project targets phones already available. | CR-16, CR-17, PRJ-01 |
-| D5 | **Two interfaces for two skill levels**: full data entry for CDU `[H-07]` and a minimal sales interface for satellite points `[H-01]`, instead of one interface for everyone. | Not evaluated in the reviewed products. | CR-01…CR-04 |
+| D5 | **Interfaces split by skill level**: full data entry for CDU `[H-07]`, minimal sales flow for satellite points `[H-01]`. | Loyverse already separates a web Back Office from the POS app `[R22]`, so two interfaces are **not a differentiator by themselves**; what is proposed is splitting them by users' skill level and validating that split (V-07). | CR-01…CR-04 |
 
 ### 3.2 Comparison with existing solutions
 
@@ -83,7 +84,7 @@ Reviewed on 2026-09-28 using **official documentation only**. "Not documented" m
 
 | Criterion | Loyverse | Shopify POS | Clip (Total 3) | This project |
 |---|---|---|---|---|
-| Sells offline | ✔ Sales and shifts work offline; stock levels, refunds and card terminal payments do not `[R22]` | ✔ Cash and manual payments offline; cards need the offline payments feature `[R26]` | Not confirmed for a specific product (a Clip blog describes offline terminals in general terms) | ✔ All sales functions, including local stock `[PRJ-02]` |
+| Sells offline | ✔ Sales and shifts work offline; stock levels, refunds and card terminal payments do not `[R22]` | ✔ Cash and manual payments offline; cards need the offline payments feature `[R26]` | Not documented on the product page `[R28]` | ✔ All sales functions, including local stock `[PRJ-02]` |
 | Multiple warehouses with separate stock | ✔ Price and stock per store `[R23]` | Not reviewed | Not documented on the product page `[R28]` | ✔ Three warehouses `[CR-08]` |
 | Custom payment method | ✔ Custom named payment types `[R25]` | ✔ Custom payment methods for tracking `[R27]` | Not documented | ✔ Interuady `[CR-12]` |
 | Mandatory data for that payment method | Not documented | Not documented | Not documented | ✔ Three mandatory fields `[CR-13]` |
@@ -103,7 +104,7 @@ Reviewed on 2026-09-28 using **official documentation only**. "Not documented" m
 
 | Strengths | Weaknesses |
 |---|---|
-| Direct access to the client (the professor) to resolve questions `[Q-01…Q-12]`. | A single person: design, research, documentation and development compete for the same time. |
+| Direct access to the client (the professor) to resolve questions `[Q-01…Q-14]`. | A single person: design, research, documentation and development compete for the same time. |
 | Physical access to the context: the author studies at FMAT and can observe the boutique and its sellers. | No user data in delivery 1; all modeling rests on hypotheses. |
 | Software engineering training (requirements, architecture, version control). | No proven prior experience with point-of-sale hardware (scanner and thermal printer). |
 | Scope bounded by a client document with concrete fields and rules `[CR-01…CR-18]`. | Open client decisions (VAT, invoicing, transfers) may change the scope `[Q-05, Q-07]`. |
@@ -122,15 +123,17 @@ Reviewed on 2026-09-28 using **official documentation only**. "Not documented" m
 
 - Only CDU modifies the catalog `[CR-01, CR-09]`: there is **a single writer** for products and prices.
 - Social Sciences and Exact Sciences **only charge** `[CR-03, CR-04]`: they generate **sale events** that are appended, never edits to existing records.
-- Each sale is deducted from **its own warehouse** `[CR-15]`, so two warehouses never compete for the same stock.
+- Each sale is deducted from **its own warehouse** `[CR-15]`, so two warehouses never compete for the same stock, unless stock is transferred between them (Q-07).
 
 ```mermaid
 flowchart LR
   CDU["CDU<br/>catalog registration and editing"] -- "catalog and prices" --> S[("Server")]
   S -- "catalog" --> SOC["Sociales point<br/>sales only"]
   S -- "catalog" --> MAT["Matemáticas point<br/>sales only"]
+  S -- "catalog, stock, receivables" --> ADM["Central Administration<br/>query and occasional sales<br/>(stock source: Q-02)"]
   SOC -- "sale events<br/>(local queue when offline)" --> S
   MAT -- "sale events<br/>(local queue when offline)" --> S
+  ADM -- "sale events" --> S
 ```
 
 **Remaining risks:** (a) selling out-of-stock items when two devices sell from the **same** warehouse while offline (depends on Q-11); (b) selling at an outdated price.
@@ -141,7 +144,7 @@ flowchart LR
 
 **Problem.** Selling relies on photos `[CR-10]`, and photos are the heaviest resource in storage, memory and mobile data on a low-end phone `[H-02]`.
 
-**Approach.** Store compressed thumbnails for selling and the full photo only at CDU; load only the local warehouse's catalog, not all three; minimize animations. Measurable targets (startup time, time to complete a sale, maximum storage) will be defined as NFRs in section 4 and adjusted after measuring on a real device. **There are no figures yet; none will be invented.**
+**Approach.** Store compressed thumbnails for selling and the full photo only at CDU; load only the local warehouse's catalog, not all three; minimize animations. Tentative measurable targets are defined in the non-functional requirements (NFR-03, NFR-04, NFR-13…NFR-15) and will be calibrated after measuring on a real device (V-08).
 
 **Pending decision:** installable web app (PWA) or native Android app. Depends on Q-12 and on scanner and printer support (challenge 3).
 
