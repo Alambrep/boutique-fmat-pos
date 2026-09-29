@@ -1,6 +1,6 @@
 # Proto-personas
 
-> **Task:** T-04 · **Rubric criterion:** 2 · **Status:** draft for delivery 1
+> **Task:** T-04 · **Rubric criterion:** 3 · **Status:** draft for delivery 1
 >
 > ⚠️ **These are proto-personas, not research-based personas.** They are built from the client's requirements (`CR`, `PRJ`) and the author's unvalidated [hypotheses](../02-research/hypotheses.md) (`H`). Names, ages and personal details are **fictional** and exist only to make the profiles easier to reason about. Every attribute is traced to its origin. They will be revised or replaced after the validation in delivery 2.
 
@@ -19,6 +19,21 @@ Classification follows Cooper: a **primary** persona needs an interface of its o
 - **Walk-in buyer:** receives the receipt; benefits from a faster sale. `[CR-17, H-09]`
 - **Interuady requester and the C.P. responsible for the payment:** their personal data is recorded. `[CR-13, H-14]`
 - **Accounting:** defines the receipt and invoicing rules. `[CR-18, Q-05]`
+
+### User profiles
+
+Profile of each user class, before turning them into proto-personas. Everything not marked `CR` is an unvalidated hypothesis.
+
+| Attribute | Satellite seller → P-01 | CDU staff → P-02 | Central Administration → P-03 |
+|---|---|---|---|
+| Client profile and permissions | Social Sciences / Exact Sciences Campus: charge only `[CR-03, CR-04]` | CDU: modify, query, charge `[CR-01]` | Query and charge `[CR-02]` |
+| Main tasks | Sell, choose payment method, record Interuady data `[CR-10…CR-13]` | Register products, photos, barcodes, stock per warehouse `[CR-05…CR-09]` | Query stock and accounts receivable; occasional sales `[CR-02, CR-14]` |
+| Frequency of use | Daily, in bursts `[H-05]` | Daily, longer sessions `[H-07]` | Occasional `[H-11]` |
+| Digital skills | Basic or low `[H-01]` | Medium `[H-07]` | Not assumed yet |
+| Device | Low/mid-range Android, possibly personal `[H-02]` | Phone, possibly a computer `[H-02]` | Not assumed yet |
+| Connectivity | Intermittent (challenged at FMAT) `[H-03]` | Not assumed yet | Not assumed yet |
+| Work environment | Queues, interruptions, one free hand `[H-05, H-06]` | Warehouse, data entry `[H-07]` | Office `[H-11]` |
+| Training | Informal, rotating staff `[H-12]` | Not assumed yet | Not assumed yet |
 
 ## 2. P-01 — Satellite seller (primary)
 
