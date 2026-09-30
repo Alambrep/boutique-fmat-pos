@@ -20,7 +20,7 @@
 
 | Task | Activity | Artifact | Planned | Actual (commit dates) | Status |
 |---|---|---|---|---|---|
-| T-01 | Repository structure, README, client requirements | `README.md`, `client/` | 2026-09-28 | 2026-09-28 → 2026-09-29 | Done |
+| T-01 | Repository structure, README, client requirements | `README.md`, `client/` | 2026-09-28 | 2026-09-28 → 2026-09-30 | Done |
 | T-02 | Project definition (relevance, innovation, feasibility) | `docs/01-definition/project-definition.md` | 2026-09-28 | 2026-09-28 → 2026-09-29 | Done |
 | T-03 | User hypotheses | `docs/02-research/hypotheses.md` | 2026-09-28 | 2026-09-28 → 2026-09-29 | Done |
 | T-04 | Proto-personas | `docs/03-user-modeling/proto-personas.md` | 2026-09-28 | 2026-09-28 → 2026-09-29 | Done |
