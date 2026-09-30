@@ -1,11 +1,11 @@
 # Project definition
 
-> **Task:** T-02 · **Rubric criterion:** 1 · **Status:** draft for delivery 1
+> **Task:** T-02 · **Rubric criterion:** 1 · **Status:** final — delivery 1
 >
 > How to read this document: every statement carries its origin.
 > `CR-xx` / `PRJ-xx` = client or project requirement ([see](../../client/client-requirements.md)) ·
 > `H-xx` = unvalidated hypothesis ([see](../02-research/hypotheses.md)) ·
-> `Q-xx` = open question for the client · `[Rn]` = verified external source ([see](../references.md)) · 🔎 = data point still pending verification (see [§6](#6-data-to-verify)).
+> `Q-xx` = open question for the client · `[Rn]` = verified external source ([see](../references.md)) · [§6](#6-data-to-verify) lists the external data checked.
 > **No statement in this document is a research finding.**
 
 ---
@@ -42,21 +42,30 @@ These assumptions guide the design but are **not validated**. They are formalize
 
 ## 2. Social relevance
 
-The rubric asks for arguments and evidence that the issue is a social one. There are three arguments, ordered by strength.
+The rubric asks for arguments and evidence that the issue is a social one. The section starts with what the author knows first-hand, followed by three arguments ordered by strength.
+
+### 2.0 Context known to the author
+
+The author studies at FMAT. The following facts come from that direct knowledge, not from research, and are recorded so they can be checked in delivery 2 (see the [hypotheses evidence log](../02-research/hypotheses.md#6-evidence-log)):
+
+- The boutique's point at FMAT is located in the middle of the faculty.
+- The faculty's institutional Wi-Fi covers the whole faculty, and the author's own mobile data (Telcel) has signal at that point.
+
+The author has not yet observed who attends the point or how sales and stock are recorded; anything beyond the facts above remains a hypothesis (H-xx).
 
 ### 2.1 Digital inclusion of people with low technology skills
 
-The client explicitly requires the system to be usable by "someone with limited technology skills", using a hot dog vendor as an example `[PRJ-03]`. This makes the project a design case for users with low digital skills, not only an internal system.
+The client stated in person that the system must be usable by a person with limited technology skills, giving a hot dog vendor as an example `[PRJ-03]`. This makes the project a design case for users with low digital skills, not only an internal system.
 
 - If the design works for the boutique's seller `[H-01]`, its interaction patterns could be reused by other small points of sale with modest phones `[H-02]` and unreliable connectivity `[H-03]`. This transfer is an argument, not a result; this project does not evaluate it.
-- **Evidence of a digital gap in small businesses.** According to INEGI's Economic Census 2024, only **22.3%** of micro establishments used computers and **23.5%** used the internet `[R21]`.
+- **Evidence of a digital gap in small businesses.** According to INEGI's 2024 Economic Censuses (preliminary results), only **22.3%** of micro establishments used computers and **23.5%** used the internet `[R21]`.
 - **Evidence that the phone is the available channel.** In 2025, **86.1%** of the population aged 6+ used the internet and **97.0%** of cell phone users used a smartphone `[R20]`.
-- **Interpretation, not a finding.** Together, these figures suggest that smartphones are common while digital management tools are not. They do not measure digital skills, and they describe people and establishments separately, so they cannot explain *why* micro establishments do not use digital tools. That the obstacle is skills and the fit of the tools is a hypothesis `[H-01]`; it motivates a mobile-first `[PRJ-01]`, simplicity-first `[PRJ-03]` design.
-- 🔎 Yucatán-specific figures are still pending (see §6).
+- **How to read these figures.** They are an interpretation, not a finding: together, they suggest that smartphones are common while digital management tools are not. They do not measure digital skills, and they describe people and establishments separately, so they cannot explain *why* micro establishments do not use digital tools. That the obstacle is skills and the fit of the tools is a hypothesis `[H-01]`; it motivates a mobile-first `[PRJ-01]`, simplicity-first `[PRJ-03]` design.
+- **Scope of the evidence.** These are national figures; state-level figures for Yucatán are not reported in the text of the 2025 national report `[R20]` and were not included. They are not needed for the argument, which concerns the gap between phone availability and tool adoption, not its regional size.
 
 ### 2.2 Responsible management of a public institution's resources
 
-UADY is a public university. The boutique handles inventory and payments, including internal charges between university units (Interuady) `[CR-12…CR-14]`. Reliable stock records per warehouse `[CR-08, CR-15]` and visible accounts receivable `[CR-14]` support **traceability and accountability** over institutional assets. What makes the problem urgent is the assumption that there are currently inventory discrepancies `[H-04]` and incomplete collections `[H-08]`; this must be validated.
+UADY is a public university. The boutique handles inventory and payments, including internal charges between university units (Interuady) `[CR-12…CR-14]`. Reliable stock records per warehouse `[CR-08, CR-15]` and visible accounts receivable `[CR-14]` support **traceability and accountability** over institutional assets. This argument rests on the public nature of UADY and on the client's own requirements; no external source is cited for it. Its urgency depends on the assumption that there are currently stock discrepancies `[H-04]` and incomplete collections `[H-08]`, which V-04 and V-06 will test.
 
 ### 2.3 Personal data protection
 
@@ -66,7 +75,7 @@ Interuady payments require recording who is responsible for the payment and who 
 
 ## 3. Innovation
 
-**Honest position:** the innovation is not inventing a point of sale. A review of commercial products (§3.2) shows that **offline sales and multi-store stock already exist** in free tools. The differentiators are **the institutional flow no reviewed product documents (D1)**, **full offline operation including local stock (D3)** and **optional low-cost hardware (D4)**. D2 and D5 are design approaches to be tested, not claimed differentiators.
+**Positioning:** the innovation is not inventing a point of sale. A review of commercial products (§3.2) shows that **offline sales and multi-store stock already exist** in free tools. The differentiators are **the institutional flow no reviewed product documents (D1)**, **full offline operation including local stock (D3)** and **optional low-cost hardware (D4)**. D2 and D5 are design approaches to be tested, not claimed differentiators.
 
 ### 3.1 Proposed differentiators
 
@@ -80,21 +89,23 @@ Interuady payments require recording who is responsible for the payment and who 
 
 ### 3.2 Comparison with existing solutions
 
-Reviewed on 2026-09-28 using **official documentation only**. "Not documented" means the feature was not found in the pages reviewed, not that it does not exist.
+**Baseline — current process.** How the boutique records sales and stock today is not documented by the client. This document assumes a manual or semi-manual process (notebook or spreadsheets) `[H-04]`; if that is confirmed (V-04, V-06), the relevant comparison for the seller is not Loyverse but a paper notebook, and the design must be at least as fast and forgiving as writing a line by hand. Whether other UADY units already use a POS is also unknown (Q-16).
+
+Reviewed on 2026-09-28 using **official documentation only**. Shopify POS was reviewed only for offline sales and payment methods. "Not documented" means the feature was not found in the pages reviewed, not that it does not exist.
 
 | Criterion | Loyverse | Shopify POS | Clip (Total 3) | This project |
 |---|---|---|---|---|
 | Sells offline | ✔ Sales and shifts work offline; stock levels, refunds and card terminal payments do not `[R22]` | ✔ Cash and manual payments offline; cards need the offline payments feature `[R26]` | Not documented on the product page `[R28]` | ✔ All sales functions, including local stock `[PRJ-02]` |
-| Multiple warehouses with separate stock | ✔ Price and stock per store `[R23]` | Not reviewed | Not documented on the product page `[R28]` | ✔ Three warehouses `[CR-08]` |
+| Multiple warehouses with separate stock | ✔ Price and stock per store `[R23]` | — (outside the review scope) | Not documented on the product page `[R28]` | ✔ Three warehouses `[CR-08]` |
 | Custom payment method | ✔ Custom named payment types `[R25]` | ✔ Custom payment methods for tracking `[R27]` | Not documented | ✔ Interuady `[CR-12]` |
 | Mandatory data for that payment method | Not documented | Not documented | Not documented | ✔ Three mandatory fields `[CR-13]` |
 | Automatic accounts receivable for that payment | Not documented | Not documented | Not documented | ✔ `[CR-14]` |
 | Hardware | Phone or tablet | Phone, tablet or POS hardware | Dedicated terminal with built-in printer `[R28]` | Low-end phone; scanner and printer optional `[PRJ-01, CR-16, CR-17]` |
-| Cost | Core POS free, including multi-store; paid add-ons per store (e.g. Advanced Inventory) `[R24]` | Not reviewed | Hardware purchase `[R28]` | No license (institutional development) |
+| Cost | Core POS free, including multi-store; paid add-ons per store (e.g. Advanced Inventory) `[R24]` | — (outside the review scope) | Hardware purchase `[R28]` | No license fee; development is part of this course project, and hosting and maintenance costs are still undefined (Q-15) |
 
 **Excluded:** Square — card payment acceptance is not available in Mexico `[R29]`.
 
-**Conclusion.** Loyverse is the strongest existing alternative and covers offline sales and multi-store stock for free. It does not document the institutional payment flow (D1) and limits offline work (D3). This comparison argues for building on a **differentiated scope** rather than on offline or multi-store alone, and suggests reviewing Loyverse's interaction patterns as a design reference in later deliveries.
+**Conclusion.** Loyverse is the strongest existing alternative and covers offline sales and multi-store stock for free. It does not document the institutional payment flow (D1) and limits offline work (D3). D1 rests on the absence of that feature in the reviewed documentation, not on proof that no product offers it. This comparison argues for building on a **differentiated scope** rather than on offline or multi-store alone, and suggests reviewing Loyverse's interaction patterns as a design reference in later deliveries.
 
 ---
 
@@ -104,8 +115,8 @@ Reviewed on 2026-09-28 using **official documentation only**. "Not documented" m
 
 | Strengths | Weaknesses |
 |---|---|
-| Direct access to the client (the professor) to resolve questions `[Q-01…Q-14]`. | A single person: design, research, documentation and development compete for the same time. |
-| Physical access to the context: the author studies at FMAT and can observe the boutique and its sellers. | No user data in delivery 1; all modeling rests on hypotheses. |
+| Direct access to the client (the professor) to resolve questions `[Q-01…Q-16]`. | A single person: design, research, documentation and development compete for the same time. |
+| Physical access to the context: the author studies at FMAT and can observe the boutique and its sellers. This access was not used in delivery 1 because of time constraints; it is planned systematically in delivery 2 with the observation guide (V-01). | No user data in delivery 1; all modeling rests on hypotheses. |
 | Software engineering training (requirements, architecture, version control). | No proven prior experience with point-of-sale hardware (scanner and thermal printer). |
 | Scope bounded by a client document with concrete fields and rules `[CR-01…CR-18]`. | Open client decisions (VAT, invoicing, transfers) may change the scope `[Q-05, Q-07]`. |
 
@@ -130,7 +141,7 @@ flowchart LR
   CDU["CDU<br/>catalog registration and editing"] -- "catalog and prices" --> S[("Server")]
   S -- "catalog" --> SOC["Sociales point<br/>sales only"]
   S -- "catalog" --> MAT["Matemáticas point<br/>sales only"]
-  S -- "catalog, stock, receivables" --> ADM["Central Administration<br/>query and occasional sales<br/>(stock source: Q-02)"]
+  S -- "catalog, stock, receivables" --> ADM["Central Administration<br/>query and occasional sales [H-11]<br/>(stock source: Q-02)"]
   SOC -- "sale events<br/>(local queue when offline)" --> S
   MAT -- "sale events<br/>(local queue when offline)" --> S
   ADM -- "sale events" --> S
@@ -181,8 +192,9 @@ The inventory table has 10 fields `[CR-08]`, which clashes with an interface for
 | Wrong user hypotheses (e.g. H-01, H-02) | Medium | High | Validate them first in delivery 2 through observation and interviews |
 | Client questions left unanswered (Q-05, Q-07) | Medium | Medium | Design receipts and transfers as isolated modules; decide based on explicit hypotheses |
 | No scanner or printer available for testing | Medium | Medium | Simulate with a keyboard (scanner) and an on-screen or PDF receipt (printer) |
-| Not enough time (individual work) | High | High | Minimum scope per delivery; schedule with slack; tracking through issues |
+| Not enough time (individual work) | High | High | Minimum scope per delivery (see the [schedule](../00-management/schedule.md#1-project-roadmap)); tracking through issues |
 | Unforeseen synchronization conflicts | Low | Medium | Append-only sale event model; tests with disconnected devices |
+| No server or hosting defined for synchronization | Medium | High | Ask the client (Q-15); design the sync layer so the first prototype can run against a local or free-tier backend |
 
 ---
 
@@ -201,15 +213,15 @@ The inventory table has 10 fields `[CR-08]`, which clashes with an interface for
 
 ## 6. Data to verify
 
-Working list for the author. Verified items cite their source in [`references.md`](../references.md); pending items keep the 🔎 in the text.
+Record of the external data checked for this document. Verified items cite their source in [`references.md`](../references.md); nothing is left pending in the delivered version.
 
 | # | What to verify | Status | Source | Used in |
 |---|---|---|---|---|
 | 1 | Use of digital tools by micro-businesses in Mexico | ✔ Verified | R21 | §2.1 |
-| 2 | Smartphone and internet use | ✔ National figures verified · 🔎 Yucatán pending (INEGI state tabulations) | R20 | §2.1 |
-| 3 | Cash versus digital payment use | Optional, not checked | INEGI/CNBV — ENIF | §2.1 |
+| 2 | Smartphone and internet use | ✔ National figures verified · Yucatán figures out of scope (see §2.1) | R20 | §2.1 |
+| 3 | Cash versus digital payment use | Not used in the argument | — | — |
 | 4 | Whether commercial POS products sell offline, handle multiple warehouses or custom payment methods | ✔ Verified for Loyverse, Shopify POS, Clip and Square (official docs) | R22–R29 | §3.1, §3.2 |
-| 5 | Whether other UADY units already use a POS or similar system | 🔎 Pending | Ask the client | §3.2 |
+| 5 | Whether other UADY units already use a POS or similar system | Converted into open question Q-16 | Client | §3.2 |
 | 6 | How barcode scanners connect (keyboard mode) | ✔ Verified | R13 | §4.2, challenge 3 |
 | 7 | Web Bluetooth support by browser | ✔ Verified | R14, R15 | §4.2, challenge 3 |
 | 8 | Obligations when handling card data | ✔ Verified | R16 | §4.2, challenge 4 |
@@ -220,5 +232,5 @@ Working list for the author. Verified items cite their source in [`references.md
 ## Traceability of this document
 
 - **Requirements cited:** CR-01…CR-18, PRJ-01…PRJ-03.
-- **Hypotheses introduced:** H-01…H-10 (detailed and prioritized in [`hypotheses.md`](../02-research/hypotheses.md)).
-- **Open questions cited:** Q-01, Q-04…Q-07, Q-09…Q-12.
+- **Hypotheses cited:** H-01…H-11, H-15 (detailed and prioritized in [`hypotheses.md`](../02-research/hypotheses.md)).
+- **Open questions cited:** all (Q-01…Q-16) in §4.1; individually: Q-02, Q-04, Q-05, Q-06, Q-07, Q-09, Q-10, Q-11, Q-12, Q-13, Q-15, Q-16.
