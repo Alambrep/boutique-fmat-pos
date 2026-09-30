@@ -1,6 +1,6 @@
 # Instrument — Seller interview guide (V-02)
 
-> Semi-structured interview, 20–30 min. Administered in Spanish; this is the reference version. Hypotheses: H-01, H-05, H-12.
+> Semi-structured interview, 20–30 min. Administered in Spanish; this English text is the reference version, and the Spanish version used in the field will be added to this folder before fieldwork (delivery 2). Hypotheses: H-01, H-02, H-05, H-06, H-08, H-12, H-14.
 
 ## Consent script
 Same as the [observation guide](observation-guide.md). Participant code: `SEL-__` · Point: ______ · Date: ______
@@ -18,10 +18,10 @@ Same as the [observation guide](observation-guide.md). Participant code: `SEL-__
 ## C. The sales process (H-05, H-06)
 7. Walk me through the last sale you made, step by step.
 8. When are the busiest times? What happens when there is a queue?
-9. What goes wrong most often when selling or recording a sale?
+9. Tell me about a recent sale that did not go as expected. What happened?
 
 ## D. Interuady (H-08, H-14)
-10. How often do you receive Interuady payments? What data do you record? Has any been left incomplete?
+10. How often do you receive Interuady payments? What data do you record? What happens when some of that data is missing?
 
 ## E. Closing
 11. If you could change one thing about how sales are recorded, what would it be?
