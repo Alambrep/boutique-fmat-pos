@@ -16,7 +16,7 @@
 | Traceable items | 18 CR, 3 PRJ, 16 Q, 17 H, 3 P, 8 S, 32 DI, 39 FR, 6 deferred FR, 28 NFR, 8 V, 34 references |
 | Commits co-authored with the AI assistant | 61 of 61 |
 | Rework commits (`fix`) | 18 of 61 |
-| Hours logged | **≈ 4.6 h** (4 sessions, approximate; see the [logbook](logbook/)) |
+| Hours logged | **≈ 4.7 h** (4 sessions, approximate: 2.3 h on 2026-09-28, 2.4 h on 2026-09-29 so far; see the [logbook](logbook/)) |
 
 ### Commits per task
 
@@ -26,7 +26,7 @@
 
 A commit can reference more than one task.
 
-**How to read these figures.** About four and a half hours of logged work produced roughly 25,000 words of documentation because drafting was done with an AI assistant, as declared in [README §12](../../README.md#12-ai-assistance-statement). The volume metrics above therefore describe the *project's* output, not the author's typing. The author's individual contribution is measured in §2 and documented session by session in the logbook. The `fix` commits are rework after reviews, which is part of the iterative process described in README §3.
+**How to read these figures.** About five hours of logged work produced roughly 25,000 words of documentation because drafting was done with an AI assistant, as declared in [README §12](../../README.md#12-ai-assistance-statement). The volume metrics above therefore describe the *project's* output, not the author's typing. The author's individual contribution is measured in §2 and documented session by session in the logbook. The `fix` commits are rework after reviews, which is part of the iterative process described in README §3.
 
 ## 2. Author-attributable metrics
 
@@ -36,7 +36,7 @@ Commits and lines measure the joint output of the author and the AI assistant (e
 |---|---|---|
 | Direction decisions | **14** | Rows of the decisions table (§3) |
 | Facts supplied by the author that no document contained | **5**: the date and setting of the project brief (2026-08-14, in person); location and connectivity of the boutique's point at FMAT; the original client document and rubric; the presentation format (video); the delivery date (2026-09-30) | Recorded in the [meeting log](meetings.md), the [hypotheses evidence log](../02-research/hypotheses.md#6-evidence-log), `client/originals/`, `docs/05-presentation/` and the [schedule](schedule.md) |
-| Reviews of the whole repository requested by the author | **2** (2026-09-29 17:39 and 18:33, the second in eight steps) | [Logbook 2026-09-29](logbook/2026-09-29.md) |
+| Reviews of the whole repository requested by the author | **2** (2026-09-29 17:39 and 18:33, both by Claude in separate conversations; the second in nine steps) | [Logbook 2026-09-29](logbook/2026-09-29.md) |
 | Review proposals not applied or adapted after checking them against the files and sources | **12** | Listed with their reasons in the [logbook](logbook/2026-09-29.md); the checks were done with the AI assistant and the author received a summary after each step |
 
 ## 3. Author decisions
