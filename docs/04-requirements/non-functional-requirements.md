@@ -17,6 +17,7 @@
 | NFR-05 | Memorability | A seller who has not used the app for two weeks completes a sale without help. | ≥ 80% of returning participants succeed. | Follow-up usability test (V-07) | H-12 |
 | NFR-06 | Errors — prevention | An Interuady sale cannot be confirmed with missing mandatory fields. | 0 incomplete Interuady notes. | Functional test | CR-13, H-08 |
 | NFR-07 | Errors — recovery | Error messages explain what happened and what to do next, in plain language. | 100% of error messages include a suggested action. | Heuristic inspection | PRJ-03, H-01 |
+| NFR-25 | Learnability | No mandatory tutorial: help appears as contextual hints, once, at the moment the user needs them. | 0 mandatory onboarding screens; each hint shown at most once per user. | Design inspection; usability test (V-07) | PRJ-03, H-01, H-12 |
 | NFR-08 | Satisfaction | Sellers rate the app as easy to use. | SUS score ≥ 68, the average SUS score across published evaluations `[R5]`. | SUS questionnaire after the usability test (V-07) | PRJ-03 |
 
 ## 2. Accessibility and ergonomics
@@ -48,7 +49,7 @@
 
 | ID | Requirement | Tentative target | How it is measured | Origin |
 |---|---|---|---|---|
-| NFR-19 | The session locks after a period of inactivity; unlocking is a single step. | Lock after ≤ 5 min of inactivity (to confirm with the client, Q-11). | Functional test | CR-01…CR-04, H-02, Q-11 |
+| NFR-19 | The session locks after a period of inactivity; unlocking is a single step. | Lock after ≤ 5 min of inactivity (to confirm with the client, Q-11); after unlocking, the app returns to the sales screen. | Functional test | CR-01…CR-04, H-02, H-12, Q-11 |
 | NFR-20 | Personal data from Interuady notes stored on a device is encrypted at rest. Devices of charge-only profiles keep only each note's number, unit, amount, date and status; personal details are stored only on devices of profiles with query permission (depends on FR-26). | 100% of locally stored personal data encrypted; 0 personal-detail fields on charge-only devices. | Local storage inspection (V-08) | CR-13, CR-14, PRJ-02, H-02 |
 | NFR-21 | The system never stores card data, to stay outside the scope of PCI DSS `[R16]`. | 0 card data fields in the data model. | Data model review | CR-12, H-10 |
 | NFR-22 | Interuady data handling follows the applicable personal data law for public-sector entities, including a privacy notice. | Compliance checklist based on the current federal and state laws for obligated subjects `[R17, R18]`. | Legal checklist | CR-13, CR-14 |
