@@ -171,10 +171,10 @@ boutique-fmat-pos/
 ├── design/
 │   └── README.md                            # links to Figma, sketches and wireframes
 ├── src/
-│   └── README.md
+│   └── README.md                            # reserved for later deliveries
 └── tools/
     ├── metrics.py                           # computes the contribution metrics from git and the artifacts
-    └── trace.py                             # regenerates the traceability views and checks coverage                            # reserved for later deliveries
+    └── trace.py                             # regenerates the traceability views and checks coverage
 ```
 
 ## 7. Delivery 1 deliverables
