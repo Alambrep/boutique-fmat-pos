@@ -45,7 +45,7 @@ Profile of each user class, before turning them into proto-personas. Everything 
 | Digital skills | Basic: uses the phone for calls and messaging, but is uneasy with unfamiliar apps and technical terms. | H-01, PRJ-03 |
 | Continuity | May cover the point in shifts with other people; learned the job by watching someone else. | H-12 |
 | Device | Low- or mid-range Android phone, possibly his own; limited storage. | H-02, PRJ-01 |
-| Connectivity | Unreliable signal or Wi-Fi at the point of sale (challenged for the FMAT point; see the hypotheses evidence log). | H-03, PRJ-02 |
+| Connectivity | Unreliable signal or Wi-Fi at the point of sale (challenged for the Matemáticas point (FMAT), assumed to correspond to the Exact Sciences Campus profile, Q-03; see the hypotheses evidence log). | H-03, PRJ-02 |
 | Work conditions | Busy periods with a queue; often holding a product or cash while charging. | H-05, H-06 |
 | Typical sale | One to three items to students or staff, paid in cash or card; occasionally an Interuady purchase. | H-09, H-14, CR-12 |
 

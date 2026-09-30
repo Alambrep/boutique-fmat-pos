@@ -48,7 +48,7 @@ The rubric asks for arguments and evidence that the issue is a social one. The s
 
 The author studies at FMAT. The following facts come from that direct knowledge, not from research, and are recorded so they can be checked in delivery 2 (see the [hypotheses evidence log](../02-research/hypotheses.md#6-evidence-log)):
 
-- The boutique's point at FMAT is located in the middle of the faculty.
+- The boutique's point at FMAT (assumed to be the Matemáticas point, corresponding to the Exact Sciences Campus profile, Q-03) is located in the middle of the faculty.
 - The faculty's institutional Wi-Fi covers the whole faculty, and the author's own mobile data (Telcel) has signal at that point.
 
 The author has not yet observed who attends the point or how sales and stock are recorded; anything beyond the facts above remains a hypothesis (H-xx).

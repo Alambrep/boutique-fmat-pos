@@ -34,7 +34,7 @@
 
 | # | Step | Task |
 |---|---|---|
-| 1 | Optional: connectivity check at the FMAT point with the [checklist](../02-research/instruments/device-connectivity-checklist.md) | T-09 (V-05) |
+| 1 | Optional: connectivity check at the Matemáticas point (FMAT) with the [checklist](../02-research/instruments/device-connectivity-checklist.md) | T-09 (V-05) |
 | 2 | Record the video and add it (or its link) to `docs/05-presentation/` | T-13 |
 | 3 | Update logbook and contribution metrics with the final session | T-11, T-12 |
 | 4 | Open a Pull Request `first-delivery` → `main`, merge it and tag `delivery-1` | T-01 |

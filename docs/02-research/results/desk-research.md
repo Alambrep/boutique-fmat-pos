@@ -18,8 +18,8 @@
 
 | Result | Sources | Implication |
 |---|---|---|
-| In 2025, 86.1% of people aged 6+ used the internet and 97.0% of cell phone users used a smartphone. | R20 | The phone is the right channel (PRJ-01). |
-| Only 22.3% of micro establishments used computers and 23.5% used the internet (Economic Census 2024). | R21 | Micro establishments make little use of digital tools. The data does not measure skills; that the cause is skills and tool fit is H-01, to be validated. |
+| In 2025, 86.1% of people aged 6+ used the internet and 97.0% of cell phone users used a smartphone. | R20 | Supports a mobile-first design (PRJ-01); whether the sellers themselves have suitable phones is H-02. |
+| Only 22.3% of micro establishments used computers and 23.5% used the internet (2024 Economic Censuses, preliminary results). | R21 | Micro establishments make little use of digital tools. The data does not measure skills; that the cause is skills and tool fit is H-01, to be validated. |
 
 ## DR-3 — Legal framework for personal data
 
@@ -34,7 +34,7 @@
 
 | Result | Sources | Implication |
 |---|---|---|
-| Keyboard-wedge scanners send barcodes as keystrokes. | R13 | Scanner support needs no special integration (FR-15, NFR-23). |
+| Keyboard-wedge scanners send barcodes as keystrokes. | R13 | Scanner support needs little integration: the input field must keep focus so the scanned code lands in it (FR-15, NFR-23). |
 | Web Bluetooth is experimental and not Baseline; it works in Chrome for Android but iOS is not listed. | R14, R15 | Printing from a PWA is limited; input for the PWA-or-native decision (NFR-24). |
 | Local-first software keeps the primary data on the device and syncs later. | R12 | Architecture approach for offline operation (FR-27, FR-28). |
 
@@ -48,4 +48,4 @@
 
 | Hypothesis | Evidence | Status |
 |---|---|---|
-| H-03 | Author's prior knowledge: Wi-Fi covers the faculty and the author's mobile data has signal at the FMAT point. | Challenged for the FMAT point only; see the [evidence log](../hypotheses.md#6-evidence-log). |
+| H-03 | Author's prior knowledge: Wi-Fi covers the faculty and the author's mobile data has signal at the boutique's point at FMAT. | Challenged for the Matemáticas point (FMAT) only — assumed to correspond to the Exact Sciences Campus profile (Q-03); see the [evidence log](../hypotheses.md#6-evidence-log). |
