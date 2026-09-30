@@ -1,6 +1,6 @@
 # Rubric — Delivery 1 (20%)
 
-Transcribed from the original: [`originals/Rubric_1st_Delivery-HCI.pdf`](originals/Rubric_1st_Delivery-HCI.pdf).
+Transcribed from the original: [`originals/Rubric_1st_Delivery-HCI.pdf`](originals/Rubric_1st_Delivery-HCI.pdf). For links to every section, see the [rubric map](../RUBRIC-MAP.md).
 
 Scale: Missing (0) · Inadequate (1) · Poor (2) · Borderline (3) · Good (4) · Excellent (5)
 
