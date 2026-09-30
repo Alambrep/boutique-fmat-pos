@@ -12,7 +12,7 @@
 
 | Delivery | Branch | Focus | Due date | Status |
 |---|---|---|---|---|
-| 1 | `first-delivery` | Project definition, hypothesis-based user modeling (proto-personas), initial requirements, research plan | 2026-09-30 | In progress |
+| 1 | `first-delivery` | Project definition, hypothesis-based user modeling (proto-personas), initial requirements, research plan | 2026-09-30 | Delivered (tag `delivery-1`) |
 | 2 | `second-delivery` | User research (V-01…V-06), research-based personas, low-fidelity prototype, first usability test (V-07) | To be announced | Planned |
 | 3 | `third-delivery` | Iterated prototype, usability testing, technical tests (V-08) | To be announced | Planned |
 
@@ -30,23 +30,23 @@
 | T-08 | Traceability matrix | `docs/04-requirements/traceability-matrix.md` | 2026-09-28 | 2026-09-28 → 2026-09-29 | Done |
 | T-09 | Research and validation plan + instruments | `docs/02-research/` | 2026-09-28 | 2026-09-29 | Done |
 | T-10 | Schedule | `docs/00-management/schedule.md` | 2026-09-29 | 2026-09-29 | Done |
-| T-11 | Logbook and task log | `docs/00-management/` | Every session | Every session | Ongoing |
-| T-12 | Individual contribution metrics | `docs/00-management/contribution-metrics.md` | 2026-09-29 | 2026-09-29 | Done (updated at close) |
-| T-13 | Presentation video | `docs/05-presentation/` | 2026-09-29 | 2026-09-29 (folder); video pending | Pending |
+| T-11 | Logbook and task log | `docs/00-management/` | Every session | Every session | Done |
+| T-12 | Individual contribution metrics | `docs/00-management/contribution-metrics.md` | 2026-09-29 | 2026-09-29 | Done |
+| T-13 | Presentation video | `docs/05-presentation/` | 2026-09-29 | 2026-09-29 → 2026-09-30 | Done |
 
-## 3. Remaining steps for delivery 1 (due 2026-09-30)
+## 3. Closing steps for delivery 1 (due 2026-09-30)
 
-| # | Step | Task |
-|---|---|---|
-| 1 | Optional: connectivity check at the Matemáticas point (FMAT) with the [checklist](../02-research/instruments/device-connectivity-checklist.md) | T-09 (V-05) |
-| 2 | Record the video and add it (or its link) to `docs/05-presentation/` | T-13 |
-| 3 | Update logbook and contribution metrics with the final session | T-11, T-12 |
-| 4 | Open a Pull Request `first-delivery` → `main`, merge it and tag `delivery-1` | T-01 |
-| 5 | Submit the repository link | — |
+| # | Step | Task | Status |
+|---|---|---|---|
+| 1 | Optional: connectivity check at the Matemáticas point (FMAT) with the [checklist](../02-research/instruments/device-connectivity-checklist.md) | T-09 (V-05) | Moved to delivery 2 |
+| 2 | Record the video and add its link to `docs/05-presentation/` | T-13 | Done (2026-09-30) |
+| 3 | Update logbook and contribution metrics with the final session | T-11, T-12 | Done (2026-09-30) |
+| 4 | Merge `first-delivery` into `main` and tag `delivery-1` | T-01 | Done (2026-09-30) |
+| 5 | Submit the repository link | — | Author |
 
 ## 4. Timeline
 
-Delivery 1 was executed in work sessions (see the [logbook](logbook/)). The chart shows **sessions**, not task durations: several tasks were worked on in the same session, and commit times only mark when work was saved.
+Delivery 1 was executed in work sessions (see the [logbook](logbook/)). The time spent recording the video was not logged and is not shown. The chart shows **sessions**, not task durations: several tasks were worked on in the same session, and commit times only mark when work was saved.
 
 ```mermaid
 gantt
@@ -58,8 +58,9 @@ gantt
   S2 Definition, hypotheses, personas, scenarios, FR, NFR, sources (T-02 … T-08, T-11) :done, 2026-09-28 22:30, 2026-09-29 00:00
   section 2026-09-29
   S3 POS comparison, research plan, schedule, metrics (T-02, T-09 … T-12) :done, 2026-09-29 00:00, 2026-09-29 00:35
-  S4 Independent review and fixes across artifacts (T-01 … T-12) :active, 2026-09-29 17:39, 2026-09-29 19:00
-  S5 Presentation video (T-13) :active, 2026-09-29 19:00, 2026-09-29 21:00
+  S4 Two reviews and fixes across artifacts (T-01 … T-12) :done, 2026-09-29 17:39, 2026-09-29 19:25
+  section 2026-09-30
+  S5 Author's name, video link, closing (T-01, T-11 … T-13) :done, 2026-09-30 14:49, 2026-09-30 15:40
 ```
 
 ## 5. Delivery 2 — planned activities (dates to be set when announced)

@@ -58,7 +58,7 @@ Because the AI assistant co-authored every commit, the author's contribution is 
 | 2026-09-29 18:20 | Keep the existing repository mentions of the presentation video; do not rewrite history to remove them | No history rewrite |
 | 2026-09-29 18:33 | Request a step-by-step audit of every artifact against the rubric and the client document, and review each step's outcome before moving on | Audit steps 1–8 applied selectively (see [logbook](logbook/2026-09-29.md)) |
 | 2026-09-29 18:57 | Correct the delivery date (2026-09-30) and use the extra time to finish the audit before recording the video | Due date corrected in README, schedule and milestone |
-| 2026-09-29 19:01 | Keep `main` unchanged until everything is ready, then merge `first-delivery` once | Closing order in the [schedule](schedule.md#3-remaining-steps-for-delivery-1-due-2026-09-30) |
+| 2026-09-29 19:01 | Keep `main` unchanged until everything is ready, then merge `first-delivery` once | Closing order in the [schedule](schedule.md#3-closing-steps-for-delivery-1-due-2026-09-30) |
 
 ## 4. How to recompute
 
