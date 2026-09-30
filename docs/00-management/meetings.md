@@ -12,4 +12,5 @@
 
 | Planned for | With | Purpose | Instrument |
 |---|---|---|---|
+| After delivery 1 | Professor (client) | Send open questions Q-01…Q-16 in writing | Email with [`client-requirements.md`](../../client/client-requirements.md#open-questions-for-the-client) |
 | Delivery 2, week 1 | Professor (client) | Answer open questions Q-01…Q-16 | [Staff and client interview guide](../02-research/instruments/staff-interview-guide.md) |

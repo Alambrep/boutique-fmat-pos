@@ -12,7 +12,7 @@
 
 | Delivery | Branch | Focus | Due date | Status |
 |---|---|---|---|---|
-| 1 | `first-delivery` | Project definition, hypothesis-based user modeling (proto-personas), initial requirements, research plan | 2026-09-29 | In progress |
+| 1 | `first-delivery` | Project definition, hypothesis-based user modeling (proto-personas), initial requirements, research plan | 2026-09-30 | In progress |
 | 2 | `second-delivery` | User research (V-01…V-06), research-based personas, low-fidelity prototype, first usability test (V-07) | To be announced | Planned |
 | 3 | `third-delivery` | Iterated prototype, usability testing, technical tests (V-08) | To be announced | Planned |
 
@@ -34,7 +34,7 @@
 | T-12 | Individual contribution metrics | `docs/00-management/contribution-metrics.md` | 2026-09-29 | 2026-09-29 | Done (updated at close) |
 | T-13 | Presentation video | `docs/05-presentation/` | 2026-09-29 | 2026-09-29 (folder); video pending | Pending |
 
-## 3. Remaining steps for delivery 1 (2026-09-29)
+## 3. Remaining steps for delivery 1 (due 2026-09-30)
 
 | # | Step | Task |
 |---|---|---|

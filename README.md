@@ -7,7 +7,7 @@
 |---|---|
 | **Author** | Alancete (individual work) |
 | **Client** | Course professor (Boutique FMAT-UADY) |
-| **Current delivery** | 1 of 3 — due 2026-09-29 |
+| **Current delivery** | 1 of 3 — due 2026-09-30 |
 | **Branch** | [`first-delivery`](https://github.com/Alambrep/boutique-fmat-pos/tree/first-delivery) |
 | **Status** | In progress |
 | **Design (Figma)** | No design artifacts in delivery 1; the low-fidelity prototype starts in delivery 2 |
@@ -173,6 +173,7 @@ boutique-fmat-pos/
 ├── src/
 │   └── README.md
 └── tools/
+    ├── metrics.py                           # computes the contribution metrics from git and the artifacts
     └── trace.py                             # regenerates the traceability views and checks coverage                            # reserved for later deliveries
 ```
 
