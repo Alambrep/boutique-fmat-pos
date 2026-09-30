@@ -2,30 +2,44 @@
 
 > **Task:** T-12 · **Rubric criterion:** 6 · **Contributor:** Alancete (individual project — 100% of the tasks are assigned to the author)
 >
-> Metrics are computed from **objective sources**: git history, GitHub issues and the logbook. Snapshot taken at commit `303289b` (2026-09-29 17:56, UTC−6), before the commit that updates this file; it is recomputed with the commands in §3 at the close of each delivery.
+> Metrics are computed from **objective sources**: git history, GitHub issues and the logbook. §1 is produced by [`tools/metrics.py`](../../tools/metrics.py); snapshot at commit `ac12d66` (2026-09-29 19:06, UTC−6). Figures exclude the commit that updates this file; they are recomputed at the close of each delivery.
 
 ## 1. Quantitative metrics
 
-| Metric | Value | Source |
-|---|---|---|
-| Tasks completed | **11 of 13** (T-11 stays open until the delivery closes; T-13 is the video) | GitHub issues, milestone "Delivery 1" |
-| Commits | **35** (13 on 2026-09-28, 22 on 2026-09-29) | `git log` |
-| Commits by type | `docs`: 25 · `fix`: 7 · `chore`: 3 | `git log` |
-| Lines added / removed | **+1,937 / −224** | `git log --numstat` |
-| Artifacts delivered | 12 of 13 deliverables + desk research results and meeting log (see [README §7](../../README.md#7-delivery-1-deliverables)) | Repository |
-| Traceable items produced | 18 CR, 3 PRJ, 14 Q, 16 H, 3 P, 7 S, 24 DI, 34 FR, 6 deferred FR, 24 NFR, 8 V, 34 references | Artifacts |
-| Hours logged | **≈ 3.2 h** (4 sessions, approximate: 2.3 h on 2026-09-28, 0.9 h on 2026-09-29 so far) | [Logbook](logbook/) |
-| Commits co-authored with the AI assistant | 35 of 35 | `Co-Authored-By` lines (see [README §12](../../README.md#12-ai-assistance-statement)) |
+| Metric | Value |
+|---|---|
+| Tasks completed | **11 of 13** (T-11 stays open until the delivery closes; T-13 is the video) |
+| Commits | **61** (13 on 2026-09-28, 48 on 2026-09-29) |
+| Commits by type | `docs`: 38 · `fix`: 18 · `chore`: 4 · `feat`: 1 |
+| Lines added / removed | **+2,652 / −553** |
+| Words in Markdown documents | ≈ 24,900 |
+| Traceable items | 18 CR, 3 PRJ, 16 Q, 17 H, 3 P, 8 S, 32 DI, 39 FR, 6 deferred FR, 28 NFR, 8 V, 34 references |
+| Commits co-authored with the AI assistant | 61 of 61 |
+| Rework commits (`fix`) | 18 of 61 |
+| Hours logged | **≈ 4.6 h** (4 sessions, approximate; see the [logbook](logbook/)) |
 
 ### Commits per task
 
 | Task | T-01 | T-02 | T-03 | T-04 | T-05 | T-06 | T-07 | T-08 | T-09 | T-10 | T-11 | T-12 | T-13 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Commits referencing it | 5 | 6 | 4 | 4 | 2 | 3 | 3 | 2 | 4 | 1 | 3 | 1 | 1 |
+| Commits referencing it | 8 | 7 | 7 | 6 | 4 | 6 | 6 | 6 | 7 | 2 | 5 | 3 | 1 |
 
 A commit can reference more than one task.
 
-## 2. Author decisions
+**How to read these figures.** About four and a half hours of logged work produced roughly 25,000 words of documentation because drafting was done with an AI assistant, as declared in [README §12](../../README.md#12-ai-assistance-statement). The volume metrics above therefore describe the *project's* output, not the author's typing. The author's individual contribution is measured in §2 and documented session by session in the logbook. The `fix` commits are rework after reviews, which is part of the iterative process described in README §3.
+
+## 2. Author-attributable metrics
+
+Commits and lines measure the joint output of the author and the AI assistant (every commit is co-authored). The counts below measure what only the author can do: direct the work, supply facts that no document contains, and ask for the work to be reviewed. They show direction and oversight, not authorship of the text.
+
+| Metric | Value | How it is counted |
+|---|---|---|
+| Direction decisions | **14** | Rows of the decisions table (§3) |
+| Facts supplied by the author that no document contained | **5**: the date and setting of the project brief (2026-08-14, in person); location and connectivity of the boutique's point at FMAT; the original client document and rubric; the presentation format (video); the delivery date (2026-09-30) | Recorded in the [meeting log](meetings.md), the [hypotheses evidence log](../02-research/hypotheses.md#6-evidence-log), `client/originals/`, `docs/05-presentation/` and the [schedule](schedule.md) |
+| Reviews of the whole repository requested by the author | **2** (2026-09-29 17:39 and 18:33, the second in eight steps) | [Logbook 2026-09-29](logbook/2026-09-29.md) |
+| Review proposals not applied or adapted after checking them against the files and sources | **12** | Listed with their reasons in the [logbook](logbook/2026-09-29.md); the checks were done with the AI assistant and the author received a summary after each step |
+
+## 3. Author decisions
 
 Because the AI assistant co-authored every commit, the author's contribution is also recorded as the **decisions that directed the work**. Times come from the working session.
 
@@ -41,20 +55,18 @@ Because the AI assistant co-authored every commit, the author's contribution is 
 | 2026-09-29 00:10 | Deliver the presentation as a video; keep the script out of the repository | `docs/05-presentation/` |
 | 2026-09-29 17:39 | Request an independent review of the whole repository against the rubric | Review findings (contradictions, unlabeled assumptions, outdated metrics) |
 | 2026-09-29 17:48 | Apply the review's critical and quick fixes; skip optional items; provide the date and setting of the project brief | FR-30…FR-34, H-15, H-16, Q-13, Q-14, S-07, [meeting log](meetings.md) |
+| 2026-09-29 18:20 | Keep the existing repository mentions of the presentation video; do not rewrite history to remove them | No history rewrite |
+| 2026-09-29 18:33 | Request a step-by-step audit of every artifact against the rubric and the client document, and review each step's outcome before moving on | Audit steps 1–8 applied selectively (see [logbook](logbook/2026-09-29.md)) |
+| 2026-09-29 18:57 | Correct the delivery date (2026-09-30) and use the extra time to finish the audit before recording the video | Due date corrected in README, schedule and milestone |
+| 2026-09-29 19:01 | Keep `main` unchanged until everything is ready, then merge `first-delivery` once | Closing order in the [schedule](schedule.md#3-remaining-steps-for-delivery-1-due-2026-09-30) |
 
-## 3. How to recompute
+## 4. How to recompute
 
-Run in the repository (Git Bash or any shell with `git`):
+Run in the repository root:
 
 ```bash
-# Commits per day
-git log --date=short --pretty=format:'%ad' | sort | uniq -c
-# Commits per type
-git log --pretty=format:'%s' | cut -d'(' -f1 | cut -d':' -f1 | sort | uniq -c
-# Commits per task
-git log --pretty=format:'%s' | grep -oE 'T-[0-9]+' | sort | uniq -c
-# Lines added and removed
-git log --numstat --pretty=format:'' | awk '{a+=$1; d+=$2} END {print "+"a" -"d}'
+python3 tools/metrics.py   # §1: commits, types, lines, words, traceable items, co-authorship
+python3 tools/trace.py     # traceability views and coverage checks
 ```
 
 Tasks completed: GitHub → Issues → Milestones → "Delivery 1".
