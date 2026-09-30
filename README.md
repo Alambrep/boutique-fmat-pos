@@ -254,16 +254,19 @@ This project uses an AI assistant (**Claude, by Anthropic**) openly, as a workin
 
 | The AI assistant was used for | The author was responsible for |
 |---|---|
-| Drafting and structuring documents from the author's instructions | Choosing the approach (Lean UX proto-personas, branch per delivery, English repository) |
-| Transcribing, translating and numbering the client's requirements | Reviewing, correcting and approving every artifact before committing it |
-| Preparing git and GitHub commands, and executing some of them | Verifying every external data point against its source before citing it (see [`references.md`](docs/references.md)) |
-| Proposing hypotheses, questions and design options | Deciding which hypotheses, questions and options are kept |
-| | Conducting the user research and validation in delivery 2 |
+| Drafting and structuring documents from the author's instructions | Choosing the approach (Lean UX proto-personas, branch per delivery, English repository, open use of AI) |
+| Transcribing, translating and numbering the client's requirements | Providing the facts no document contained (project brief, context of the boutique's point at FMAT, original documents, presentation format, dates) |
+| Searching external sources and checking every citation against the original page (see [`references.md`](docs/references.md)) | Setting the rules the work had to follow (hypotheses labeled, no invented data, verified sources only) |
+| Preparing and executing git and GitHub operations (commits, issues, milestone) | Requesting reviews of the whole repository and deciding the closing order |
+| Proposing hypotheses, questions and design options | Approving the work after a summary of each step, and deciding what to keep |
+| Reviewing the repository against the rubric (two reviews, by Claude in separate conversations) and checking each review proposal against the files and sources before applying it | Recording the presentation video |
+| Writing the scripts in `tools/` | Conducting the user research and validation in delivery 2 |
 
 Rules followed:
 
 - The AI does not produce findings. Everything not stated by the client is labeled as a hypothesis (`H-xx`) until it is validated with real users.
-- The AI does not invent statistics, quotes or sources. Missing evidence is listed as a pending item for the author to verify.
+- The AI does not invent statistics, quotes or sources. A claim that could not be verified is not included.
+- Work done by the assistant is not presented as the author's; the author's own contribution is measured in [`contribution-metrics.md`](docs/00-management/contribution-metrics.md#2-author-attributable-metrics).
 
 ## 13. Tools
 
