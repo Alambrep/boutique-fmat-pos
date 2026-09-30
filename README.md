@@ -5,7 +5,7 @@
 
 | | |
 |---|---|
-| **Author** | Alancete (individual work) |
+| **Author** | Alan Pérez (individual work) |
 | **Client** | Course professor (Boutique FMAT-UADY) |
 | **Current delivery** | 1 of 3 — due 2026-09-30 |
 | **Branch** | [`first-delivery`](https://github.com/Alambrep/boutique-fmat-pos/tree/first-delivery) |

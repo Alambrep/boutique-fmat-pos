@@ -1,6 +1,6 @@
 # Individual contribution metrics
 
-> **Task:** T-12 · **Rubric criterion:** 6 · **Contributor:** Alancete (individual project — 100% of the tasks are assigned to the author)
+> **Task:** T-12 · **Rubric criterion:** 6 · **Contributor:** Alan Pérez (individual project — 100% of the tasks are assigned to the author)
 >
 > Metrics are computed from **objective sources**: git history, GitHub issues and the logbook. §1 is produced by [`tools/metrics.py`](../../tools/metrics.py); snapshot at commit `ac12d66` (2026-09-29 19:06, UTC−6). Figures exclude the commit that updates this file; they are recomputed at the close of each delivery.
 
