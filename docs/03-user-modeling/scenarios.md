@@ -35,6 +35,7 @@
 - DI-03: Cash payment calculates change.
 - DI-04: Sales are saved locally and queued for synchronization; offline status is shown in plain language and never blocks a sale.
 - DI-05: Local stock is updated immediately after each sale.
+- DI-32: The sales screen shows whether each product is available at the user's point (depends on Q-14).
 - DI-28: Printing a receipt is optional and never blocks or undoes a saved sale; receipt content depends on Q-05.
 
 ## S-02 — Sale paid with Interuady
