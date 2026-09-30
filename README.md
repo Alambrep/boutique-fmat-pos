@@ -17,7 +17,7 @@
 
 ## For the evaluator
 
-Where each rubric criterion is covered, with the known gaps of this delivery: [**rubric map**](client/rubric-delivery-1.md).
+**Start here: [RUBRIC-MAP.md](RUBRIC-MAP.md)** — every item of the rubric with a direct link to the section that covers it, and the known gaps of this delivery. Summary:
 
 | Criterion | Main evidence |
 |---|---|
@@ -135,12 +135,13 @@ flowchart LR
 ```
 boutique-fmat-pos/
 ├── README.md
+├── RUBRIC-MAP.md                            # where each rubric item is covered
 ├── .github/
 │   └── ISSUE_TEMPLATE/
 │       └── task.md                          # template for every task (T-xx)
 ├── client/
 │   ├── client-requirements.md               # CR-xx, PRJ-xx and open questions Q-xx
-│   ├── rubric-delivery-1.md
+│   ├── rubric-delivery-1.md             # rubric transcription
 │   └── originals/                           # documents exactly as delivered by the client
 ├── docs/
 │   ├── 00-management/
