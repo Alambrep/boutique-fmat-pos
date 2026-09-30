@@ -15,6 +15,21 @@
 
 ---
 
+## For the evaluator
+
+Where each rubric criterion is covered, with the known gaps of this delivery: [**rubric map**](client/rubric-delivery-1.md).
+
+| Criterion | Main evidence |
+|---|---|
+| 1 — Definition of the project | [Project definition](docs/01-definition/project-definition.md) |
+| 2 — User research process | [Validation plan](docs/02-research/validation-plan.md), [instruments](docs/02-research/instruments/), [desk research results](docs/02-research/results/desk-research.md), [hypotheses](docs/02-research/hypotheses.md), [schedule](docs/00-management/schedule.md), this README |
+| 3 — User modeling | [Proto-personas](docs/03-user-modeling/proto-personas.md), [scenarios](docs/03-user-modeling/scenarios.md) |
+| 4 — Product requirements | [Functional](docs/04-requirements/functional-requirements.md), [non-functional](docs/04-requirements/non-functional-requirements.md), [traceability matrix](docs/04-requirements/traceability-matrix.md) |
+| 5 — Presentation | [Video](docs/05-presentation/README.md) |
+| 6 — Collaborative work (individual) | [Contribution metrics](docs/00-management/contribution-metrics.md), [logbook](docs/00-management/logbook/), [task log](docs/00-management/task-log.md), [meeting log](docs/00-management/meetings.md) |
+
+---
+
 ## 1. What this project is
 
 A point of sale (POS) and inventory system for the FMAT-UADY Boutique. It must:
@@ -34,13 +49,14 @@ Recommended order (follows the product process):
 
 1. [Client requirements](client/client-requirements.md) — starting point and open questions.
 2. [Project definition](docs/01-definition/project-definition.md) — social relevance, innovation, feasibility.
-3. [User hypotheses](docs/02-research/hypotheses.md) — numbered assumptions behind the modeling.
-4. [Proto-personas](docs/03-user-modeling/proto-personas.md) and [scenarios](docs/03-user-modeling/scenarios.md).
-5. [Functional requirements](docs/04-requirements/functional-requirements.md), [non-functional requirements](docs/04-requirements/non-functional-requirements.md) and [traceability matrix](docs/04-requirements/traceability-matrix.md).
-6. [Research and validation plan](docs/02-research/validation-plan.md) — what gets validated in delivery 2.
-7. [Management](docs/00-management/): schedule, logbook, task log and contribution metrics.
-8. [Presentation video](docs/05-presentation/README.md).
-9. [References](docs/references.md) — every external source used, with how to verify it.
+3. [Desk research results](docs/02-research/results/desk-research.md) — context evidence DR-1…DR-5 (no user findings yet).
+4. [User hypotheses](docs/02-research/hypotheses.md) — numbered assumptions behind the modeling.
+5. [Proto-personas](docs/03-user-modeling/proto-personas.md) and [scenarios](docs/03-user-modeling/scenarios.md).
+6. [Functional requirements](docs/04-requirements/functional-requirements.md), [non-functional requirements](docs/04-requirements/non-functional-requirements.md) and [traceability matrix](docs/04-requirements/traceability-matrix.md).
+7. [Research and validation plan](docs/02-research/validation-plan.md) and [instruments](docs/02-research/instruments/) — what gets validated in delivery 2, and how.
+8. [Management](docs/00-management/): [schedule](docs/00-management/schedule.md), [meeting log](docs/00-management/meetings.md), [logbook](docs/00-management/logbook/), [task log](docs/00-management/task-log.md) and [contribution metrics](docs/00-management/contribution-metrics.md).
+9. [Presentation video](docs/05-presentation/README.md).
+10. [References](docs/references.md) — every external source used, with how to verify it.
 
 ## 3. Delivery 1 approach
 
@@ -61,19 +77,19 @@ The project follows the four iterative human-centred design activities of ISO 92
 | Produce design solutions | — | Low-fidelity prototype | Iterated prototype |
 | Evaluate the design | — | First usability test (V-07) | Usability and technical tests (V-07, V-08) |
 
-### Main findings so far
+### Main results so far (desk research)
 
-Delivery 1 has **no user research findings** yet. The [desk research results](docs/02-research/results/desk-research.md) are:
+Delivery 1 has **no user research findings** yet. These are the results of the [desk research](docs/02-research/results/desk-research.md); each one links to its section:
 
-1. **Market:** offline sales and multi-store stock already exist in free tools (Loyverse); the institutional Interuady flow with mandatory data and accounts receivable is not documented in the reviewed products.
-2. **Social relevance:** smartphone use is almost universal among cell phone users in Mexico, but only about a quarter of micro establishments use computers or the internet (INEGI).
-3. **Legal:** new federal (2025) and Yucatán (2025) laws on personal data held by public entities apply to the Interuady data.
-4. **Technical:** keyboard-wedge scanners are easy to integrate; Bluetooth printing from web apps is experimental and not available on iOS, which affects the PWA-or-native decision.
-5. **Requirements analysis:** 16 open questions for the client, including how 4 profiles map to 3 warehouses, whether each warehouse is also a point of sale, and where the synchronization server would be hosted.
+1. **Market** ([DR-1](docs/02-research/results/desk-research.md#dr-1--existing-solutions)): offline sales and multi-store stock already exist in free tools (Loyverse); the institutional Interuady flow with mandatory data and accounts receivable is not documented in the reviewed products.
+2. **Social context** ([DR-2](docs/02-research/results/desk-research.md#dr-2--social-context)): smartphone use is almost universal among cell phone users in Mexico, but only about a quarter of micro establishments use computers or the internet (INEGI).
+3. **Legal** ([DR-3](docs/02-research/results/desk-research.md#dr-3--legal-framework-for-personal-data)): new federal (2025) and Yucatán (2025) laws on personal data held by public entities apply to the Interuady data.
+4. **Technical** ([DR-4](docs/02-research/results/desk-research.md#dr-4--technical-feasibility)): keyboard-wedge scanners need little integration (the input field must keep focus); Bluetooth printing from web apps is experimental and not available on iOS, which affects the PWA-or-native decision.
+5. **Requirements analysis** ([DR-5](docs/02-research/results/desk-research.md#dr-5--requirements-analysis-of-the-clients-document)): 16 open questions for the client, including how 4 profiles map to 3 warehouses, whether each warehouse is also a point of sale, and where the synchronization server would be hosted.
 
 ## 4. Evidence conventions
 
-Every statement in this repository carries one of these labels:
+Every statement in the artifacts under `client/` and `docs/01…04` carries one of these labels:
 
 | Label | Meaning | Where it lives |
 |---|---|---|
@@ -95,6 +111,11 @@ Rule: **nothing is presented as a finding** until a `V-xx` activity confirms it;
 | `FR-xx` | Functional requirement |
 | `NFR-xx` | Non-functional requirement (usability or quality attribute) |
 | `T-xx` | Task (GitHub issue) |
+| `D1…D5` | Proposed differentiator (project definition §3) |
+| `DR-x` | Desk research result |
+| `RQ-x` | Research question (validation plan) |
+| `DI-xx` | Design implication derived from a scenario |
+| `FR-Dx` | Deferred functional requirement (depends on an open question) |
 
 Traceability rule: **every `P`, `S`, `FR` and `NFR` cites at least one `H`, `CR` or `PRJ`.** The full matrix is in [`traceability-matrix.md`](docs/04-requirements/traceability-matrix.md).
 
@@ -126,14 +147,16 @@ boutique-fmat-pos/
 │   │   ├── schedule.md
 │   │   ├── task-log.md                      # tasks, owner, estimated and actual hours
 │   │   ├── contribution-metrics.md          # objective individual contribution metric
+│   │   ├── meetings.md                      # meetings with the client
 │   │   └── logbook/                         # one entry per work session: YYYY-MM-DD.md
 │   ├── 01-definition/
 │   │   └── project-definition.md
 │   ├── 02-research/
 │   │   ├── hypotheses.md
 │   │   ├── validation-plan.md
-│   │   ├── instruments/                     # interview guides, surveys, test tasks
-│   │   └── results/                         # desk research (D1); field findings (D2)
+│   │   ├── instruments/                     # observation guide, seller and staff interview guides, device and connectivity checklist
+│   │   └── results/
+│   │       └── desk-research.md             # DR-1…DR-5 (D1); field findings go here in D2
 │   ├── 03-user-modeling/
 │   │   ├── proto-personas.md
 │   │   ├── scenarios.md
@@ -167,6 +190,7 @@ boutique-fmat-pos/
 | 9b | Desk research results | `docs/02-research/results/desk-research.md` | 1, 2 | Done |
 | 10 | Schedule | `docs/00-management/schedule.md` | 2 | Done |
 | 11 | Logbook and task log | `docs/00-management/` | 2, 6 | Done (updated each session) |
+| 11b | Meeting log | `docs/00-management/meetings.md` | 6 | Done |
 | 12 | Individual contribution metrics | `docs/00-management/contribution-metrics.md` | 6 | Done (updated each session) |
 | 13 | Presentation video | `docs/05-presentation/` | 5 | Pending |
 
@@ -205,6 +229,7 @@ Although this is an individual project, the process leaves verifiable evidence i
   # Lines added and removed in docs/
   git log --numstat --pretty=format:'' -- docs/ | awk '{a+=$1; d+=$2} END {print "+"a" -"d}'
   ```
+- **History rewrite:** on 2026-09-28 the first commits were rewritten once to translate the repository to English, so several commits share the same timestamp (see the [logbook](docs/00-management/logbook/2026-09-28.md)). Later review fixes were also committed in batches at the end of a session. Commit times therefore mark when work was saved, not how long it took; session hours are in the logbook.
 
 ## 9. Open questions for the client
 
@@ -228,7 +253,7 @@ This project uses an AI assistant (**Claude, by Anthropic**) openly, as a workin
 |---|---|
 | Drafting and structuring documents from the author's instructions | Choosing the approach (Lean UX proto-personas, branch per delivery, English repository) |
 | Transcribing, translating and numbering the client's requirements | Reviewing, correcting and approving every artifact before committing it |
-| Preparing git and GitHub commands, and executing some of them | Verifying every data point marked 🔎 against a real source |
+| Preparing git and GitHub commands, and executing some of them | Verifying every external data point against its source before citing it (see [`references.md`](docs/references.md)) |
 | Proposing hypotheses, questions and design options | Deciding which hypotheses, questions and options are kept |
 | | Conducting the user research and validation in delivery 2 |
 

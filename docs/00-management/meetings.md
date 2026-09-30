@@ -4,7 +4,7 @@
 
 | Date | Participants | Place / channel | Topics | Outcome | Artifacts affected |
 |---|---|---|---|---|---|
-| 2026-08-14 | Professor (client), Alancete | In person, professor's office at FMAT | Project brief for the individual course (acompañamiento): POS and inventory for the FMAT-UADY Boutique | The system must run on low-end mobile devices, work offline and be usable by a person with limited technology skills (example given: a hot dog vendor) | [PRJ-01…PRJ-03](../../client/client-requirements.md#project-requirements-prj--professors-project-brief) |
+| 2026-08-14 | Professor (client), Alancete | In person, professor's office at FMAT | Project brief for the individual course (*acompañamiento*, individually supervised course project): POS and inventory for the FMAT-UADY Boutique | The system must run on low-end mobile devices, work offline and be usable by a person with limited technology skills (example given: a hot dog vendor) | [PRJ-01…PRJ-03](../../client/client-requirements.md#project-requirements-prj--professors-project-brief) |
 
 **Not recorded:** the date on which the written client document ("Proceso de inventario y venta — Boutique") was received.
 
