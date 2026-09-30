@@ -23,7 +23,7 @@
 
 ## S-01 — Cash sale during a rush, without internet
 
-**Proto-persona:** P-01 (Luis) · **Origins:** CR-03, CR-04, CR-10, CR-11, CR-12, CR-15, CR-17, PRJ-01, PRJ-02, H-01, H-02, H-03, H-05, H-06, H-09, Q-14
+**Proto-persona:** P-01 (Luis) · **Origins:** CR-03, CR-04, CR-10, CR-11, CR-12, CR-15, CR-17, PRJ-01, PRJ-02, H-01, H-02, H-03, H-05, H-06, H-09, Q-05, Q-14
 
 **Context.** First week of the semester. There is a queue at the Sociales point `[H-05]`, and the phone has no signal `[H-03]`. Luis is holding a T-shirt in one hand `[H-06]`.
 
@@ -40,7 +40,7 @@
 
 ## S-02 — Sale paid with Interuady
 
-**Proto-persona:** P-01 (Luis) · **Origins:** CR-03, CR-04, CR-12, CR-13, CR-14, H-01, H-08, H-14
+**Proto-persona:** P-01 (Luis) · **Origins:** CR-03, CR-04, CR-12, CR-13, CR-14, H-01, H-08, H-14, Q-04
 
 **Context.** A staff member from another UADY unit comes to buy five polos for an event, paid through Interuady `[H-14]`.
 
@@ -54,7 +54,7 @@
 
 ## S-03 — Card sale when the barcode scanner is not available
 
-**Proto-persona:** P-01 (Luis) · **Origins:** CR-03, CR-04, CR-10, CR-11, CR-12, CR-16, H-01, H-02, H-06, H-10
+**Proto-persona:** P-01 (Luis) · **Origins:** CR-03, CR-04, CR-10, CR-11, CR-12, CR-16, H-01, H-02, H-06, H-10, Q-06
 
 **Context.** The Bluetooth scanner at the Matemáticas point has no battery `[CR-16]`. A customer wants to pay by card.
 

@@ -63,6 +63,7 @@ Profile of each user class, before turning them into proto-personas. Everything 
 | Connectivity | Unreliable signal or Wi-Fi at the point of sale (challenged for the Matemáticas point (FMAT), assumed to correspond to the Exact Sciences Campus profile, Q-03; see the hypotheses evidence log). | H-03, PRJ-02 |
 | Work conditions | Busy periods with a queue; often holding a product or cash while charging. | H-05, H-06 |
 | Typical sale | One to three items to students or staff, paid in cash or card; occasionally an Interuady purchase. | H-09, H-14, CR-12 |
+| Hardware | May use an external barcode scanner and a thermal receipt printer if the point has them; neither is required to sell. | CR-16, CR-17, Q-12 |
 | Scenarios | S-01, S-02, S-03, S-07, S-08 | — |
 
 **Goals**
