@@ -9,9 +9,9 @@
 | **Client** | Course professor (Boutique FMAT-UADY) |
 | **Current delivery** | 1 of 3 — due 2026-09-30 |
 | **Branch** | [`first-delivery`](https://github.com/Alambrep/boutique-fmat-pos/tree/first-delivery) |
-| **Status** | In progress |
+| **Status** | Delivered — tag [`delivery-1`](https://github.com/Alambrep/boutique-fmat-pos/releases/tag/delivery-1) |
 | **Design (Figma)** | No design artifacts in delivery 1; the low-fidelity prototype starts in delivery 2 |
-| **Video / presentation** | _[paste link]_ |
+| **Video / presentation** | [Delivery 1 video](https://youtu.be/kahF-t9Y5TM) — also listed in [`docs/05-presentation/`](docs/05-presentation/README.md) |
 
 ---
 
@@ -195,7 +195,7 @@ boutique-fmat-pos/
 | 11 | Logbook and task log | `docs/00-management/` | 2, 6 | Done (updated each session) |
 | 11b | Meeting log | `docs/00-management/meetings.md` | 6 | Done |
 | 12 | Individual contribution metrics | `docs/00-management/contribution-metrics.md` | 6 | Done (updated each session) |
-| 13 | Presentation video | `docs/05-presentation/` | 5 | Pending |
+| 13 | Presentation video | `docs/05-presentation/` | 5 | Done |
 
 ## 8. Workflow and contribution evidence
 

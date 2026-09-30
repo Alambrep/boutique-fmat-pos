@@ -1,10 +1,9 @@
 # Presentation — Delivery 1
 
-Delivery 1 is presented as a **short video** (task T-13).
+Delivery 1 is presented as a video (task T-13).
 
-| Item | Link / file |
+| Item | Link |
 |---|---|
-| Video | _[paste link or add the file to this folder]_ |
-| Slides used in the video (PDF, optional) | _[add file to this folder]_ |
+| Video | [Boutique FMAT POS – HCI Delivery 1 \| Alan Pérez](https://youtu.be/kahF-t9Y5TM) (YouTube; opens without signing in) |
 
-If the video file is too large for the repository (GitHub blocks files over 100 MB), upload it to a video platform or cloud drive and paste the link above.
+The spoken content follows the repository at tag `delivery-1`.
