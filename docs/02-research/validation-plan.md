@@ -8,7 +8,7 @@
 
 | ID | Question | Hypotheses |
 |---|---|---|
-| RQ-1 | Who sells at each point, what digital skills do they have, and how are they trained? | H-01, H-07, H-11, H-12, H-16 |
+| RQ-1 | Who sells at each point, what digital skills do they have, and how are they trained? | H-01, H-07, H-11, H-12, H-16, H-17 |
 | RQ-2 | With which devices and connectivity do they work at each point? | H-02, H-03 |
 | RQ-3 | Where is stock kept and sold, how are sales, stock and Interuady payments recorded today, and what goes wrong? | H-04, H-08, H-10, H-13, H-15 |
 | RQ-4 | Under what conditions do sales happen (peaks, interruptions, typical basket)? | H-05, H-06, H-09, H-14 |
@@ -22,8 +22,8 @@ Order follows the [prioritization](hypotheses.md#4-prioritization-assumption-map
 |---|---|---|---|---|---|---|
 | V-01 | Observation at the points of sale | Contextual inquiry: observe sellers at work and ask about what they do, in their own environment `[R30]` | Sellers at FMAT, Sociales and CDU; 1–2 sessions of 30–45 min per point | [Observation guide](instruments/observation-guide.md) | H-01, H-03, H-04, H-05, H-06, H-08, H-09, H-14; baseline sale time (NFR-04) | Week 1 |
 | V-02 | Seller interviews | Semi-structured interview | 3–5 sellers (all points) | [Seller interview guide](instruments/seller-interview-guide.md) | H-01, H-02, H-05, H-06, H-08, H-12, H-14 | Week 1–2 |
-| V-03 | CDU interview | Semi-structured interview + walkthrough of current records | 1–2 CDU staff | [Staff interview guide](instruments/staff-interview-guide.md) | H-04, H-07 | Week 1–2 |
-| V-04 | Client and Central Administration interview | Semi-structured interview; answers to Q-01…Q-16 | Client (professor); 1 Central Administration officer; 1 accounting contact referred by the client (Q-05) | [Staff interview guide](instruments/staff-interview-guide.md) + [open questions](../../client/client-requirements.md#open-questions-for-the-client) | H-02, H-08, H-10, H-11, H-12, H-13, H-14, H-15, H-16 | Week 1 |
+| V-03 | CDU interview | Semi-structured interview + walkthrough of current records | 1–2 CDU staff | [Staff interview guide](instruments/staff-interview-guide.md) | H-04, H-07, H-17 | Week 1–2 |
+| V-04 | Client and Central Administration interview | Semi-structured interview; answers to Q-01…Q-16 | Client (professor); 1 Central Administration officer; 1 accounting contact referred by the client (Q-05) | [Staff interview guide](instruments/staff-interview-guide.md) + [open questions](../../client/client-requirements.md#open-questions-for-the-client) | H-02, H-08, H-10, H-11, H-12, H-13, H-14, H-15, H-16, H-17 | Week 1 |
 | V-05 | Device and connectivity check | Checklist at each point (device model, OS, storage; Wi-Fi and mobile data tests at different times) | Author, with permission of each point | [Device and connectivity checklist](instruments/device-connectivity-checklist.md) | H-02, H-03 | Week 1 |
 | V-06 | Review of current records | Document analysis of anonymized sales, stock and Interuady records (no personal data copied) | Records provided by CDU / client | Record review sheet (staff interview guide, part C) | H-04, H-05, H-08, H-09, H-14 | Week 2 |
 | V-07 | Usability test | Task-based test with a Figma prototype; think-aloud; SUS questionnaire `[R5]` | 5 participants per round, iterating between rounds `[R31]`. P-01 profile first: real sellers when available; otherwise proxy participants who match P-01 on the recruitment criteria below. Returning participants repeat one task two weeks later (NFR-05) | Test script (delivery 2) | NFR-01…NFR-08; D2, D5 | Delivery 2–3 |

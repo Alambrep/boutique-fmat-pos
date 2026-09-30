@@ -34,6 +34,7 @@ Status values: `Unvalidated` → `Validated` / `Refuted` / `Partially validated`
 | H-11 | Central Administration staff use the system mostly to **query** (stock, accounts receivable) and charge only occasionally. | Staff describe querying as their main activity and sales as rare. | Central Administration sells as often as the satellite points. | Low | Medium | V-04 | Unvalidated |
 | H-12 | Sellers at the satellite points rotate often (e.g. student assistants or shift staff) and get little training time. | More than one person covers each point; training is informal or on the job. | Each point has one stable seller with formal training. | Low | High | V-02, V-04 | Unvalidated |
 | H-16 | Central Administration staff work at an office desk, mostly with a computer, and have medium digital skills (forms, spreadsheets, email). | Staff describe office work with a computer and use spreadsheets without help. | Staff work mainly from a phone or have low digital skills. | Low | Medium | V-04 | Unvalidated |
+| H-17 | Sales at the CDU point are made by the same person who manages the inventory (P-02), not by a separate front-desk seller. | CDU staff describe one person doing both tasks. | CDU has a separate seller, who would receive modify permissions through the CDU profile. | Low | High | V-03, V-04 | Unvalidated |
 
 ### Context and devices
 
@@ -67,11 +68,11 @@ Following assumptions mapping `[R9]`, hypotheses that are **important (high risk
 
 | | **Low confidence** | **Medium confidence** |
 |---|---|---|
-| **High risk** | **H-12** | **H-01, H-02, H-03, H-10, H-15** |
+| **High risk** | **H-12, H-17** | **H-01, H-02, H-03, H-10, H-15** |
 | **Medium risk** | H-06, H-08, H-11, H-13, H-16 | H-04, H-05, H-07 |
 | **Low risk** | H-14 | H-09 |
 
-**Validation order:** H-01, H-02, H-03, H-12 (define the primary persona and technical constraints) → H-10, H-15, H-04 (define scope) → the rest.
+**Validation order:** H-01, H-02, H-03, H-12, H-17 (define the primary persona and technical constraints) → H-10, H-15, H-04 (define scope) → the rest.
 
 ## 5. Where each hypothesis is used
 
@@ -79,8 +80,8 @@ Generated from the same origin columns as the [traceability matrix](../04-requir
 
 | Hypothesis | Proto-personas | Scenarios | Requirements | Project definition |
 |---|---|---|---|---|
-| H-01 | P-01 | S-01, S-02, S-03, S-07 | FR-03, FR-14, FR-29, NFR-01, NFR-02, NFR-07, NFR-09, NFR-10 | §2.1, §3.1, §4.2 ch. 1, §4.2 ch. 5, §4.3 |
-| H-02 | P-01 | S-01, S-03 | NFR-13, NFR-14, NFR-19, NFR-20 | §2.1, §2.3, §4.2 ch. 2, §4.2 ch. 4, §4.3 |
+| H-01 | P-01 | S-01, S-02, S-03, S-07, S-08 | FR-03, FR-14, FR-29, NFR-01, NFR-02, NFR-07, NFR-09, NFR-10, NFR-25 | §2.1, §3.1, §4.2 ch. 1, §4.2 ch. 5, §4.3 |
+| H-02 | P-01 | S-01, S-03, S-08 | NFR-13, NFR-14, NFR-19, NFR-20 | §2.1, §2.3, §4.2 ch. 2, §4.2 ch. 4, §4.3 |
 | H-03 | P-01 | S-01, S-05 | FR-11, NFR-17 | §2.1 |
 | H-04 | P-01, P-02, P-03 | S-05 | FR-31, FR-32, NFR-04 | §2.2, §3.2 |
 | H-05 | P-01 | S-01, S-07 | FR-18, NFR-03, NFR-04 | — |
@@ -90,11 +91,12 @@ Generated from the same origin columns as the [traceability matrix](../04-requir
 | H-09 | P-01 | S-01 | — | — |
 | H-10 | — | S-03 | FR-19, NFR-21 | §4.2 ch. 4 |
 | H-11 | P-03 | S-06 | — | §4.2 ch. 1 |
-| H-12 | P-01 | — | NFR-01, NFR-05 | — |
+| H-12 | P-01 | S-08 | FR-35, NFR-01, NFR-05, NFR-19, NFR-25 | — |
 | H-13 | P-02, P-03 | S-06 | — | — |
 | H-14 | P-01 | S-02 | — | — |
-| H-15 | — | — | — | §1 |
-| H-16 | P-03 | — | — | — |
+| H-15 | P-01 | — | — | §1 |
+| H-16 | P-03 | S-06 | FR-37 | — |
+| H-17 | P-02 | — | — | — |
 
 `V-xx` activities are described in the [validation plan](validation-plan.md). `[Rn]` sources are listed in [`references.md`](../references.md).
 
