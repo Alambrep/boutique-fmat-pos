@@ -94,9 +94,9 @@ Generated from the same origin columns as the [traceability matrix](../04-requir
 | H-12 | P-01 | S-08 | FR-35, FR-38, NFR-01, NFR-05, NFR-19, NFR-25 | — |
 | H-13 | P-02, P-03 | S-06 | — | — |
 | H-14 | P-01 | S-02 | — | — |
-| H-15 | P-01 | — | — | §1 |
+| H-15 | P-01 | — | FR-13, FR-22, FR-31 | §1 |
 | H-16 | P-03 | S-06 | FR-37, NFR-27 | — |
-| H-17 | P-02 | — | — | — |
+| H-17 | P-02 | — | FR-01, FR-09 | — |
 
 `V-xx` activities are described in the [validation plan](validation-plan.md). `[Rn]` sources are listed in [`references.md`](../references.md).
 
