@@ -23,7 +23,7 @@ Order follows the [prioritization](hypotheses.md#4-prioritization-assumption-map
 | V-01 | Observation at the points of sale | Contextual inquiry: observe sellers at work and ask about what they do, in their own environment `[R30]` | Sellers at FMAT, Sociales and CDU; 1–2 sessions of 30–45 min per point | [Observation guide](instruments/observation-guide.md) | H-01, H-03, H-05, H-06, H-09; baseline time for NFR-04 | Week 1 |
 | V-02 | Seller interviews | Semi-structured interview | 3–5 sellers (all points) | [Seller interview guide](instruments/seller-interview-guide.md) | H-01, H-05, H-12 | Week 1–2 |
 | V-03 | CDU interview | Semi-structured interview + walkthrough of current records | 1–2 CDU staff | [Staff interview guide](instruments/staff-interview-guide.md) | H-04, H-07 | Week 1–2 |
-| V-04 | Client and Central Administration interview | Semi-structured interview; answers to Q-01…Q-14 | Client (professor); 1 Central Administration officer | [Staff interview guide](instruments/staff-interview-guide.md) + [open questions](../../client/client-requirements.md#open-questions-for-the-client) | H-02, H-08, H-10, H-11, H-12, H-13, H-14 | Week 1 |
+| V-04 | Client and Central Administration interview | Semi-structured interview; answers to Q-01…Q-16 | Client (professor); 1 Central Administration officer | [Staff interview guide](instruments/staff-interview-guide.md) + [open questions](../../client/client-requirements.md#open-questions-for-the-client) | H-02, H-08, H-10, H-11, H-12, H-13, H-14 | Week 1 |
 | V-05 | Device and connectivity check | Checklist at each point (device model, OS, storage; Wi-Fi and mobile data tests at different times) | Author, with permission of each point | [Device and connectivity checklist](instruments/device-connectivity-checklist.md) | H-02, H-03 | Week 1 |
 | V-06 | Review of current records | Document analysis of anonymized sales, stock and Interuady records (no personal data copied) | Records provided by CDU / client | Record review sheet (staff interview guide, part C) | H-04, H-05, H-08, H-09, H-14 | Week 2 |
 | V-07 | Usability test | Task-based test with a Figma prototype; think-aloud; SUS questionnaire `[R5]` | 5 participants per round, iterating between rounds `[R31]`; P-01 profile first; returning participants repeat one task two weeks later (NFR-05) | Test script (delivery 2) | NFR-01…NFR-08; D2, D5 | Delivery 2–3 |
@@ -54,7 +54,7 @@ Delivery 2 date is not yet known; weeks are counted from the start of delivery 2
 
 | Week | Activities |
 |---|---|
-| 1 | V-04 (client, answers to Q-01…Q-14), V-05 (devices and connectivity), V-01 (observation) |
+| 1 | V-04 (client, answers to Q-01…Q-16), V-05 (devices and connectivity), V-01 (observation) |
 | 2 | V-02 (sellers), V-03 (CDU), V-06 (records) |
 | 3 | Analysis; update hypotheses, personas, scenarios and requirements |
 | Delivery 2–3 | V-07 (usability test with prototype), V-08 (technical tests) |

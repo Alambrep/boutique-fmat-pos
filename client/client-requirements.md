@@ -73,3 +73,5 @@ These do not appear in the written document. **Source:** stated by the professor
 | Q-12 | Which specific devices will be used (model, operating system), and is there budget for a scanner and a printer? | PRJ-01, CR-16, CR-17 | Open |
 | Q-13 | The document uses *almacén*, *bodega*, *tienda* and *boutique*. Is each warehouse (CDU, Sociales, Matemáticas) also a point of sale, or are there points of sale separate from the warehouses? | CR-08, CR-09, CR-15 | Open |
 | Q-14 | May charge-only profiles see on the sales screen whether a product is available at their point, or does that count as "query" (*consulta*)? | CR-03, CR-04, FR-31 | Open |
+| Q-15 | Where will the synchronization server be hosted (UADY infrastructure, a cloud service, none), and who maintains it? | PRJ-02, CR-08, CR-14 | Open |
+| Q-16 | Do other UADY units already use a point-of-sale or inventory system that this project should align with or learn from? | CR-01…CR-18 | Open |

@@ -12,4 +12,4 @@
 
 | Planned for | With | Purpose | Instrument |
 |---|---|---|---|
-| Delivery 2, week 1 | Professor (client) | Answer open questions Q-01…Q-14 | [Staff and client interview guide](../02-research/instruments/staff-interview-guide.md) |
+| Delivery 2, week 1 | Professor (client) | Answer open questions Q-01…Q-16 | [Staff and client interview guide](../02-research/instruments/staff-interview-guide.md) |

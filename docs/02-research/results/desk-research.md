@@ -42,7 +42,7 @@
 
 | Result | Source | Implication |
 |---|---|---|
-| 14 points are undefined, including the meaning of CDU and C.P., how 4 profiles map to 3 warehouses, whether warehouses are also points of sale, VAT, transfers and card payments. | [Client requirements](../../../client/client-requirements.md) | Open questions Q-01…Q-14; six functional requirements deferred (FR-D1…FR-D6). |
+| 16 points are undefined, including the meaning of CDU and C.P., how 4 profiles map to 3 warehouses, whether warehouses are also points of sale, server hosting, VAT, transfers and card payments. | [Client requirements](../../../client/client-requirements.md) | Open questions Q-01…Q-16; six functional requirements deferred (FR-D1…FR-D6). |
 
 ## Informal evidence (not systematic)
 

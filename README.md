@@ -69,7 +69,7 @@ Delivery 1 has **no user research findings** yet. The [desk research results](do
 2. **Social relevance:** smartphone use is almost universal among cell phone users in Mexico, but only about a quarter of micro establishments use computers or the internet (INEGI).
 3. **Legal:** new federal (2025) and Yucatán (2025) laws on personal data held by public entities apply to the Interuady data.
 4. **Technical:** keyboard-wedge scanners are easy to integrate; Bluetooth printing from web apps is experimental and not available on iOS, which affects the PWA-or-native decision.
-5. **Requirements analysis:** 14 open questions for the client, including how 4 profiles map to 3 warehouses and whether each warehouse is also a point of sale.
+5. **Requirements analysis:** 16 open questions for the client, including how 4 profiles map to 3 warehouses, whether each warehouse is also a point of sale, and where the synchronization server would be hosted.
 
 ## 4. Evidence conventions
 
@@ -208,7 +208,7 @@ Although this is an individual project, the process leaves verifiable evidence i
 
 ## 9. Open questions for the client
 
-The client's document leaves several points undefined (meaning of *CDU* and *C.P.*, how 4 profiles map to 3 warehouses, VAT and invoicing, transfers between warehouses, cancellations, among others). They are numbered `Q-01…Q-14` in [`client/client-requirements.md`](client/client-requirements.md#open-questions-for-the-client). Until they are answered, the artifacts that depend on them rely on an explicit hypothesis.
+The client's document leaves several points undefined (meaning of *CDU* and *C.P.*, how 4 profiles map to 3 warehouses, VAT and invoicing, transfers between warehouses, cancellations, among others). They are numbered `Q-01…Q-16` in [`client/client-requirements.md`](client/client-requirements.md#open-questions-for-the-client). Until they are answered, the artifacts that depend on them rely on an explicit hypothesis.
 
 ## 10. Known limitations of this delivery
 
