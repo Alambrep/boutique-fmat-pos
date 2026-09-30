@@ -12,7 +12,7 @@
 | RQ-2 | With which devices and connectivity do they work at each point? | H-02, H-03 |
 | RQ-3 | Where is stock kept and sold, how are sales, stock and Interuady payments recorded today, and what goes wrong? | H-04, H-08, H-10, H-13, H-15 |
 | RQ-4 | Under what conditions do sales happen (peaks, interruptions, typical basket)? | H-05, H-06, H-09, H-14 |
-| RQ-5 | Can the target users complete the key tasks with the proposed design? | NFR-01…NFR-08 (delivery 2–3) |
+| RQ-5 | Can the target users complete the key tasks with the proposed design? | NFR-01…NFR-08, NFR-25…NFR-28 (delivery 2–3) |
 
 ## 2. Activities
 
@@ -26,7 +26,7 @@ Order follows the [prioritization](hypotheses.md#4-prioritization-assumption-map
 | V-04 | Client and Central Administration interview | Semi-structured interview; answers to Q-01…Q-16 | Client (professor); 1 Central Administration officer; 1 accounting contact referred by the client (Q-05) | [Staff interview guide](instruments/staff-interview-guide.md) + [open questions](../../client/client-requirements.md#open-questions-for-the-client) | H-02, H-08, H-10, H-11, H-12, H-13, H-14, H-15, H-16, H-17 | Week 1 |
 | V-05 | Device and connectivity check | Checklist at each point (device model, OS, storage; Wi-Fi and mobile data tests at different times) | Author, with permission of each point | [Device and connectivity checklist](instruments/device-connectivity-checklist.md) | H-02, H-03 | Week 1 |
 | V-06 | Review of current records | Document analysis of anonymized sales, stock and Interuady records (no personal data copied) | Records provided by CDU / client | Record review sheet (staff interview guide, part C) | H-04, H-05, H-08, H-09, H-14 | Week 2 |
-| V-07 | Usability test | Task-based test with a Figma prototype; think-aloud; SUS questionnaire `[R5]` | 5 participants per round, iterating between rounds `[R31]`. P-01 profile first: real sellers when available; otherwise proxy participants who match P-01 on the recruitment criteria below. Returning participants repeat one task two weeks later (NFR-05) | Test script (delivery 2) | NFR-01…NFR-08; D2, D5 | Delivery 2–3 |
+| V-07 | Usability test | Task-based test with a Figma prototype; think-aloud; SUS questionnaire `[R5]` | 5 participants per round, iterating between rounds `[R31]`. P-01 profile first: real sellers when available; otherwise proxy participants who match P-01 on the recruitment criteria below. Returning participants repeat one task two weeks later (NFR-05) | Test script (delivery 2) | NFR-01…NFR-08, NFR-25…NFR-28; D2, D5 | Delivery 2–3 |
 | V-08 | Technical device test | Performance and offline tests on a reference low-end phone; scanner and printer tests | Author | Test protocol (delivery 3) | NFR-13…NFR-18, NFR-23, NFR-24 | Delivery 3 |
 
 **Mapping rule:** the *Hypotheses* column lists every hypothesis for which the activity's instrument collects evidence. The *Validation* column in [`hypotheses.md`](hypotheses.md) lists the same activities.

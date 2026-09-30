@@ -80,22 +80,22 @@ Generated from the same origin columns as the [traceability matrix](../04-requir
 
 | Hypothesis | Proto-personas | Scenarios | Requirements | Project definition |
 |---|---|---|---|---|
-| H-01 | P-01 | S-01, S-02, S-03, S-07, S-08 | FR-03, FR-14, FR-29, NFR-01, NFR-02, NFR-07, NFR-09, NFR-10, NFR-25 | §2.1, §3.1, §4.2 ch. 1, §4.2 ch. 5, §4.3 |
+| H-01 | P-01 | S-01, S-02, S-03, S-07, S-08 | FR-03, FR-14, FR-29, NFR-01, NFR-02, NFR-06, NFR-07, NFR-09, NFR-10, NFR-25, NFR-28 | §2.1, §3.1, §4.2 ch. 1, §4.2 ch. 5, §4.3 |
 | H-02 | P-01 | S-01, S-03, S-08 | NFR-13, NFR-14, NFR-19, NFR-20 | §2.1, §2.3, §4.2 ch. 2, §4.2 ch. 4, §4.3 |
 | H-03 | P-01 | S-01, S-05 | FR-11, NFR-17 | §2.1 |
 | H-04 | P-01, P-02, P-03 | S-05 | FR-31, FR-32, NFR-04 | §2.2, §3.2 |
-| H-05 | P-01 | S-01, S-07 | FR-18, NFR-03, NFR-04 | — |
+| H-05 | P-01 | S-01, S-07 | FR-18, NFR-03, NFR-04, NFR-28 | — |
 | H-06 | P-01 | S-01, S-03, S-07 | NFR-09, NFR-11 | — |
-| H-07 | P-02 | S-04 | — | §3.1, §4.2 ch. 5 |
+| H-07 | P-02 | S-04 | NFR-26 | §3.1, §4.2 ch. 5 |
 | H-08 | P-03 | S-02, S-06 | FR-21, NFR-06 | §2.2 |
 | H-09 | P-01 | S-01 | — | — |
 | H-10 | — | S-03 | FR-19, NFR-21 | §4.2 ch. 4 |
-| H-11 | P-03 | S-06 | — | §4.2 ch. 1 |
-| H-12 | P-01 | S-08 | FR-35, NFR-01, NFR-05, NFR-19, NFR-25 | — |
+| H-11 | P-03 | S-06 | NFR-27 | §4.2 ch. 1 |
+| H-12 | P-01 | S-08 | FR-35, FR-38, NFR-01, NFR-05, NFR-19, NFR-25 | — |
 | H-13 | P-02, P-03 | S-06 | — | — |
 | H-14 | P-01 | S-02 | — | — |
 | H-15 | P-01 | — | — | §1 |
-| H-16 | P-03 | S-06 | FR-37 | — |
+| H-16 | P-03 | S-06 | FR-37, NFR-27 | — |
 | H-17 | P-02 | — | — | — |
 
 `V-xx` activities are described in the [validation plan](validation-plan.md). `[Rn]` sources are listed in [`references.md`](../references.md).
