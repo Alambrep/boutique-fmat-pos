@@ -15,8 +15,8 @@ Written messages sent to the client and their outcome. The messages are quoted v
 | Date and time | Channel | Sent by | Content | Answer |
 |---|---|---|---|---|
 | 2026-09-30 15:50 | Microsoft Teams, direct message | Alan Pérez | Link to the repository (delivery 1); 17 open questions grouped by topic; request for permission to observe sales at the boutique and interview the staff, and for a contact to coordinate it | None as of 2026-10-27 |
-| 2026-10-19 | Microsoft Teams, direct message | Alan Pérez | Reminder: asks whether the 2026-09-30 message arrived; the permission for observation and interviews is the most urgent point; offers a 15-minute meeting (office or Teams call) to go over the questions | None as of 2026-10-27 |
-| Not recorded | In person, professor's cubicle | Alan Pérez | Attempt to talk with the client | No conversation took place |
+| 2026-10-19 15:29 | Microsoft Teams, direct message | Alan Pérez | Reminder: asks whether the 2026-09-30 message arrived; the permission for observation and interviews is the most urgent point; offers a 15-minute meeting (office or Teams call) to go over the questions | None as of 2026-10-27 |
+| 2026-10-26, about 19:00 | In person, professor's cubicle | Alan Pérez | Attempt to talk with the client | No conversation took place |
 
 **Effect on the project.** Field research (V-01…V-06) cannot start without the client's permission, and the open questions remain open. The [validation plan](../02-research/validation-plan.md#7-delivery-2-status-of-the-activities) records what is blocked and what the project does meanwhile; the [schedule](schedule.md#5-delivery-2--plan-due-2026-10-31) was replanned accordingly.
 
@@ -70,17 +70,17 @@ The message regrouped and renumbered the questions, so its numbers do not match 
 </details>
 
 <details>
-<summary>Reminder of 2026-10-19 (verbatim, Spanish)</summary>
+<summary>Reminder of 2026-10-19 (verbatim, Spanish) — <a href="communications/2026-10-19-teams-reminder.png">screenshot</a></summary>
 
 > Buenas tardes, maestro. Le escribo para confirmar si le llegó mi mensaje del 30 de septiembre con el enlace del repositorio de la primera entrega: https://github.com/Alambrep/boutique-fmat-pos
 >
 > Para avanzar con la segunda entrega, lo más urgente para mí es saber si me autoriza a observar cómo se vende en la boutique y hacer entrevistas breves a quienes atienden, y con quién podría coordinarlo.
 >
-> También me ayudaría mucho resolver algunas dudas del proyecto, que le incluí por escrito en ese mismo mensaje del 30 de septiembre. Si le resulta más fácil, podríamos verlas en una reunión de 15 minutos esta semana, en su oficina o por llamada de Teams, lo que le sea más cómodo. Me adapto a su horario. ¡Muchas gracias!
+> También me ayudaría mucho resolver algunas dudas del proyecto, que le incluí por escrito en ese mismo mensaje del 30 de septiembre. Si le resulta más fácil, podríamos verlas en una reunión de 15 minutos esta semana, en su oficina o por llamada de Teams, lo que le sea más cómodo. Me adapto a su horario. Muchas gracias
 
 </details>
 
-**Not recorded:** the time of the 2026-10-19 reminder and the date of the attempt in person.
+The quoted text of both messages matches the screenshots; Teams also showed a link preview of the repository below the reminder.
 
 ## Planned
 
