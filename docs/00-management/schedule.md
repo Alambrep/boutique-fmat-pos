@@ -13,7 +13,7 @@
 | Delivery | Branch | Focus | Due date | Status |
 |---|---|---|---|---|
 | 1 | `first-delivery` | Project definition, hypothesis-based user modeling (proto-personas), initial requirements, research plan | 2026-09-30 | Delivered (tag `delivery-1`) |
-| 2 | `second-delivery` | User research (V-01…V-06), research-based personas, low-fidelity prototype, first usability test (V-07) | To be announced | Planned |
+| 2 | `second-delivery` | Requirements evolution, design guidelines, low-fidelity prototype, interaction design, inspection (optional), usability test protocol (V-07 sketch); field research (V-01…V-06) ready but blocked pending the client's permission | 2026-10-31 | In progress |
 | 3 | `third-delivery` | Iterated prototype, usability testing, technical tests (V-08) | To be announced | Planned |
 
 ## 2. Delivery 1 — activities
@@ -63,22 +63,40 @@ gantt
   S5 Author's name, video link, closing (T-01, T-11 … T-13) :done, 2026-09-30 14:49, 2026-09-30 15:40
 ```
 
-## 5. Delivery 2 — planned activities (dates to be set when announced)
+## 5. Delivery 2 — plan (due 2026-10-31)
 
-Each task is created as an issue with its estimated hours before work starts; actual hours are recorded when it closes.
+**How this plan was built.** The author provided the delivery 2 rubric ([transcription](../../client/rubric-delivery-2.md)), the due date (2026-10-31) and the video limit (5 minutes) on 2026-10-27. Tasks T-14…T-28 were created as issues with estimated hours on 2026-10-27, **before** work on them started (lesson learned from delivery 1). Estimates are the author's planned working-session hours; actual hours are recorded in each issue and in the [task log](task-log.md) when it closes.
 
-| Week | Activities | Tasks (to be created) |
+**Change from the delivery 1 plan.** The previous version of this section put field research (V-01…V-06) in weeks 1–2. It is blocked: permission to observe and interview at the boutique was requested from the client on 2026-09-30 and 2026-10-19 and has not been answered ([communications](meetings.md#communications-with-the-client)). The plan therefore starts with the work that does not depend on the client, and leaves fieldwork ready to run (T-15).
+
+| Day | Tasks | Est. (h) |
 |---|---|---|
-| 1 | Client interview and open questions Q-01…Q-16, including the accounting contact for Q-05 (V-04); device and connectivity check (V-05); observation (V-01) | T-14…T-16 |
-| 2 | Seller interviews (V-02); CDU interview (V-03); records review (V-06) | T-17…T-19 |
-| 3 | Analysis; update hypotheses, personas, scenarios and requirements | T-20…T-21 |
-| 4 | Low-fidelity prototype in Figma; first usability test (V-07) | T-22…T-23 |
+| Tue 2026-10-27 | Issues and milestone; T-14 setup; T-15 starts | 1.0 |
+| Wed 2026-10-28 | T-15 field research ready (blocked); T-16 requirements revision; T-17 FR ↔ NFR map; T-19 design guidelines | 6.0 |
+| Thu 2026-10-29 | T-20 prototype v1; T-21 interaction design; T-18 requirements → design traceability | 6.0 |
+| Fri 2026-10-30 | T-22 inspection *(conditional)*; T-23 prototype v2; T-24 usability test protocol; T-27 contribution metric; T-25 pilot *(conditional)* | 8.5 |
+| Sat 2026-10-31 | T-28 video (≤ 5 min) and closing: PR to `main`, tag `delivery-2` | 2.5 |
+| Every session | T-26 logbook and task tracking | 1.0 |
+
+Total estimated: **25.0 h**; without the conditional tasks (T-22, T-25): **21.0 h**.
+
+**Checkpoints and cut order.** The author asked for a cut proposal in case the estimates do not fit the date.
+
+| Checkpoint | Condition to go ahead | If not met |
+|---|---|---|
+| A — Thu 2026-10-29, end of day | Prototype v1 (T-20) reviewed by the author | Cut **T-22**; T-23 iterates v1 on the author's review |
+| B — Fri 2026-10-30, 14:00 | Protocol (T-24) and prototype v2 (T-23) finished, and the 2 proxy participants available | Cut **T-25**; the protocol stays ready for a pilot in delivery 3 |
+| C — any time | Mandatory tasks at risk | Reduce T-15 to the Spanish versions of V-01 and V-02 only; the rest are prepared when permission arrives |
+
+Cut order: **T-25 → T-22 → T-15 (reduced)**. A cut task is closed as *Cancelled* in the task log, with the reason.
 
 ## 6. Delivery 3 — planned activities (dates to be set when announced)
 
+The final delivery rubric ([original](../../client/originals/Rubric_Final_Delivery-HCI.pdf)) asks for a summary of the changes across the three deliveries, the product by user-centred design phase with the transition between stages and prototypes, the usability tests in detail (materials, evidence, analysis, results), lessons learned, the presentation and teamwork. Delivery 2 artifacts are built so they can be reused: requirement change log, versioned prototypes with an evolution log, and a test protocol that can be run as is.
+
 | Week | Activities | Tasks (to be created) |
 |---|---|---|
-| 1 | Iterate the prototype on the V-07 findings | T-24 |
-| 2 | Second usability round (V-07), including the two-week memorability task (NFR-05) | T-25 |
-| 3 | Technical tests on a reference low-end phone: performance, offline, scanner and printer (V-08) | T-26 |
-| 4 | Final requirements revision, report and presentation | T-27…T-28 |
+| 1 | Field research V-01…V-06 when permission is granted; iterate the prototype on its findings and on the delivery 2 pilot, if run | T-29 |
+| 2 | Usability test rounds (V-07), including the two-week memorability task (NFR-05) | T-30 |
+| 3 | Technical tests on a reference low-end phone: performance, offline, scanner and printer (V-08) | T-31 |
+| 4 | Final requirements revision, lessons learned, report and presentation | T-32…T-33 |
