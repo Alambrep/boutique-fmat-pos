@@ -99,3 +99,4 @@ When the client answers a question (V-04), these are the artifacts to revise. Ge
 | Q-14 | — | — | S-01 | FR-31 |
 | Q-15 | — | — | — | FR-28 |
 | Q-16 | — | — | — | — |
+| Q-17 | H-17 | P-02 | — | FR-01, FR-09 (via H-17) |

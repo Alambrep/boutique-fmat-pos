@@ -57,6 +57,8 @@ These do not appear in the written document. **Source:** stated by the professor
 
 ## Open questions for the client
 
+**Status:** Q-01…Q-17 were sent to the client in writing on 2026-09-30 (Microsoft Teams) and a reminder was sent on 2026-10-19; there is no answer yet. Details, the exact messages and how the message's numbering maps to these identifiers are in the [meeting log](../docs/00-management/meetings.md#communications-with-the-client).
+
 | ID | Question | Affects | Status |
 |---|---|---|---|
 | Q-01 | What does **CDU** stand for, and where is it physically located? | CR-01, CR-08, CR-09 | Open |
@@ -75,3 +77,4 @@ These do not appear in the written document. **Source:** stated by the professor
 | Q-14 | May charge-only profiles see on the sales screen whether a product is available at their point, or does that count as "query" (*consulta*)? | CR-03, CR-04, FR-31 | Open |
 | Q-15 | Where will the synchronization server be hosted (UADY infrastructure, a cloud service, none), and who maintains it? | PRJ-02, CR-08, CR-14 | Open |
 | Q-16 | Do other UADY units already use a point-of-sale or inventory system that this project should align with or learn from? | CR-01…CR-18 | Open |
+| Q-17 | At CDU, is the person who serves customers the same person who registers the products? _(Added on 2026-10-27: asked as question 5 of the 2026-09-30 message, where it was worded from hypothesis H-17.)_ | CR-01, CR-09, H-17 | Open |

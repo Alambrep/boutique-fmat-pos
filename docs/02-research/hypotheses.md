@@ -34,7 +34,7 @@ Status values: `Unvalidated` → `Validated` / `Refuted` / `Partially validated`
 | H-11 | Central Administration staff use the system mostly to **query** (stock, accounts receivable) and charge only occasionally. | Staff describe querying as their main activity and sales as rare. | Central Administration sells as often as the satellite points. | Low | Medium | V-04 | Unvalidated |
 | H-12 | Sellers at the satellite points rotate often (e.g. student assistants or shift staff) and get little training time. | More than one person covers each point; training is informal or on the job. | Each point has one stable seller with formal training. | Low | High | V-02, V-04 | Unvalidated |
 | H-16 | Central Administration staff work at an office desk, mostly with a computer, and have medium digital skills (forms, spreadsheets, email). | Staff describe office work with a computer and use spreadsheets without help. | Staff work mainly from a phone or have low digital skills. | Low | Medium | V-04 | Unvalidated |
-| H-17 | Sales at the CDU point are made by the same person who manages the inventory (P-02), not by a separate front-desk seller. | CDU staff describe one person doing both tasks. | CDU has a separate seller, who would receive modify permissions through the CDU profile. | Low | High | V-03, V-04 | Unvalidated |
+| H-17 | Sales at the CDU point are made by the same person who manages the inventory (P-02), not by a separate front-desk seller. | CDU staff describe one person doing both tasks. | CDU has a separate seller, who would receive modify permissions through the CDU profile. | Low | High | V-03, V-04 (Q-17) | Unvalidated |
 
 ### Context and devices
 
