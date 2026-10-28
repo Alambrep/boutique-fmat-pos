@@ -1,26 +1,38 @@
 # Boutique FMAT — Offline Point of Sale and Inventory for Mobile Devices
 
 > Project for the **Human-Computer Interaction** course (B.Sc. in Software Engineering, FMAT-UADY).
-> **Delivery 1:** project definition, hypothesis-based user modeling and initial requirements.
+> **Delivery 1 (delivered):** project definition, hypothesis-based user modeling and initial requirements.
+> **Delivery 2 (in progress):** requirements evolution, design guidelines, low-fidelity prototype, interaction design and usability test protocol.
 
 | | |
 |---|---|
 | **Author** | Alan Pérez (individual work) |
 | **Client** | Course professor (Boutique FMAT-UADY) |
-| **Current delivery** | 1 of 3 — due 2026-09-30 |
-| **Branch** | [`first-delivery`](https://github.com/Alambrep/boutique-fmat-pos/tree/first-delivery) |
-| **Status** | Delivered — tag [`delivery-1`](https://github.com/Alambrep/boutique-fmat-pos/releases/tag/delivery-1) |
-| **Design (Figma)** | No design artifacts in delivery 1; the low-fidelity prototype starts in delivery 2 |
-| **Video / presentation** | [Delivery 1 video](https://youtu.be/kahF-t9Y5TM) — also listed in [`docs/05-presentation/`](docs/05-presentation/README.md) |
+| **Current delivery** | 2 of 3 — due 2026-10-31 |
+| **Branch** | [`second-delivery`](https://github.com/Alambrep/boutique-fmat-pos/tree/second-delivery) |
+| **Status** | In progress — milestone [Delivery 2](https://github.com/Alambrep/boutique-fmat-pos/milestone/2) |
+| **Previous delivery** | Delivery 1 — tag [`delivery-1`](https://github.com/Alambrep/boutique-fmat-pos/releases/tag/delivery-1) |
+| **Design** | Low-fidelity prototype in [`design/`](design/README.md) (SVG wireframes and a clickable HTML version) — in progress |
+| **Video / presentation** | [Delivery 1 video](https://youtu.be/kahF-t9Y5TM); delivery 2 video pending — both listed in [`docs/05-presentation/`](docs/05-presentation/README.md) |
 
 ---
 
 ## For the evaluator
 
-**Start here: [RUBRIC-MAP.md](RUBRIC-MAP.md)** — every item of the rubric with a direct link to the section that covers it, and the known gaps of this delivery. Summary:
+**Start here: [RUBRIC-MAP.md](RUBRIC-MAP.md)** — every item of the delivery 2 rubric with a direct link to the section that covers it. Summary:
 
-| Criterion | Main evidence |
+| Delivery 2 criterion | Main evidence |
 |---|---|
+| 1 — Evolution of the requirements | [Functional](docs/04-requirements/functional-requirements.md) and [non-functional](docs/04-requirements/non-functional-requirements.md) requirements, [traceability matrix](docs/04-requirements/traceability-matrix.md) — revision in progress |
+| 2 — Interface prototyping | [`design/`](design/README.md) — in progress |
+| 3 — Inspection methods (optional) | Planned (T-22, conditional) |
+| 4 — Usability test sketch | Planned (T-24) |
+| 5 — Teamwork (individual) | [Task log](docs/00-management/task-log.md), [logbook](docs/00-management/logbook/), [schedule](docs/00-management/schedule.md), [contribution metrics](docs/00-management/contribution-metrics.md) |
+| 6 — Presentation | [Video](docs/05-presentation/README.md) — pending |
+
+Delivery 1 evidence (definition, research plan, user modeling) remains in place; its map is linked from [RUBRIC-MAP.md](RUBRIC-MAP.md).
+
+---|---|
 | 1 — Definition of the project | [Project definition](docs/01-definition/project-definition.md) |
 | 2 — User research process | [Validation plan](docs/02-research/validation-plan.md), [instruments](docs/02-research/instruments/), [desk research results](docs/02-research/results/desk-research.md), [hypotheses](docs/02-research/hypotheses.md), [schedule](docs/00-management/schedule.md), this README |
 | 3 — User modeling | [Proto-personas](docs/03-user-modeling/proto-personas.md), [scenarios](docs/03-user-modeling/scenarios.md) |
@@ -141,8 +153,9 @@ boutique-fmat-pos/
 │       └── task.md                          # template for every task (T-xx)
 ├── client/
 │   ├── client-requirements.md               # CR-xx, PRJ-xx and open questions Q-xx
-│   ├── rubric-delivery-1.md             # rubric transcription
-│   └── originals/                           # documents exactly as delivered by the client
+│   ├── rubric-delivery-1.md                 # rubric transcription, delivery 1
+│   ├── rubric-delivery-2.md                 # rubric transcription, delivery 2
+│   └── originals/                           # documents exactly as delivered by the client (incl. the three rubrics)
 ├── docs/
 │   ├── 00-management/
 │   │   ├── schedule.md
@@ -203,7 +216,7 @@ boutique-fmat-pos/
 Although this is an individual project, the process leaves verifiable evidence in the repository:
 
 - **Branches:** `main` holds the approved version of each delivery. Each delivery is developed in its own branch (`first-delivery`, `second-delivery`, `third-delivery`) and closed with a Pull Request to `main` and a tag (`delivery-1`, `delivery-2`, `delivery-3`).
-- **Tasks:** every task is an *issue* created from the [`task.md`](.github/ISSUE_TEMPLATE/task.md) template, with a `T-xx` identifier, the `delivery-1` label and the rubric criterion it addresses. All belong to the "Delivery 1" *milestone*.
+- **Tasks:** every task is an *issue* created from the [`task.md`](.github/ISSUE_TEMPLATE/task.md) template, with a `T-xx` identifier, the delivery label (`delivery-1`, `delivery-2`…), the rubric criterion it addresses and, from delivery 2 on, estimated hours set before work starts. Each delivery has its own *milestone*. Tasks that are done only if time allows carry the `conditional` label.
 - **Commits:** [Conventional Commits](https://www.conventionalcommits.org/) format, referencing the task:
 
   ```
@@ -247,7 +260,13 @@ The client's document leaves several points undefined (meaning of *CDU* and *C.P
 
 ## 11. Language
 
-Repository content is written in English. Client documents in `client/originals/` are kept in their original language (Spanish); proper names (warehouses, profiles, *Interuady*) are kept in Spanish.
+Repository content is written in English. Exceptions, kept in Spanish because Spanish speakers use them:
+
+- Client documents in `client/originals/` and the author's messages to the client, quoted verbatim in the [meeting log](docs/00-management/meetings.md#communications-with-the-client).
+- The user interface text of the prototype (`NFR-12`).
+- Participant-facing research and test materials, kept in folders named `es/` (from delivery 2). Each one has an English reference version next to it.
+
+Proper names (warehouses, profiles, *Interuady*) are kept in Spanish.
 
 ## 12. AI assistance statement
 
