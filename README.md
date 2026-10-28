@@ -250,7 +250,7 @@ Although this is an individual project, the process leaves verifiable evidence i
 
 ## 9. Open questions for the client
 
-The client's document leaves several points undefined (meaning of *CDU* and *C.P.*, how 4 profiles map to 3 warehouses, VAT and invoicing, transfers between warehouses, cancellations, among others). They are numbered `Q-01…Q-16` in [`client/client-requirements.md`](client/client-requirements.md#open-questions-for-the-client). Until they are answered, the artifacts that depend on them rely on an explicit hypothesis.
+The client's document leaves several points undefined (meaning of *CDU* and *C.P.*, how 4 profiles map to 3 warehouses, VAT and invoicing, transfers between warehouses, cancellations, among others). They are numbered `Q-01…Q-17` in [`client/client-requirements.md`](client/client-requirements.md#open-questions-for-the-client). Until they are answered, the artifacts that depend on them rely on an explicit hypothesis. They were sent to the client on 2026-09-30, with a reminder on 2026-10-19; no answer yet ([communications](docs/00-management/meetings.md#communications-with-the-client)).
 
 ## 10. Known limitations of this delivery
 

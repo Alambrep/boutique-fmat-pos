@@ -1,6 +1,6 @@
 # Instrument — Staff and client interview guide (V-03, V-04, V-06)
 
-> Semi-structured interview, 30–45 min, with CDU staff, Central Administration and the client. Administered in Spanish; this English text is the reference version, and the Spanish version used in the field will be added to this folder before fieldwork (delivery 2).
+> Semi-structured interview, 30–45 min, with CDU staff, Central Administration and the client. Administered in Spanish; this English text is the reference version; the Spanish version used in the field is [`es/guia-entrevista-personal.md`](es/guia-entrevista-personal.md).
 
 ## Consent script
 Same as the [observation guide](observation-guide.md). Participant code: `CDU-__` / `ADM-__` / `CLI-01` · Date: ______
@@ -11,7 +11,7 @@ Same as the [observation guide](observation-guide.md). Participant code: `CDU-__
 3. How do you know how much stock each point has? How often do counts not match?
 4. How are codes assigned to products? *(Q-08)*
 5. *(CDU)* Which tools do you use for this work (paper, spreadsheets, a system)? Could you show me how you would add a new product to that tool? *(observe without helping; H-07)*
-6. *(CDU)* Who attends customers at the CDU point? Is it the same person who registers products? *(H-17, Q-11)*
+6. *(CDU)* Who attends customers at the CDU point? Is it the same person who registers products? *(H-17, Q-11, Q-17)*
 
 ## B. Payments and accounts receivable — Central Administration and client (H-08, H-10, H-11, H-13, H-16)
 7. What does Central Administration mainly do with the boutique: query, sell, or both? From which stock? *(Q-02)*
@@ -38,4 +38,4 @@ Only aggregated data; no personal data is copied.
 3. Is any receipt number or format required for audit purposes?
 
 ## D. Open questions for the client
-Ask the questions Q-01…Q-16 from [client requirements](../../../client/client-requirements.md#open-questions-for-the-client) and record the answers there.
+Ask the questions Q-01…Q-17 from [client requirements](../../../client/client-requirements.md#open-questions-for-the-client) and record the answers there.

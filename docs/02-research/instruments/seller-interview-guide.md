@@ -1,6 +1,6 @@
 # Instrument — Seller interview guide (V-02)
 
-> Semi-structured interview, 20–30 min. Administered in Spanish; this English text is the reference version, and the Spanish version used in the field will be added to this folder before fieldwork (delivery 2). Hypotheses: H-01, H-02, H-05, H-06, H-08, H-12, H-14.
+> Semi-structured interview, 20–30 min. Administered in Spanish; this English text is the reference version; the Spanish version used in the field is [`es/guia-entrevista-vendedores.md`](es/guia-entrevista-vendedores.md). Hypotheses: H-01, H-02, H-05, H-06, H-08, H-12, H-14.
 
 ## Consent script
 Same as the [observation guide](observation-guide.md). Participant code: `SEL-__` · Point: ______ · Date: ______
