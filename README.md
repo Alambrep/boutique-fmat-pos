@@ -12,7 +12,7 @@
 | **Branch** | [`second-delivery`](https://github.com/Alambrep/boutique-fmat-pos/tree/second-delivery) |
 | **Status** | In progress — milestone [Delivery 2](https://github.com/Alambrep/boutique-fmat-pos/milestone/2) |
 | **Previous delivery** | Delivery 1 — tag [`delivery-1`](https://github.com/Alambrep/boutique-fmat-pos/releases/tag/delivery-1) |
-| **Design** | [Clickable low-fidelity prototype v1](design/prototype/v1/) (HTML, opens on a phone) and its screens; [design folder](design/README.md) |
+| **Design** | [Clickable low-fidelity prototype v1](design/prototype/v1/) — open it online on a phone: https://alambrep.github.io/boutique-fmat-pos/design/prototype/v1/ — and its screens; [design folder](design/README.md) |
 | **Video / presentation** | [Delivery 1 video](https://youtu.be/kahF-t9Y5TM); delivery 2 video pending — both listed in [`docs/05-presentation/`](docs/05-presentation/README.md) |
 
 ---

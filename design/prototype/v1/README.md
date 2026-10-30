@@ -8,7 +8,7 @@
 
 | What | How |
 |---|---|
-| Use it as a participant would | Open [`index.html`](index.html) in a browser (phone or computer). It is one file with no external resources, so it also works without internet once downloaded. |
+| Use it as a participant would | **Online:** https://alambrep.github.io/boutique-fmat-pos/design/prototype/v1/ (GitHub Pages, published from the `second-delivery` branch). **Offline:** open [`index.html`](index.html) in a browser (phone or computer). It is one file with no external resources, so it also works without internet once downloaded. |
 | Facilitator panel (choose profile, internet on/off, printer, scanner, jump to any screen) | Add `?f` to the address: `index.html?f`. Participants do not see the panel unless the address has `?f`. |
 | Annotations (screen ID, requirements and pending questions on every screen) | `index.html?f&notas`, or tick *Anotaciones* in the panel. |
 | Sign in | Any user and password. The users `luis`, `daniela` and `martha` open the profiles of P-01 (Campus Sociales), P-02 (CDU) and P-03 (Central Administration); any other user opens the profile chosen in the facilitator panel (default: Campus Sociales). |
@@ -68,6 +68,10 @@ Computed with the WCAG 2.2 relative-luminance formula from the CSS colors ([G-22
 | Table header | `#111111` on `#e8e8e8` | 15.4:1 |
 | Product drawing (graphic, not text) | `#555555` on `#e8e8e8` | 6.1:1 |
 
+## Test on a real phone
+
+2026-10-30, by the author, on an iPhone 14 Pro Max (Safari), through GitHub Pages: cash sale, Interuady sale with two products, lock and change user, inventory table, new product. Result reported by the author: everything worked; no unexpected zoom when typing; the inventory table scrolls sideways and shows all columns. The keyboard covers *Confirmar venta* while typing, but the page can be scrolled or the keyboard closed (B-3). At this screen size (430 × 740 CSS px in Safari) the *Interuady* button of SCR-04 is visible without scrolling, so B-1 appears only on smaller phones such as the 360 × 640 reference.
+
 ## Issues noticed while building v1
 
 Found by the AI assistant when reviewing the screenshots; candidates for v2 (T-23), to be confirmed by the author and the inspection.
@@ -76,6 +80,7 @@ Found by the AI assistant when reviewing the screenshots; candidates for v2 (T-2
 |---|---|---|---|
 | B-1 | SCR-04 | At 360 × 640, with two lines in the sale, *Interuady* — the third payment method — is below the fold; the seller has to scroll to see it. | G-06, G-07 |
 | B-2 | SCR-02, SCR-09, SCR-11, SCR-15 | When the status chip is long (*Sin internet · 2 ventas por enviar*), the point and user wrap to two lines in the top bar. | G-09 |
+| B-3 | SCR-05, SCR-07, SCR-13 | On the iPhone, the keyboard covers the primary button while typing; the user scrolls or closes the keyboard (found by the author on 2026-10-30; considered acceptable). | G-06, G-07 |
 
 ## Limitations for testing
 
