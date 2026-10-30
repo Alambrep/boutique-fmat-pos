@@ -47,7 +47,7 @@ The delivery 1 map is kept as it was delivered: [RUBRIC-MAP.md at the close of d
 | Rubric item | Where to find it | Status |
 |---|---|---|
 | **5a — Logbook and task tracking** (task, owner, status, definition of done) | [Task log](docs/00-management/task-log.md) · [Logbook](docs/00-management/logbook/) · [Schedule §5](docs/00-management/schedule.md#5-delivery-2--plan-due-2026-10-31) · [GitHub issues, milestone "Delivery 2"](https://github.com/Alambrep/boutique-fmat-pos/milestone/2) | In progress (T-26) |
-| **5b — Contribution metric, parameters and % per delivery** | _Pending (T-27)_ | Planned |
+| **5b — Contribution metric, parameters and % per delivery** | [Contribution metrics](docs/00-management/contribution-metrics.md): [§0 metric and parameters](docs/00-management/contribution-metrics.md#0-how-individual-contribution-is-measured), [§1 % per delivery and progress](docs/00-management/contribution-metrics.md#1-contribution-per-delivery), [§3 author-attributable work](docs/00-management/contribution-metrics.md#3-author-attributable-metrics); computed by [`tools/metrics.py`](tools/metrics.py) | Done (T-27); recomputed at close |
 
 ## 6. Progress presentation
 

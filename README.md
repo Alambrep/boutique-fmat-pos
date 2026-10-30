@@ -303,7 +303,7 @@ Rules followed:
 
 - The AI does not produce findings. Everything not stated by the client is labeled as a hypothesis (`H-xx`) until it is validated with real users.
 - The AI does not invent statistics, quotes or sources. A claim that could not be verified is not included.
-- Work done by the assistant is not presented as the author's; the author's own contribution is measured in [`contribution-metrics.md`](docs/00-management/contribution-metrics.md#2-author-attributable-metrics).
+- Work done by the assistant is not presented as the author's; the author's own contribution is measured in [`contribution-metrics.md`](docs/00-management/contribution-metrics.md#3-author-attributable-metrics).
 
 ## 13. Tools
 
