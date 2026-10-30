@@ -1,6 +1,6 @@
 # References
 
-> Every source below was opened and checked against the statement it supports on **2026-09-28**, by the AI assistant at the author's request, with a summary given to the author; sources were re-checked on **2026-09-29** after two reviews by Claude in separate conversations (R10 attribution and R32 title corrected; R12 DOI and the official publication of R18 added; a proposed Android startup-time benchmark could not be confirmed and was not added). R35–R40 and the SC 1.4.1 use of R3 were opened and checked on **2026-10-29** by the AI assistant, for the delivery 2 design work; an NN/g article on error messages was considered but not added, because the accessible text did not contain the statements needed (heuristic 9 of R35 is cited instead).
+> Every source below was opened and checked against the statement it supports on **2026-09-28**, by the AI assistant at the author's request, with a summary given to the author; sources were re-checked on **2026-09-29** after two reviews by Claude in separate conversations (R10 attribution and R32 title corrected; R12 DOI and the official publication of R18 added; a proposed Android startup-time benchmark could not be confirmed and was not added). R35–R40 and the SC 1.4.1 use of R3 were opened and checked on **2026-10-29**, and R41 on **2026-10-30**, by the AI assistant, for the delivery 2 design work; an NN/g article on error messages was considered but not added, because the accessible text did not contain the statements needed (heuristic 9 of R35 is cited instead).
 >
 > **How to verify a citation:** open the link, search the page (Ctrl+F) for the keyword given in the "Where to look" column, and confirm the statement matches.
 
@@ -82,6 +82,12 @@
 
 - **Commercial POS comparison:** Shopify POS was reviewed only for offline sales and payment methods; its multi-store features and cost were not reviewed (see [project definition §3.2](01-definition/project-definition.md#32-comparison-with-existing-solutions)).
 - **Yucatán-specific ENDUTIH figures:** out of scope for delivery 1; the argument uses national figures (see [project definition §2.1](01-definition/project-definition.md#21-digital-inclusion-of-people-with-low-technology-skills)).
+
+## Requirements writing (delivery 2)
+
+| ID | Reference | Supports | Where to look |
+|---|---|---|---|
+| R41 | NASA. (n.d.). *Appendix C: How to Write a Good Requirement.* https://www.nasa.gov/reference/appendix-c-how-to-write-a-good-requirement/ (accessed 2026-10-30) | Requirements use *shall*, express one thought per statement (one subject and one predicate), can be tested, demonstrated, inspected or analyzed, and avoid unverifiable terms such as *easy*, *adequate*, *user-friendly*, *usable*, *fast*, *quickly*, and ambiguous ones such as *etc.* and *and/or* (requirements change log, writing rules). | "user-friendly" |
 
 ## Interface and interaction design (delivery 2)
 
