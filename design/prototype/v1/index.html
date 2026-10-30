@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boutique FMAT — prototipo de baja fidelidad v1</title>
+<!--
+  Low-fidelity clickable prototype, version 1 (T-20).
+  - One self-contained file: no libraries, no fonts, no network. Opens offline.
+  - UI text in Spanish (NFR-12); code and comments in English.
+  - Screens are the <section> elements with id SCR-xx. Their data-reqs attribute must match
+    design/screens.md; tools/trace.py --check verifies it.
+  - Sample data is fictional, except the record P010203 (Playera Jaguar Azul), copied from the
+    client's document.
+  - Facilitator panel: open with ?f in the URL (e.g. index.html?f). Annotations: ?f&notas.
+-->
+<style>
+:root{--ink:#111;--ink2:#4d4d4d;--line:#777;--fill:#e8e8e8;--fill2:#f4f4f4;--bg:#fff;--page:#cfcfcf}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{font:16px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--page)}
+button,input,select{font:inherit;color:inherit}
+#app{position:relative;max-width:420px;height:100vh;height:100dvh;margin:0 auto;background:var(--bg);display:flex;flex-direction:column;overflow:hidden}
+@media (min-width:600px){#app{height:740px;margin:24px auto;border:2px solid var(--ink);border-radius:14px}}
+.screen{display:none;flex:1;flex-direction:column;min-height:0}
+.screen.on{display:flex}
+.top{border-bottom:2px solid var(--ink);padding:8px 12px 8px;background:var(--bg)}
+.top .row{display:flex;align-items:center;gap:8px}
+.top h1{font-size:20px;margin:0;flex:1;line-height:1.2}
+.top .sub{font-size:14px;color:var(--ink2);flex:1}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:14px;border:2px solid var(--ink);border-radius:16px;padding:2px 10px;white-space:nowrap}
+.chip.off{border-style:dashed}
+.chip .dot{width:10px;height:10px;border:2px solid var(--ink);border-radius:50%}
+.chip.ok .dot{background:var(--ink)}
+.content{flex:1;overflow-y:auto;padding:12px}
+.actions{border-top:2px solid var(--ink);padding:10px 12px;background:var(--bg)}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:56px;border:2px solid var(--ink);border-radius:8px;background:var(--ink);color:#fff;font-size:18px;font-weight:700;padding:8px 12px;cursor:pointer}
+.btn.sec{background:var(--bg);color:var(--ink)}
+.btn.dis{background:var(--fill);color:var(--ink2);border-style:dashed}
+.btn+.btn{margin-top:8px}
+.link{min-height:48px;min-width:48px;border:0;background:none;text-decoration:underline;font-size:16px;padding:8px 4px;cursor:pointer}
+.iconbtn{min-height:48px;min-width:48px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;border:2px solid var(--ink);border-radius:8px;background:var(--bg);font-size:12px;padding:2px 6px;cursor:pointer}
+svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.field{margin:0 0 14px}
+.field label{display:block;font-weight:700;margin-bottom:4px}
+.field .req{font-weight:400;color:var(--ink2)}
+.field input,.field select{width:100%;min-height:48px;border:2px solid var(--line);border-radius:6px;padding:8px 10px;background:var(--bg)}
+.field.invalid input,.field.invalid select{border:3px solid var(--ink)}
+.field .msg{display:none;margin-top:4px;font-size:15px;font-weight:700}
+.field.invalid .msg{display:block}
+.field.invalid .msg::before{content:"⚠ "}
+.searchrow{display:flex;gap:8px;margin-bottom:10px}
+.searchrow input{flex:1;min-height:48px;border:2px solid var(--line);border-radius:6px;padding:8px 10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.card{position:relative;border:2px solid var(--ink);border-radius:8px;background:var(--bg);padding:8px;text-align:left;cursor:pointer;min-height:48px}
+.card .ph{height:84px;background:var(--fill);border-radius:4px;display:flex;align-items:center;justify-content:center;margin-bottom:6px}
+.card .ph svg{width:56px;height:56px;fill:none;stroke:#555;stroke-width:2}
+.card .nm{font-weight:700;line-height:1.2}
+.card .pr{font-size:18px;font-weight:700}
+.card .cd{font-size:12px;color:var(--ink2)}
+.card .av{display:inline-block;font-size:13px;border:1px solid var(--ink);border-radius:10px;padding:0 6px;margin-top:4px}
+.card .av.out{border-style:dashed;text-decoration:line-through}
+.card .cnt{position:absolute;top:6px;right:6px;background:var(--ink);color:#fff;border-radius:12px;padding:0 8px;font-weight:700}
+.cartbar{display:flex;align-items:center;gap:10px}
+.cartbar .sum{flex:1}
+.cartbar .sum b{font-size:20px}
+.cartbar .btn{width:auto;flex:0 0 46%}
+.line{display:flex;gap:10px;align-items:center;border-bottom:1px solid var(--line);padding:10px 0}
+.line .ph{width:48px;height:48px;background:var(--fill);border-radius:4px;flex:0 0 48px;display:flex;align-items:center;justify-content:center}
+.line .ph svg{width:36px;height:36px;fill:none;stroke:#555;stroke-width:2}
+.line .info{flex:1;min-width:0}
+.line .info .s{font-size:14px;color:var(--ink2)}
+.stepper{display:flex;align-items:center;gap:4px}
+.stepper button{width:48px;height:48px;border:2px solid var(--ink);border-radius:8px;background:var(--bg);font-size:22px;font-weight:700;cursor:pointer}
+.stepper span{min-width:28px;text-align:center;font-size:18px;font-weight:700}
+.total{display:flex;justify-content:space-between;align-items:baseline;font-size:20px;margin:12px 0}
+.total b{font-size:28px}
+.big{font-size:28px;font-weight:700}
+.note{border:2px dashed var(--line);border-radius:8px;padding:10px;margin:10px 0;font-size:15px}
+.warn{border:2px solid var(--ink);border-radius:8px;padding:10px;margin:10px 0}
+.warn::before{content:"⚠ ";font-weight:700}
+.quick{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 12px}
+.quick button{min-height:48px;flex:1 1 30%;border:2px solid var(--ink);border-radius:8px;background:var(--bg);font-weight:700;cursor:pointer}
+.counter{font-size:15px;margin:0 0 8px;font-weight:700}
+.ok-mark{width:84px;height:84px;border:4px solid var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:20px auto 10px;font-size:44px;font-weight:700}
+.center{text-align:center}
+.nav{display:none;border-top:2px solid var(--ink);background:var(--bg)}
+.nav.on{display:flex}
+.nav button{flex:1;min-height:56px;border:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:13px;border-top:4px solid transparent;cursor:pointer}
+.nav button.cur{border-top-color:var(--ink);font-weight:700}
+.overlay{display:none;position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:20;flex-direction:column;justify-content:flex-end}
+.overlay.on{display:flex}
+.overlay.center-dlg{justify-content:center;padding:16px}
+.sheet{background:var(--bg);border-top:2px solid var(--ink);border-radius:14px 14px 0 0;padding:12px;max-height:85%;overflow:auto}
+.dialog{background:var(--bg);border:2px solid var(--ink);border-radius:10px;padding:16px}
+.dialog h2,.sheet h2{font-size:20px;margin:0 0 8px}
+.opt{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:56px;border:2px solid var(--ink);border-radius:8px;background:var(--bg);padding:8px 12px;margin-bottom:8px;font-size:17px;cursor:pointer;text-align:left}
+.opt .av{font-size:14px}
+.seg{display:flex;border:2px solid var(--ink);border-radius:8px;overflow:hidden;margin-bottom:10px}
+.seg button{flex:1;min-height:48px;border:0;border-right:2px solid var(--ink);background:var(--bg);cursor:pointer}
+.seg button:last-child{border-right:0}
+.seg button.cur{background:var(--ink);color:#fff;font-weight:700}
+.tablewrap{overflow-x:auto;border:2px solid var(--ink);border-radius:6px}
+table{border-collapse:collapse;font-size:14px;min-width:760px}
+th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;white-space:nowrap}
+th{background:var(--fill)}
+td.num,th.num{text-align:right}
+tr.flag td{font-weight:700}
+tr.flag td:first-child::before{content:"⚠ "}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 10px}
+.chips button{min-height:48px;border:2px solid var(--ink);border-radius:24px;background:var(--bg);padding:6px 14px;cursor:pointer}
+.chips button.cur{background:var(--ink);color:#fff;font-weight:700}
+.chips button.cur::before{content:"✓ "}
+.variant{border:2px solid var(--line);border-radius:8px;padding:8px;margin-bottom:8px}
+.variant.vbad{border:3px solid var(--ink)}
+.variant .vrow{display:flex;gap:6px;align-items:flex-end}
+.variant .vrow .field{flex:1;margin:0}
+.variant .vrow input{min-height:48px;padding:6px}
+.barcode{height:40px;margin:4px 0;background:repeating-linear-gradient(90deg,#111 0 2px,#fff 2px 4px,#111 4px 5px,#fff 5px 8px,#111 8px 11px,#fff 11px 12px)}
+.rowbtn{display:block;width:100%;text-align:left;border:2px solid var(--ink);border-radius:8px;background:var(--bg);padding:10px;margin-bottom:8px;cursor:pointer}
+.rowbtn .top2{display:flex;justify-content:space-between;font-weight:700}
+.rowbtn .s{font-size:14px;color:var(--ink2)}
+dl{margin:0}dt{font-size:14px;color:var(--ink2);margin-top:8px}dd{margin:0;font-weight:700}
+.ticket{border:2px dashed var(--ink);padding:12px;font-family:ui-monospace,Consolas,monospace;font-size:14px}
+.toast{position:absolute;left:12px;right:12px;bottom:84px;background:var(--ink);color:#fff;border-radius:8px;padding:12px;z-index:30;display:none;font-size:16px}
+.toast.on{display:block}
+.camera{background:#333;color:#fff;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:16px;text-align:center}
+.camera .frame{width:80%;height:120px;border:3px dashed #fff;border-radius:8px}
+.ann{display:none;font:12px/1.35 ui-monospace,Consolas,monospace;border:1px dashed var(--ink);background:#fff;padding:4px 6px;margin:6px 12px 0}
+body.annot .ann{display:block}
+#fac{display:none;position:fixed;right:4px;top:40%;z-index:50;font-size:14px}
+body.fac #fac{display:block}
+#facpanel{display:none;background:#fff;border:2px solid #111;border-radius:8px;padding:10px;width:250px;max-height:90vh;overflow:auto;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+#facpanel.on{display:block}
+#facpanel label{display:block;margin:4px 0}
+#facpanel select{width:100%}
+::placeholder{color:#666;opacity:1}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+<div id="app">
+
+<section class="screen" id="SCR-01" data-title="Iniciar sesión" data-reqs="FR-01 FR-02 FR-30 NFR-12" data-notes="Cuentas personales o una por punto: pendiente (Q-11)."></section>
+<section class="screen" id="SCR-02" data-title="Vender" data-reqs="FR-03 FR-13 FR-14 FR-15 FR-27 FR-28 FR-29 FR-31 NFR-02 NFR-03 NFR-09 NFR-11 NFR-25" data-notes="Etiqueta Hay/Quedan pocos/Agotado: propuesta pendiente (Q-14). Adm. Central vende de CDU: provisional (Q-02)."></section>
+<section class="screen" id="SCR-04" data-title="Resumen de la venta" data-reqs="FR-16 FR-17 FR-33 NFR-03 NFR-11 NFR-28" data-notes=""></section>
+<section class="screen" id="SCR-05" data-title="Pago en efectivo" data-reqs="FR-18 FR-22 NFR-03 NFR-04" data-notes=""></section>
+<section class="screen" id="SCR-06" data-title="Pago con tarjeta" data-reqs="FR-19 FR-22 NFR-21" data-notes="Terminal bancaria aparte: hipótesis H-10 (Q-06)."></section>
+<section class="screen" id="SCR-07" data-title="Pago con Interuady" data-reqs="FR-20 FR-21 FR-39 NFR-06 NFR-07 NFR-22" data-notes="Significado de C.P.: pendiente (Q-04). Dependencias: lista de ejemplo (DI-08). Texto del aviso de privacidad: lo proporciona la UADY."></section>
+<section class="screen" id="SCR-09" data-title="Venta guardada" data-reqs="FR-22 FR-23 FR-24 FR-29 NFR-02 NFR-17" data-notes=""></section>
+<section class="screen" id="SCR-10" data-title="Ticket" data-reqs="FR-23 FR-38" data-notes="Desglose de IVA y facturación: pendiente (Q-05)."></section>
+<section class="screen" id="SCR-11" data-title="Teléfono bloqueado" data-reqs="FR-30 FR-35 NFR-19" data-notes="Tiempo de bloqueo por inactividad: por confirmar (Q-11)."></section>
+<section class="screen" id="SCR-12" data-title="Inventario" data-reqs="FR-09 FR-10 FR-11 FR-12" data-notes="Vista de escritorio (FR-37) no prototipada en v1."></section>
+<section class="screen" id="SCR-13" data-title="Nuevo producto" data-reqs="FR-04 FR-05 FR-06 FR-08 FR-34 FR-36 NFR-26" data-notes="Formato del código: pendiente (Q-08)."></section>
+<section class="screen" id="SCR-14" data-title="Producto guardado" data-reqs="FR-06 FR-07 FR-28 NFR-26" data-notes="Códigos de ejemplo: el formato real depende de Q-08."></section>
+<section class="screen" id="SCR-15" data-title="Cuentas por cobrar" data-reqs="FR-25 NFR-27" data-notes="Filtro por estado (pendiente/pagada): cuando se defina la liquidación (Q-09)."></section>
+<section class="screen" id="SCR-16" data-title="Detalle de la nota" data-reqs="FR-24 FR-26 NFR-20" data-notes="Ocultar datos de personas a perfiles de solo cobro: propuesta (FR-26)."></section>
+
+<nav class="nav" id="nav" aria-label="Secciones"></nav>
+
+<section class="screen overlay" id="SCR-03" data-title="Elegir talla o color" data-reqs="FR-13 FR-31 NFR-09" data-notes="" role="dialog" aria-modal="true"></section>
+<section class="screen overlay center-dlg" id="SCR-08" data-title="Producto agotado" data-reqs="FR-12 FR-32 NFR-07" data-notes="" role="alertdialog" aria-modal="true"></section>
+<div class="overlay center-dlg" id="dlg" role="dialog" aria-modal="true"></div>
+<div class="overlay" id="cam" role="dialog" aria-modal="true"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+
+<div id="fac"><button class="iconbtn" data-act="facToggle" aria-label="Panel del facilitador">F</button><div id="facpanel"></div></div>
+
+<script>
+"use strict";
+/* ---------------------------------------------------------------- data (fictional, except P010203) */
+const WH = ["CDU", "Sociales", "Matemáticas"];
+const PROFILES = {
+  sociales: {name: "Campus Sociales", point: "Sociales", sell: 1, query: 0, modify: 0, start: "SCR-02"},
+  exactas:  {name: "Campus Ciencias Exactas", point: "Matemáticas", sell: 1, query: 0, modify: 0, start: "SCR-02"},
+  cdu:      {name: "CDU", point: "CDU", sell: 1, query: 1, modify: 1, start: "SCR-02"},
+  adm:      {name: "Administración Central", point: "CDU", label: "Adm. Central", sell: 1, query: 1, modify: 0, start: "SCR-15"}
+};
+const NAMES = {luis: "sociales", daniela: "cdu", martha: "adm"};
+const UNITS = ["Facultad de Matemáticas", "Facultad de Ingeniería", "Facultad de Medicina", "Otra"];
+const LOW = 3; // "quedan pocos" threshold, set by CDU (FR-31); sample value
+const SYNCED = {CDU: "ahora", Sociales: "hace 15 min", "Matemáticas": "hace 2 h"};
+
+function seed() {
+  return [
+    {id: "jaguar", name: "Playera Jaguar", type: "Playera o Polo", icon: "tshirt", supplier: "Spiro", cost: 100, price: 200, variants: [
+      {code: "P010202", color: "Azul", size: "Chica", stock: {CDU: 40, Sociales: 5, "Matemáticas": 6}},
+      {code: "P010203", color: "Azul", size: "Mediana", stock: {CDU: 100, Sociales: 12, "Matemáticas": 8}},
+      {code: "P010204", color: "Azul", size: "Grande", stock: {CDU: 30, Sociales: 3, "Matemáticas": 4}}]},
+    {id: "polo", name: "Polo FMAT", type: "Playera o Polo", icon: "polo", supplier: "Proveedor de ejemplo", cost: 160, price: 320, variants: [
+      {code: "P020103", color: "Blanco", size: "Mediana", stock: {CDU: 30, Sociales: 4, "Matemáticas": 2}},
+      {code: "P020104", color: "Blanco", size: "Grande", stock: {CDU: 20, Sociales: 2, "Matemáticas": -1}, flag: {"Matemáticas": "Se vendió con existencias en 0"}}]},
+    {id: "sudadera", name: "Sudadera", type: "Sudadera", icon: "hoodie", supplier: "Proveedor de ejemplo", cost: 225, price: 450, variants: [
+      {code: "P030103", color: "Gris", size: "Mediana", stock: {CDU: 15, Sociales: 2, "Matemáticas": 3}},
+      {code: "P030104", color: "Gris", size: "Grande", stock: {CDU: 10, Sociales: 0, "Matemáticas": 1}}]},
+    {id: "gorra", name: "Gorra", type: "Gorra", icon: "cap", supplier: "Proveedor de ejemplo", cost: 75, price: 150, variants: [
+      {code: "P040100", color: "Azul", size: "N/A", stock: {CDU: 25, Sociales: 8, "Matemáticas": 5}}]},
+    {id: "taza", name: "Taza", type: "Taza", icon: "mug", supplier: "Proveedor de ejemplo", cost: 60, price: 120, variants: [
+      {code: "P050100", color: "Blanco", size: "N/A", stock: {CDU: 40, Sociales: 15, "Matemáticas": 9}}]},
+    {id: "termo", name: "Termo", type: "Termo", icon: "bottle", supplier: "Proveedor de ejemplo", cost: 125, price: 250, variants: [
+      {code: "P060100", color: "Negro", size: "N/A", stock: {CDU: 12, Sociales: 2, "Matemáticas": 3}}]},
+    {id: "libreta", name: "Libreta", type: "Papelería", icon: "notebook", supplier: "Proveedor de ejemplo", cost: 30, price: 60, variants: [
+      {code: "P070100", color: "Azul", size: "N/A", stock: {CDU: 60, Sociales: 20, "Matemáticas": 14}}]}
+  ];
+}
+function seedNotes() {
+  return [
+    {id: "N-0001", date: "2026-10-12", point: "Sociales", unit: "Facultad de Ingeniería", cp: "C.P. Ejemplo Uno", req: "Persona Ejemplo A", lines: [{name: "Polo FMAT Blanco Mediana", qty: 5, price: 320}]},
+    {id: "N-0002", date: "2026-10-19", point: "CDU", unit: "Facultad de Medicina", cp: "C.P. Ejemplo Dos", req: "Persona Ejemplo B", lines: [{name: "Taza Blanco", qty: 10, price: 120}]},
+    {id: "N-0003", date: "2026-10-23", point: "Matemáticas", unit: "Facultad de Ingeniería", cp: "C.P. Ejemplo Uno", req: "Persona Ejemplo C", lines: [{name: "Gorra Azul", qty: 3, price: 150}]}
+  ];
+}
+
+/* ---------------------------------------------------------------- state */
+let S;
+function reset(keepFac) {
+  const fac = S ? S.fac : {profile: "sociales", online: false, printer: false, scanner: false};
+  S = {user: null, profile: null, groups: seed(), notes: seedNotes(), cart: [], queue: [], sales: 0, last: null,
+       hints: {}, q: "", sheet: null, pending: null, cash: "", iu: {unit: "", other: "", cp: "", req: ""}, iuTried: false,
+       wh: "CDU", arUnit: "", arPeriod: "all", note: null, np: null, npSaved: null, npTried: false, stack: [],
+       cur: null, lockedUser: null, fac: keepFac ? fac : {profile: "sociales", online: false, printer: false, scanner: false}};
+}
+
+/* ---------------------------------------------------------------- helpers */
+const $ = s => document.querySelector(s);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+const money = n => "$" + Number(n).toLocaleString("es-MX", {minimumFractionDigits: 0, maximumFractionDigits: 2});
+const norm = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const prof = () => PROFILES[S.profile];
+const point = () => prof().point;
+const ICONS = {
+  sell: '<path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="7.5" r="1.5"/>',
+  box: '<path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/>',
+  doc: '<path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7"/>',
+  lock: '<rect x="5" y="11" width="14" height="10" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
+  scan: '<path d="M4 7V4h3M17 4h3v3M20 17v3h-3M7 20H4v-3M8 8v8M11 8v8M14 8v8M17 8v8"/>'
+};
+const PICS = {
+  tshirt: '<path d="M16 6 8 10 4 18l6 3 2-4v25h24V17l2 4 6-3-4-8-8-4q-8 6-16 0z"/>',
+  polo: '<path d="M16 6 8 10 4 18l6 3 2-4v25h24V17l2 4 6-3-4-8-8-4q-8 6-16 0z"/><path d="m20 7 4 7 4-7M24 14v6"/>',
+  hoodie: '<path d="M16 6 8 10 3 30l6 1 3-11v22h24V20l3 11 6-1-5-20-8-4z"/><path d="M16 6q8-6 16 0-8 8-16 0z"/>',
+  cap: '<path d="M6 30q0-18 18-18t18 18z"/><path d="M42 30l5 3H6"/>',
+  mug: '<path d="M10 12h22v28H10z"/><path d="M32 18q10 0 10 8t-10 8"/>',
+  bottle: '<path d="M18 4h12v6q4 2 4 6v28H14V16q0-4 4-6z"/>',
+  notebook: '<path d="M12 6h26v38H12z"/><path d="M9 12h6M9 20h6M9 28h6M9 36h6"/>'
+};
+const icon = k => `<svg class="i" viewBox="0 0 24 24" aria-hidden="true">${ICONS[k]}</svg>`;
+const pic = k => `<svg viewBox="0 0 48 48" aria-hidden="true">${PICS[k] || PICS.box || ""}</svg>`;
+function allVariants() { const out = []; S.groups.forEach(g => g.variants.forEach(v => out.push({g, v}))); return out; }
+function findCode(code) { return allVariants().find(x => x.v.code === code); }
+function vLabel(g, v) { return [g.name, v.color, v.size !== "N/A" ? v.size : ""].filter(Boolean).join(" "); }
+function avail(n) { return n <= 0 ? ["Agotado", "out"] : n <= LOW ? ["Quedan pocos", ""] : ["Hay", ""]; }
+function cartTotal() { return S.cart.reduce((t, l) => t + l.qty * findCode(l.code).g.price, 0); }
+function cartCount() { return S.cart.reduce((t, l) => t + l.qty, 0); }
+
+function toast(msg) {
+  const t = $("#toast"); t.textContent = msg; t.classList.add("on");
+  clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("on"), 2600);
+}
+function chip() {
+  const n = S.queue.length;
+  if (!S.fac.online) return `<span class="chip off"><span class="dot"></span>Sin internet · ${n ? n + (n === 1 ? " venta por enviar" : " ventas por enviar") : "todo guardado"}</span>`;
+  return n ? `<span class="chip"><span class="dot"></span>Enviando ${n}…</span>` : `<span class="chip ok"><span class="dot"></span>Todo enviado</span>`;
+}
+function topBar(title, opts = {}) {
+  const sub = S.user ? `${esc(prof().label || point())} · ${esc(S.user)}` : "";
+  return `<div class="top"><div class="row"><h1>${title}</h1>${opts.nolock ? "" :
+    `<button class="iconbtn" data-act="lock" aria-label="Bloquear el teléfono">${icon("lock")}Bloquear</button>`}</div>
+    ${S.user ? `<div class="row" style="margin-top:4px"><span class="sub">${sub}</span>${chip()}</div>` : ""}</div>`;
+}
+function ann(id) {
+  const s = document.getElementById(id);
+  const n = s.dataset.notes ? `<br>${esc(s.dataset.notes)}` : "";
+  return `<div class="ann"><b>${id}</b> · ${s.dataset.reqs}${n}</div>`;
+}
+
+/* ---------------------------------------------------------------- navigation */
+const TOPLEVEL = ["SCR-02", "SCR-12", "SCR-15"];
+function show(id, push = true) {
+  const el = document.getElementById(id);
+  if (el.classList.contains("overlay")) { RENDER[id](); el.innerHTML = ann(id) + el.innerHTML; el.classList.add("on"); el.querySelector("button")?.focus(); return; }
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("on"));
+  if (push && S.cur && S.cur !== id) S.stack.push(S.cur);
+  S.cur = id; RENDER[id](); el.innerHTML = ann(id) + el.innerHTML; el.classList.add("on");
+  const c = el.querySelector(".content"); if (c) c.scrollTop = 0;
+  renderNav(); renderFac();
+}
+function closeOverlay(id) { document.getElementById(id).classList.remove("on"); }
+function rerender() { if (S.cur) show(S.cur, false); }
+function renderNav() {
+  const nav = $("#nav");
+  if (!S.user || !TOPLEVEL.includes(S.cur)) { nav.classList.remove("on"); return; }
+  const p = prof(), items = [["SCR-02", "sell", "Vender"]];
+  if (p.query) items.push(["SCR-12", "box", "Inventario"]);
+  items.push(["SCR-15", "doc", "Por cobrar"]);
+  nav.innerHTML = items.map(([id, ic, lb]) => `<button data-act="go" data-to="${id}" class="${S.cur === id ? "cur" : ""}" ${S.cur === id ? 'aria-current="page"' : ""}>${icon(ic)}${lb}</button>`).join("");
+  nav.classList.add("on");
+}
+
+/* ---------------------------------------------------------------- screens */
+const RENDER = {};
+RENDER["SCR-01"] = () => {
+  $("#SCR-01").innerHTML = `${topBar("Boutique FMAT", {nolock: 1})}
+  <div class="content"><p style="font-size:18px;margin-top:4px"><b>Inicia sesión</b></p>
+   <div class="field" id="f-user"><label for="in-user">Usuario</label><input id="in-user" autocomplete="username" autocapitalize="none">
+     <div class="msg">Escribe tu usuario.</div></div>
+   <div class="field" id="f-pass"><label for="in-pass">Contraseña</label><input id="in-pass" type="password" autocomplete="current-password">
+     <div class="msg">Escribe tu contraseña.</div></div>
+   <div class="note">La primera vez necesitas internet. Después, la app funciona aunque no haya internet.</div></div>
+  <div class="actions"><button class="btn" data-act="signin">Entrar</button></div>`;
+};
+RENDER["SCR-02"] = () => {
+  $("#SCR-02").innerHTML = `${topBar("Vender")}
+  <div class="content"><div class="searchrow"><label class="sr" for="in-q">Buscar producto</label>
+     <input id="in-q" data-in="q" placeholder="Buscar producto o código" value="${esc(S.q)}" inputmode="search">
+     <button class="iconbtn" data-act="scan" aria-label="Escanear código">${icon("scan")}Escanear</button></div>
+   <div class="grid" id="grid"></div></div>
+  <div class="actions" id="cartbar"></div>`;
+  renderGrid(); renderCartbar();
+};
+function renderGrid() {
+  const q = norm(S.q.trim()), p = point();
+  const gs = S.groups.filter(g => !q || norm(g.name).includes(q) || g.variants.some(v => norm(v.code).includes(q) || norm(v.color).includes(q)));
+  $("#grid").innerHTML = gs.length ? gs.map(g => {
+    const n = g.variants.reduce((t, v) => t + Math.max(0, v.stock[p] || 0), 0), [lb, cl] = avail(n);
+    const inCart = S.cart.filter(l => findCode(l.code).g === g).reduce((t, l) => t + l.qty, 0);
+    const code = g.variants.length === 1 ? g.variants[0].code : g.variants.length + " opciones";
+    return `<button class="card" data-act="pick" data-g="${g.id}">${inCart ? `<span class="cnt">×${inCart}</span>` : ""}
+      <div class="ph">${pic(g.icon)}</div><div class="nm">${esc(g.name)}${g.variants.length === 1 && g.variants[0].color ? " " + esc(g.variants[0].color) : ""}</div>
+      <div class="pr">${money(g.price)}</div><div class="cd">${esc(code)}</div><span class="av ${cl}">${lb}</span></button>`;
+  }).join("") : `<p>No encontramos «${esc(S.q)}». Prueba con otra palabra.</p>`;
+}
+function renderCartbar() {
+  const n = cartCount();
+  $("#cartbar").innerHTML = n ? `<div class="cartbar"><div class="sum">${n} ${n === 1 ? "artículo" : "artículos"}<br><b>${money(cartTotal())}</b></div>
+      <button class="btn" data-act="go" data-to="SCR-04">Cobrar</button></div>`
+    : `<p class="center" style="margin:8px 0">Toca un producto para agregarlo a la venta.</p>`;
+}
+RENDER["SCR-03"] = () => {
+  const g = S.groups.find(x => x.id === S.sheet), p = point();
+  $("#SCR-03").innerHTML = `<div class="sheet"><h2>${esc(g.name)} · ${money(g.price)}</h2><p style="margin:0 0 10px">Elige la opción:</p>
+    ${g.variants.map(v => { const [lb] = avail(v.stock[p] || 0);
+      return `<button class="opt" data-act="addv" data-code="${v.code}"><span>${esc([v.color, v.size !== "N/A" ? v.size : ""].filter(Boolean).join(" · "))}</span><span class="av">${lb}</span></button>`; }).join("")}
+    <button class="btn sec" data-act="close" data-o="SCR-03">Cancelar</button></div>`;
+};
+RENDER["SCR-04"] = () => {
+  $("#SCR-04").innerHTML = `${topBar("Resumen de la venta")}
+  <div class="content"><button class="link" data-act="to-catalog">‹ Seguir agregando</button>
+   ${S.cart.map(l => { const {g, v} = findCode(l.code);
+     return `<div class="line"><div class="ph">${pic(g.icon)}</div><div class="info"><b>${esc(vLabel(g, v))}</b><div class="s">${money(g.price)} c/u${l.flag ? " · se avisará a CDU" : ""}</div>
+       <button class="link" data-act="ask-remove" data-code="${l.code}" style="padding-left:0">Quitar</button></div>
+       <div class="stepper"><button data-act="dec" data-code="${l.code}" aria-label="Uno menos">−</button><span aria-live="polite">${l.qty}</span><button data-act="inc" data-code="${l.code}" aria-label="Uno más">+</button></div></div>`; }).join("")}
+   <div class="total"><span>Total</span><b>${money(cartTotal())}</b></div>
+   <p style="font-size:18px;margin:16px 0 8px"><b>¿Cómo paga?</b></p>
+   <button class="opt" data-act="pay" data-m="cash"><b>Efectivo</b><span>›</span></button>
+   <button class="opt" data-act="pay" data-m="card"><b>Tarjeta</b><span>›</span></button>
+   <button class="opt" data-act="pay" data-m="iu"><b>Interuady</b><span>›</span></button></div>`;
+};
+function bills(t) { const b = [50, 100, 200, 500, 1000].filter(x => x > t).slice(0, 2); return b; }
+RENDER["SCR-05"] = () => {
+  const t = cartTotal();
+  $("#SCR-05").innerHTML = `${topBar("Pago en efectivo")}
+  <div class="content"><button class="link" data-act="to-summary">‹ Cambiar forma de pago</button>
+   <div class="total"><span>Total</span><b>${money(t)}</b></div>
+   <div class="field" id="f-cash"><label for="in-cash">¿Con cuánto paga?</label><input id="in-cash" data-in="cash" inputmode="decimal" value="${esc(S.cash)}" placeholder="$0">
+     <div class="msg">El monto es menor que el total.</div></div>
+   <div class="quick"><button data-act="cashq" data-v="${t}">Pago exacto</button>${bills(t).map(b => `<button data-act="cashq" data-v="${b}">${money(b)}</button>`).join("")}</div>
+   <div class="total"><span>Cambio</span><b id="change">—</b></div></div>
+  <div class="actions"><button class="btn" id="b-cash" data-act="confirm-cash">Confirmar venta</button></div>`;
+  updateCash();
+};
+function updateCash() {
+  const t = cartTotal(), r = parseFloat(S.cash), ok = !isNaN(r) && r >= t;
+  $("#change").textContent = ok ? money(r - t) : "—";
+  $("#b-cash").classList.toggle("dis", !ok); $("#b-cash").setAttribute("aria-disabled", String(!ok));
+  $("#f-cash").classList.toggle("invalid", !isNaN(r) && r < t && S.cash !== "");
+}
+RENDER["SCR-06"] = () => {
+  $("#SCR-06").innerHTML = `${topBar("Pago con tarjeta")}
+  <div class="content"><button class="link" data-act="to-summary">‹ Cambiar forma de pago</button>
+   <div class="total"><span>Total</span><b>${money(cartTotal())}</b></div>
+   <p><b>1.</b> Cobra <b>${money(cartTotal())}</b> en la terminal bancaria.</p>
+   <p><b>2.</b> ¿La terminal aprobó el pago?</p>
+   <div class="note">Aquí no se escriben datos de la tarjeta.</div></div>
+  <div class="actions"><button class="btn" data-act="confirm-card">Sí, aprobado: confirmar venta</button>
+   <button class="btn sec" data-act="to-summary">No, cambiar forma de pago</button></div>`;
+};
+RENDER["SCR-07"] = () => {
+  const iu = S.iu;
+  $("#SCR-07").innerHTML = `${topBar("Pago con Interuady")}
+  <div class="content"><button class="link" data-act="to-summary">‹ Cambiar forma de pago</button>
+   <div class="total"><span>Total</span><b>${money(cartTotal())}</b></div>
+   <p style="margin-top:0">Los 3 datos son obligatorios.</p>
+   <div class="field" id="f-unit"><label for="in-unit">Dependencia o departamento</label>
+     <select id="in-unit" data-in="iu.unit"><option value="">Elige una</option>${UNITS.map(u => `<option ${iu.unit === u ? "selected" : ""}>${u}</option>`).join("")}</select>
+     <div class="msg">Elige la dependencia que compra.</div></div>
+   <div class="field" id="f-other" style="${iu.unit === "Otra" ? "" : "display:none"}"><label for="in-other">Escribe la dependencia</label><input id="in-other" data-in="iu.other" value="${esc(iu.other)}">
+     <div class="msg">Escribe el nombre de la dependencia.</div></div>
+   <div class="field" id="f-cp"><label for="in-cp">C.P. responsable del pago</label><input id="in-cp" data-in="iu.cp" value="${esc(iu.cp)}">
+     <div class="msg">Escribe el C.P. responsable del pago.</div></div>
+   <div class="field" id="f-req"><label for="in-req">Solicitante o quien autoriza</label><input id="in-req" data-in="iu.req" value="${esc(iu.req)}">
+     <div class="msg">Escribe quién solicita o autoriza la compra.</div></div>
+   <button class="link" data-act="privacy">Aviso de privacidad</button></div>
+  <div class="actions"><p class="counter" id="iu-count" aria-live="polite"></p><button class="btn" id="b-iu" data-act="confirm-iu">Confirmar venta</button></div>`;
+  updateIU();
+};
+function iuMissing() {
+  const iu = S.iu, m = [];
+  if (!iu.unit || (iu.unit === "Otra" && !iu.other.trim())) m.push(iu.unit === "Otra" ? "f-other" : "f-unit");
+  if (!iu.cp.trim()) m.push("f-cp");
+  if (!iu.req.trim()) m.push("f-req");
+  return m;
+}
+function updateIU() {
+  const m = iuMissing();
+  $("#f-other").style.display = S.iu.unit === "Otra" ? "" : "none";
+  $("#iu-count").textContent = m.length ? `Falta${m.length > 1 ? "n" : ""} ${m.length} de 3 datos para confirmar` : "Datos completos";
+  $("#b-iu").classList.toggle("dis", m.length > 0); $("#b-iu").setAttribute("aria-disabled", String(m.length > 0));
+  ["f-unit", "f-other", "f-cp", "f-req"].forEach(f => $("#" + f).classList.toggle("invalid", S.iuTried && m.includes(f)));
+}
+RENDER["SCR-08"] = () => {
+  const {g, v} = findCode(S.pending);
+  $("#SCR-08").innerHTML = `<div class="dialog"><h2>Aparece agotado en ${esc(point())}</h2>
+    <p><b>${esc(vLabel(g, v))}</b></p><p>Según este teléfono ya no quedan. Si tienes el producto en la mano, puedes venderlo y se avisará a CDU para que revise las existencias.</p>
+    <button class="btn" data-act="add-anyway">Agregar de todos modos</button><button class="btn sec" data-act="close" data-o="SCR-08">Cancelar</button></div>`;
+};
+RENDER["SCR-09"] = () => {
+  const s = S.last, sent = s.sent;
+  $("#SCR-09").innerHTML = `${topBar("Venta guardada")}
+  <div class="content center"><div class="ok-mark" aria-hidden="true">✓</div>
+   <p class="big" style="margin:0">Venta guardada</p><p>${money(s.total)} · ${esc(s.methodLabel)}</p>
+   <div class="note" style="text-align:left">${sent ? "Ya se envió." : "Está guardada en este teléfono. Se enviará sola cuando haya internet."}</div>
+   ${s.note ? `<div class="note" style="text-align:left">La nota <b>${s.note}</b> se agregó a <b>Cuentas por cobrar</b>.</div>` : ""}
+   ${s.flag ? `<div class="note" style="text-align:left">Se avisará a CDU para que revise las existencias.</div>` : ""}
+   ${S.fac.printer ? `<p>Se imprimió el ticket.</p>` : ""}
+   <button class="link" data-act="go" data-to="SCR-10">Ver ticket en pantalla</button></div>
+  <div class="actions"><button class="btn" data-act="new-sale">Nueva venta</button></div>`;
+};
+RENDER["SCR-10"] = () => {
+  const s = S.last;
+  $("#SCR-10").innerHTML = `${topBar("Ticket")}
+  <div class="content"><div class="ticket">BOUTIQUE FMAT-UADY<br>Punto: ${esc(s.point)}<br>${esc(s.time)}<br>Atendió: ${esc(s.user)}<br>Venta: ${s.id}<br>--------------------------------<br>
+   ${s.lines.map(l => `${l.qty} × ${esc(l.name)}<br>&nbsp;&nbsp;${money(l.price)} c/u = ${money(l.qty * l.price)}`).join("<br>")}<br>--------------------------------<br>
+   TOTAL ${money(s.total)}<br>Forma de pago: ${esc(s.methodLabel)}${s.note ? `<br>Nota Interuady: ${s.note}` : ""}</div></div>
+  <div class="actions"><button class="btn" data-act="back">Listo</button></div>`;
+};
+RENDER["SCR-11"] = () => {
+  const n = S.queue.length;
+  $("#SCR-11").innerHTML = `${topBar("Teléfono bloqueado", {nolock: 1})}
+  <div class="content"><div class="ok-mark" aria-hidden="true">${icon("lock")}</div>
+   ${n ? `<div class="note">${n} ${n === 1 ? "venta guardada" : "ventas guardadas"} en este teléfono, a nombre de quien las hizo. Se enviarán cuando haya internet.</div>` : ""}
+   <div class="field" id="f-unlock"><label for="in-unlock">Contraseña de ${esc(S.lockedUser)}</label><input id="in-unlock" type="password">
+     <div class="msg">Escribe tu contraseña.</div></div></div>
+  <div class="actions"><button class="btn" data-act="unlock">Desbloquear</button><button class="btn sec" data-act="other-account">Entrar con otra cuenta</button></div>`;
+};
+RENDER["SCR-12"] = () => {
+  const p = prof(), w = S.wh, rows = [];
+  allVariants().forEach(({g, v}) => rows.push({g, v, n: v.stock[w] || 0, flag: v.flag && v.flag[w]}));
+  const flagged = rows.filter(r => r.flag || r.n < 0);
+  $("#SCR-12").innerHTML = `${topBar("Inventario")}
+  <div class="content"><div class="seg" role="group" aria-label="Bodega">${WH.map(x => `<button data-act="wh" data-w="${x}" class="${x === w ? "cur" : ""}" aria-pressed="${x === w}">${x}</button>`).join("")}</div>
+   <p style="margin:0 0 8px">Bodega <b>${w}</b> · actualizado ${SYNCED[w]}${p.modify ? "" : " · solo consulta"}</p>
+   ${flagged.length ? `<div class="warn"><b>${flagged.length} ${flagged.length === 1 ? "producto para revisar" : "productos para revisar"}</b>${flagged.map(r => `<br>${esc(vLabel(r.g, r.v))}: ${r.n} — ${esc(r.flag || "existencias negativas")}`).join("")}</div>` : ""}
+   <div class="tablewrap"><table><thead><tr><th>Código</th><th>Producto</th><th>Tipo</th><th>Color</th><th>Talla</th><th class="num">Existencias</th><th class="num">Costo neto</th><th class="num">Precio de venta</th><th>Proveedor</th><th>Bodega</th></tr></thead>
+   <tbody>${rows.map(r => `<tr class="${r.flag || r.n < 0 ? "flag" : ""}"><td>${r.v.code}</td><td>${esc(r.g.name)}</td><td>${esc(r.g.type)}</td><td>${esc(r.v.color)}</td><td>${esc(r.v.size)}</td><td class="num">${r.n}</td><td class="num">${money(r.g.cost)}</td><td class="num">${money(r.g.price)}</td><td>${esc(r.g.supplier)}</td><td>${w}</td></tr>`).join("")}</tbody></table></div>
+   <p style="font-size:14px">Desliza la tabla hacia los lados para ver todas las columnas.</p></div>
+  ${p.modify ? `<div class="actions"><button class="btn" data-act="new-product">+ Nuevo producto</button></div>` : ""}`;
+};
+const SIZES = ["Chica", "Mediana", "Grande", "Extra grande"];
+function npVariants() {
+  const np = S.np, cols = np.colors.length ? np.colors : [""], sz = np.na || !np.sizes.length ? ["N/A"] : np.sizes;
+  const out = []; cols.forEach(c => sz.forEach(z => out.push(c + "|" + z))); return out;
+}
+RENDER["SCR-13"] = () => {
+  const np = S.np;
+  $("#SCR-13").innerHTML = `${topBar("Nuevo producto")}
+  <div class="content"><button class="link" data-act="back">‹ Volver al inventario</button>
+   <p style="margin-top:0"><b>1. Datos del producto</b> (se escriben una sola vez)</p>
+   ${fld("np-name", "Nombre del producto", np.name, "Escribe el nombre.")}
+   <div class="field" id="f-np-type"><label for="in-np-type">Tipo</label><select id="in-np-type" data-in="np.type">${["Playera o Polo", "Sudadera", "Gorra", "Taza", "Termo", "Papelería", "Otro"].map(t => `<option ${np.type === t ? "selected" : ""}>${t}</option>`).join("")}</select></div>
+   ${fld("np-supplier", "Proveedor", np.supplier, "")}
+   <div style="display:flex;gap:8px"><div style="flex:1">${fld("np-cost", "Costo neto", np.cost, "", "decimal")}</div><div style="flex:1">${fld("np-price", "Precio de venta", np.price, "Escribe el precio de venta.", "decimal")}</div></div>
+   <p><b>2. Colores y tallas</b></p>
+   <div class="field"><label for="in-np-color">Colores</label><div style="display:flex;gap:8px"><input id="in-np-color" placeholder="Ej. Azul" style="flex:1;min-height:48px;border:2px solid var(--line);border-radius:6px;padding:8px"><button class="iconbtn" data-act="np-addcolor">Agregar</button></div>
+     <div class="chips">${np.colors.map(c => `<button class="cur" data-act="np-rmcolor" data-c="${esc(c)}" aria-label="Quitar ${esc(c)}">${esc(c)} ×</button>`).join("")}</div></div>
+   <div class="field"><label>Tallas</label><div class="chips">${SIZES.map(z => `<button class="${!np.na && np.sizes.includes(z) ? "cur" : ""}" data-act="np-size" data-z="${z}" aria-pressed="${!np.na && np.sizes.includes(z)}">${z}</button>`).join("")}
+     <button class="${np.na ? "cur" : ""}" data-act="np-na" aria-pressed="${np.na}">No tiene talla</button></div></div>
+   <p><b>3. Foto y existencias de cada opción</b></p><div id="np-vars"></div>
+   <div class="note">El código y el código de barras se crean solos al guardar.</div></div>
+  <div class="actions"><p class="counter" id="np-msg" aria-live="polite"></p><button class="btn" data-act="np-save">Guardar producto</button></div>`;
+  renderNpVars();
+};
+function fld(id, label, val, msg, mode) {
+  return `<div class="field" id="f-${id}"><label for="in-${id}">${label}</label><input id="in-${id}" data-in="${id.replace("-", ".")}" value="${esc(val)}" ${mode ? `inputmode="${mode}"` : ""}><div class="msg">${msg}</div></div>`;
+}
+function renderNpVars() {
+  const np = S.np, vs = npVariants();
+  $("#np-vars").innerHTML = vs.map(k => { const [c, z] = k.split("|"), st = np.stock[k] || {}, ph = np.photos[k];
+    const lbl = [c, z !== "N/A" ? z : ""].filter(Boolean).join(" · ") || "Única opción";
+    return `<div class="variant ${S.npTried && !ph ? "vbad" : ""}"><div style="display:flex;justify-content:space-between;align-items:center"><b>${esc(lbl)}</b>
+      <button class="iconbtn" data-act="np-photo" data-k="${esc(k)}">${ph ? "Foto ✓" : "Tomar foto"}</button></div>
+      ${S.npTried && !ph ? `<div class="msg" style="display:block">Falta la foto.</div>` : ""}
+      <div class="vrow">${WH.map(w => `<div class="field"><label for="st-${esc(k)}-${w}" style="font-size:14px">${w}</label><input id="st-${esc(k)}-${w}" data-in="np.stock" data-k="${esc(k)}" data-w="${w}" inputmode="numeric" value="${st[w] ?? ""}" placeholder="0"></div>`).join("")}</div></div>`;
+  }).join("");
+  const n = vs.length; $("#np-msg").textContent = `Se crearán ${n} ${n === 1 ? "producto" : "productos"} (uno por cada opción).`;
+}
+RENDER["SCR-14"] = () => {
+  const r = S.npSaved;
+  $("#SCR-14").innerHTML = `${topBar("Producto guardado")}
+  <div class="content"><div class="ok-mark" aria-hidden="true">✓</div><p class="center"><b>Se ${r.items.length === 1 ? "guardó 1 producto" : "guardaron " + r.items.length + " productos"}</b></p>
+   ${r.items.map(i => `<div class="variant"><b>${esc(i.label)}</b><div class="barcode" aria-hidden="true"></div><div>${i.code}</div></div>`).join("")}
+   <div class="note">${S.fac.online ? "Ya está disponible en Sociales y Matemáticas." : "Se enviará a Sociales y Matemáticas cuando haya internet."}</div></div>
+  <div class="actions"><button class="btn" data-act="labels">Imprimir etiquetas</button><button class="btn sec" data-act="go" data-to="SCR-12">Listo</button></div>`;
+};
+function filteredNotes() {
+  const now = new Date("2026-10-29T12:00:00");
+  return S.notes.filter(n => (!S.arUnit || n.unit === S.arUnit) && (S.arPeriod === "all" || (now - new Date(n.date + "T12:00:00")) / 864e5 <= (S.arPeriod === "7" ? 7 : 31)));
+}
+const noteTotal = n => n.lines.reduce((t, l) => t + l.qty * l.price, 0);
+const fdate = d => new Date(d + "T12:00:00").toLocaleDateString("es-MX", {day: "numeric", month: "short", year: "numeric"});
+RENDER["SCR-15"] = () => {
+  const ns = filteredNotes(), units = [...new Set(S.notes.map(n => n.unit))];
+  $("#SCR-15").innerHTML = `${topBar("Cuentas por cobrar")}
+  <div class="content"><p style="margin-top:0">Ventas pagadas con Interuady.</p>
+   <div style="display:flex;gap:8px"><div class="field" style="flex:1"><label for="in-arunit">Dependencia</label><select id="in-arunit" data-in="arUnit"><option value="">Todas</option>${units.map(u => `<option ${S.arUnit === u ? "selected" : ""}>${esc(u)}</option>`).join("")}</select></div>
+   <div class="field" style="flex:1"><label for="in-arper">Fecha</label><select id="in-arper" data-in="arPeriod">${[["all", "Todas"], ["7", "Últimos 7 días"], ["31", "Último mes"]].map(([v, l]) => `<option value="${v}" ${S.arPeriod === v ? "selected" : ""}>${l}</option>`).join("")}</select></div></div>
+   <p><b>${ns.length} ${ns.length === 1 ? "nota" : "notas"} · ${money(ns.reduce((t, n) => t + noteTotal(n), 0))}</b></p>
+   ${ns.length ? ns.map(n => `<button class="rowbtn" data-act="note" data-n="${n.id}"><div class="top2"><span>${n.id} · ${esc(n.unit)}</span><span>${money(noteTotal(n))}</span></div><div class="s">${fdate(n.date)} · vendida en ${esc(n.point)}</div></button>`).join("") : `<p>No hay notas con estos filtros.</p>`}</div>`;
+};
+RENDER["SCR-16"] = () => {
+  const n = S.notes.find(x => x.id === S.note), q = prof().query;
+  $("#SCR-16").innerHTML = `${topBar("Nota " + n.id)}
+  <div class="content"><button class="link" data-act="back">‹ Cuentas por cobrar</button>
+   <dl><dt>Dependencia o departamento</dt><dd>${esc(n.unit)}</dd><dt>Fecha</dt><dd>${fdate(n.date)}</dd><dt>Punto de venta</dt><dd>${esc(n.point)}</dd>
+   <dt>Productos</dt><dd>${n.lines.map(l => `${l.qty} × ${esc(l.name)} (${money(l.price)} c/u)`).join("<br>")}</dd><dt>Total</dt><dd class="big">${money(noteTotal(n))}</dd></dl>
+   ${q ? `<dl><dt>C.P. responsable del pago</dt><dd>${esc(n.cp)}</dd><dt>Solicitante o quien autoriza</dt><dd>${esc(n.req)}</dd></dl>`
+       : `<div class="note">Los datos de las personas solo los pueden ver CDU y Administración Central.</div>`}</div>`;
+};
+
+/* ---------------------------------------------------------------- actions */
+function addCode(code, flag) {
+  const l = S.cart.find(x => x.code === code);
+  if (l) { l.qty++; l.flag = l.flag || flag; } else S.cart.push({code, qty: 1, flag: !!flag});
+  const {g, v} = findCode(code);
+  if (!S.hints[S.user]) { S.hints[S.user] = 1; toast("Agregado. En «Cobrar» puedes cambiar la cantidad o quitarlo."); }
+  else toast("Agregado: " + vLabel(g, v));
+  if (S.cur === "SCR-02") { renderGrid(); renderCartbar(); } else if (S.cur === "SCR-04") rerender();
+}
+function tryAdd(code) {
+  const {v} = findCode(code);
+  const inCart = (S.cart.find(x => x.code === code) || {qty: 0}).qty;
+  if ((v.stock[point()] || 0) - inCart <= 0) { S.pending = code; show("SCR-08"); return; }
+  addCode(code, false);
+}
+function commit(method, extra = {}) {
+  const p = point(), lines = S.cart.map(l => { const {g, v} = findCode(l.code); v.stock[p] = (v.stock[p] || 0) - l.qty;
+    if (l.flag) { v.flag = v.flag || {}; v.flag[p] = "Se vendió con existencias en 0"; }
+    return {name: vLabel(g, v), qty: l.qty, price: g.price}; });
+  const total = cartTotal(), id = "V-" + String(++S.sales).padStart(4, "0");
+  const labels = {cash: "Efectivo", card: "Tarjeta", iu: "Interuady"};
+  let note = null;
+  if (method === "iu") { note = "N-" + String(S.notes.length + 1).padStart(4, "0");
+    S.notes.push({id: note, date: new Date().toLocaleDateString("en-CA"), point: prof().label || p, unit: S.iu.unit === "Otra" ? S.iu.other.trim() : S.iu.unit, cp: S.iu.cp.trim(), req: S.iu.req.trim(), lines}); }
+  const sale = {id, user: S.user, point: prof().label || p, method, methodLabel: labels[method], total, lines, note, flag: S.cart.some(l => l.flag),
+    time: new Date().toLocaleString("es-MX", {dateStyle: "short", timeStyle: "short"}), sent: S.fac.online};
+  if (!S.fac.online) S.queue.push(sale);
+  S.last = sale; S.cart = []; S.cash = ""; S.iu = {unit: "", other: "", cp: "", req: ""}; S.iuTried = false; S.stack = [];
+  show("SCR-09", false);
+}
+function flush() {
+  if (!S.fac.online || !S.queue.length) return;
+  setTimeout(() => { const n = S.queue.length; if (!S.fac.online || !n) return; S.queue = []; toast(`Se ${n === 1 ? "envió 1 venta" : "enviaron " + n + " ventas"}.`); rerender(); }, 1500);
+}
+function signIn(name) {
+  const key = norm(name.trim());
+  S.user = name.trim().replace(/^./, c => c.toUpperCase());
+  S.profile = NAMES[key] || S.fac.profile; S.stack = []; S.cur = null;
+  show(prof().start);
+}
+function dialog(html) { const d = $("#dlg"); d.innerHTML = `<div class="dialog">${html}</div>`; d.classList.add("on"); d.querySelector("button")?.focus(); }
+
+const ACT = {
+  go: d => show(d.to),
+  "to-catalog": () => { S.stack = []; show("SCR-02", false); },
+  "to-summary": () => { S.stack = ["SCR-02"]; show("SCR-04", false); },
+  back: () => { const prev = S.stack.pop(); show(prev || (S.user ? prof().start : "SCR-01"), false); },
+  close: d => closeOverlay(d.o),
+  signin: () => {
+    const u = $("#in-user").value, p = $("#in-pass").value;
+    $("#f-user").classList.toggle("invalid", !u.trim()); $("#f-pass").classList.toggle("invalid", !p);
+    if (u.trim() && p) signIn(u);
+  },
+  lock: () => { S.lockedUser = S.user; S.cart = []; S.stack = []; show("SCR-11"); renderNav(); },
+  unlock: () => { const p = $("#in-unlock").value; $("#f-unlock").classList.toggle("invalid", !p); if (p) { S.stack = []; S.cur = null; show(prof().start); } },
+  "other-account": () => { S.user = null; S.profile = null; S.stack = []; S.cur = null; show("SCR-01"); },
+  pick: d => { const g = S.groups.find(x => x.id === d.g); if (g.variants.length > 1) { S.sheet = g.id; show("SCR-03"); } else tryAdd(g.variants[0].code); },
+  addv: d => { closeOverlay("SCR-03"); tryAdd(d.code); },
+  "add-anyway": () => { closeOverlay("SCR-08"); addCode(S.pending, true); },
+  scan: () => {
+    if (S.fac.scanner) { $("#in-q").value = ""; S.q = ""; $("#in-q").focus(); toast("Lector listo: escanea el código del producto."); return; }
+    const c = $("#cam"); c.innerHTML = `<div class="camera"><p style="font-size:18px"><b>Apunta la cámara al código de barras</b></p><div class="frame"></div>
+      <button class="btn sec" data-act="cam-sim">(Prototipo) Simular lectura: P010203</button><button class="btn sec" data-act="close" data-o="cam">Cancelar</button></div>`;
+    c.classList.add("on");
+  },
+  "cam-sim": () => { closeOverlay("cam"); tryAdd("P010203"); },
+  inc: d => { const l = S.cart.find(x => x.code === d.code); const {v} = findCode(d.code);
+    if ((v.stock[point()] || 0) - l.qty <= 0 && !l.flag) { S.pending = d.code; show("SCR-08"); return; } l.qty++; rerender(); },
+  dec: d => { const l = S.cart.find(x => x.code === d.code); if (l.qty > 1) { l.qty--; rerender(); } else ACT["ask-remove"](d); },
+  "ask-remove": d => { const {g, v} = findCode(d.code);
+    dialog(`<h2>¿Quitar este artículo?</h2><p>${esc(vLabel(g, v))}</p><button class="btn" data-act="remove" data-code="${d.code}">Quitar</button><button class="btn sec" data-act="close" data-o="dlg">Cancelar</button>`); },
+  remove: d => { closeOverlay("dlg"); S.cart = S.cart.filter(x => x.code !== d.code); if (!S.cart.length) show("SCR-02", false); else rerender(); },
+  pay: d => show({cash: "SCR-05", card: "SCR-06", iu: "SCR-07"}[d.m]),
+  cashq: d => { S.cash = String(d.v); $("#in-cash").value = S.cash; updateCash(); },
+  "confirm-cash": () => { const r = parseFloat(S.cash); if (isNaN(r) || r < cartTotal()) { $("#f-cash").classList.add("invalid"); $("#f-cash .msg").textContent = isNaN(r) ? "Escribe con cuánto paga o toca «Pago exacto»." : "El monto es menor que el total."; $("#in-cash").focus(); return; } commit("cash"); },
+  "confirm-card": () => commit("card"),
+  "confirm-iu": () => { S.iuTried = true; const m = iuMissing(); updateIU(); if (m.length) { $("#" + m[0] + " input, #" + m[0] + " select").focus(); return; } commit("iu"); },
+  privacy: () => dialog(`<h2>Aviso de privacidad</h2><p>Aquí se mostrará el aviso de privacidad de la UADY para estos datos. Puedes enseñarlo a la persona que te da sus datos.</p><p class="note">(Prototipo) El texto lo proporciona la UADY.</p><button class="btn" data-act="close" data-o="dlg">Cerrar</button>`),
+  "new-sale": () => { S.stack = []; show("SCR-02", false); },
+  wh: d => { S.wh = d.w; rerender(); },
+  "new-product": () => { S.np = {name: "", type: "Playera o Polo", supplier: "", cost: "", price: "", colors: [], sizes: [], na: false, stock: {}, photos: {}}; S.npTried = false; show("SCR-13"); },
+  "np-addcolor": () => { const i = $("#in-np-color"), c = i.value.trim(); if (c && !S.np.colors.includes(c)) S.np.colors.push(c); i.value = ""; rerender(); },
+  "np-rmcolor": d => { S.np.colors = S.np.colors.filter(c => c !== d.c); rerender(); },
+  "np-size": d => { const np = S.np; np.na = false; np.sizes = np.sizes.includes(d.z) ? np.sizes.filter(z => z !== d.z) : SIZES.filter(z => np.sizes.includes(z) || z === d.z); rerender(); },
+  "np-na": () => { S.np.na = !S.np.na; if (S.np.na) S.np.sizes = []; rerender(); },
+  "np-photo": d => { S.np.photos[d.k] = 1; renderNpVars(); },
+  "np-save": () => {
+    const np = S.np, vs = npVariants(); S.npTried = true;
+    const bad = []; if (!np.name.trim()) bad.push("f-np-name"); if (!(parseFloat(np.price) > 0)) bad.push("f-np-price");
+    ["f-np-name", "f-np-price"].forEach(f => $("#" + f).classList.toggle("invalid", bad.includes(f)));
+    const nophoto = vs.filter(k => !np.photos[k]); renderNpVars();
+    if (bad.length || nophoto.length) { $("#np-msg").textContent = "Falta información: revisa lo marcado con ⚠."; (bad.length ? $("#" + bad[0] + " input") : $("#np-vars .vbad button")).focus(); return; }
+    const gi = S.groups.length + 1, g = {id: "g" + gi, name: np.name.trim(), type: np.type, icon: {"Gorra": "cap", "Taza": "mug", "Termo": "bottle", "Sudadera": "hoodie", "Papelería": "notebook"}[np.type] || "tshirt",
+      supplier: np.supplier.trim() || "—", cost: parseFloat(np.cost) || 0, price: parseFloat(np.price), variants: []};
+    vs.forEach((k, i) => { const [c, z] = k.split("|"), st = np.stock[k] || {};
+      g.variants.push({code: "P" + String(gi).padStart(2, "0") + String(i + 1).padStart(2, "0") + "00", color: c, size: z, stock: {CDU: +st.CDU || 0, Sociales: +st.Sociales || 0, "Matemáticas": +st["Matemáticas"] || 0}}); });
+    S.groups.push(g); S.npSaved = {items: g.variants.map(v => ({label: vLabel(g, v), code: v.code}))}; S.stack = []; show("SCR-14", false);
+  },
+  labels: () => toast(`(Prototipo) Se enviarían ${S.npSaved.items.length} etiquetas a la impresora.`),
+  note: d => { S.note = d.n; show("SCR-16"); },
+  facToggle: () => $("#facpanel").classList.toggle("on")
+};
+document.addEventListener("click", e => {
+  const a = e.target.closest("[data-act]"); if (!a) return;
+  if (a.classList.contains("dis") && a.dataset.act !== "confirm-iu" && a.dataset.act !== "confirm-cash") return;
+  e.preventDefault(); ACT[a.dataset.act](a.dataset, a);
+});
+document.addEventListener("input", e => {
+  const el = e.target, k = el.dataset.in; if (!k) return;
+  if (k === "q") { S.q = el.value; const hit = findCode(el.value.trim().toUpperCase()); if (hit && S.fac.scanner) { S.q = ""; el.value = ""; tryAdd(hit.v.code); } renderGrid(); return; }
+  if (k === "cash") { S.cash = el.value.replace(",", "."); updateCash(); return; }
+  if (k.startsWith("iu.")) { S.iu[k.slice(3)] = el.value; updateIU(); return; }
+  if (k === "np.stock") { const st = S.np.stock[el.dataset.k] = S.np.stock[el.dataset.k] || {}; st[el.dataset.w] = el.value; return; }
+  if (k.startsWith("np.")) { S.np[k.slice(3)] = el.value; return; }
+  if (k === "arUnit" || k === "arPeriod") { S[k] = el.value; rerender(); }
+});
+document.addEventListener("change", e => { if (e.target.dataset.in === "iu.unit") { S.iu.unit = e.target.value; updateIU(); } });
+document.addEventListener("keydown", e => {
+  if (e.key === "Enter" && e.target.id === "in-np-color") { e.preventDefault(); ACT["np-addcolor"](); }
+  if (e.key === "Escape") ["SCR-03", "SCR-08", "dlg", "cam"].forEach(closeOverlay);
+});
+
+/* ---------------------------------------------------------------- facilitator panel and demo states */
+function renderFac() {
+  if (!document.body.classList.contains("fac")) return;
+  const f = S.fac, scr = [...document.querySelectorAll("section.screen")].map(s => s.id).sort();
+  $("#facpanel").innerHTML = `<b>Facilitador</b> (no lo ve el participante)
+    <label>Perfil al entrar<select data-fac="profile">${Object.entries(PROFILES).map(([k, p]) => `<option value="${k}" ${f.profile === k ? "selected" : ""}>${p.name}</option>`).join("")}</select></label>
+    <label><input type="checkbox" data-fac="online" ${f.online ? "checked" : ""}> Hay internet</label>
+    <label><input type="checkbox" data-fac="printer" ${f.printer ? "checked" : ""}> Impresora conectada</label>
+    <label><input type="checkbox" data-fac="scanner" ${f.scanner ? "checked" : ""}> Lector de códigos conectado</label>
+    <label><input type="checkbox" data-fac="annot" ${document.body.classList.contains("annot") ? "checked" : ""}> Anotaciones (SCR, requisitos)</label>
+    <label>Ir a pantalla (estado de ejemplo)<select data-fac="demo"><option value="">—</option>${scr.map(s => `<option>${s}</option>`).join("")}</select></label>
+    <button class="btn sec" data-act="facReset" style="min-height:40px;font-size:15px">Reiniciar prototipo</button>`;
+}
+ACT.facReset = () => { reset(true); show("SCR-01"); };
+document.addEventListener("change", e => {
+  const k = e.target.dataset.fac; if (!k) return;
+  if (k === "annot") { document.body.classList.toggle("annot", e.target.checked); return; }
+  if (k === "demo") { if (e.target.value) demo(e.target.value); return; }
+  S.fac[k] = e.target.type === "checkbox" ? e.target.checked : e.target.value;
+  if (k === "online") flush();
+  if (S.cur && S.user) rerender();
+});
+function demo(id) {
+  ["SCR-03", "SCR-08", "dlg", "cam"].forEach(closeOverlay);
+  const fac = S.fac; reset(true); S.fac = fac;
+  const as = (p, u) => { S.profile = p; S.user = u; };
+  const cart = () => { S.cart = [{code: "P010203", qty: 2, flag: false}, {code: "P040100", qty: 1, flag: false}]; };
+  const sale = m => { as("sociales", "Luis"); cart(); S.queue = [{}]; if (m === "iu") S.iu = {unit: "Facultad de Ingeniería", other: "", cp: "C.P. Ejemplo Uno", req: "Persona Ejemplo A"}; commit(m); };
+  switch (id) {
+    case "SCR-01": show("SCR-01"); break;
+    case "SCR-02": as("sociales", "Luis"); S.hints.Luis = 1; S.queue = [{}]; cart(); show("SCR-02"); break;
+    case "SCR-03": as("sociales", "Luis"); S.hints.Luis = 1; cart(); show("SCR-02"); S.sheet = "jaguar"; show("SCR-03"); break;
+    case "SCR-04": as("sociales", "Luis"); cart(); S.cur = "SCR-02"; show("SCR-04"); break;
+    case "SCR-05": as("sociales", "Luis"); cart(); S.cash = "1000"; S.cur = "SCR-04"; show("SCR-05"); break;
+    case "SCR-06": as("sociales", "Luis"); cart(); S.cur = "SCR-04"; show("SCR-06"); break;
+    case "SCR-07": as("sociales", "Luis"); cart(); S.iu = {unit: "Facultad de Ingeniería", other: "", cp: "", req: "Persona Ejemplo A"}; S.iuTried = true; S.cur = "SCR-04"; show("SCR-07"); break;
+    case "SCR-08": as("sociales", "Luis"); S.hints.Luis = 1; show("SCR-02"); S.pending = "P030104"; show("SCR-08"); break;
+    case "SCR-09": sale("cash"); break;
+    case "SCR-10": sale("iu"); show("SCR-10"); break;
+    case "SCR-11": as("sociales", "Luis"); S.queue = [{}, {}]; S.lockedUser = "Luis"; show("SCR-11"); break;
+    case "SCR-12": as("cdu", "Daniela"); S.wh = "Matemáticas"; show("SCR-12"); break;
+    case "SCR-13": as("cdu", "Daniela"); S.cur = "SCR-12"; S.np = {name: "Gorra bordada", type: "Gorra", supplier: "Proveedor de ejemplo", cost: "90", price: "180", colors: ["Azul", "Blanco"], sizes: [], na: true,
+      stock: {"Azul|N/A": {CDU: "20", Sociales: "5", "Matemáticas": "5"}, "Blanco|N/A": {CDU: "20", Sociales: "5", "Matemáticas": ""}}, photos: {"Azul|N/A": 1}}; show("SCR-13"); break;
+    case "SCR-14": as("cdu", "Daniela"); S.np = {name: "Gorra bordada", type: "Gorra", supplier: "Proveedor de ejemplo", cost: "90", price: "180", colors: ["Azul", "Blanco"], sizes: [], na: true, stock: {}, photos: {"Azul|N/A": 1, "Blanco|N/A": 1}};
+      S.cur = "SCR-13"; RENDER["SCR-13"](); ACT["np-save"](); break;
+    case "SCR-15": as("adm", "Martha"); show("SCR-15"); break;
+    case "SCR-16": as("cdu", "Daniela"); S.cur = "SCR-15"; S.note = "N-0001"; show("SCR-16"); break;
+  }
+}
+window.demo = demo; window.ACT = ACT; // used by the screenshot script and the facilitator
+
+/* ---------------------------------------------------------------- start */
+reset(false);
+const qs = location.search + location.hash;
+if (/[?&#]f\b/.test(qs)) document.body.classList.add("fac");
+if (/notas/.test(qs)) document.body.classList.add("annot");
+show("SCR-01");
+</script>
+</body>
+</html>
