@@ -97,7 +97,7 @@ Cut order: **T-25 → T-22 → T-15 (reduced)**. A cut task is closed as *Cancel
 | Tue 2026-10-27 | Issues, T-14, T-15 | Done as planned; T-15 waits for the author's review of the Spanish versions ([logbook](logbook/2026-10-27.md)) |
 | Wed 2026-10-28 | T-15, T-16, T-17, T-19 | **No work session.** The day's tasks moved |
 | Thu 2026-10-29 | T-18, T-20, T-21 | T-19 (moved from Wednesday), T-20 (v1, author's review pending), T-18 and T-21 done ([logbook](logbook/2026-10-29.md)). T-16 and T-17 move to Friday |
-| Fri 2026-10-30 | T-22, T-23, T-24, T-25, T-27 | Now also T-16 and T-17. Checkpoint A applies: if the author has not reviewed prototype v1 by the end of 2026-10-29, T-22 is cancelled |
+| Fri 2026-10-30 | T-22, T-23, T-24, T-25, T-27 | Now also T-16 and T-17. Checkpoint A was met (v1 reviewed on 2026-10-29), but the author **cancelled T-22** to make room for T-16 and T-17 |
 
 ## 6. Delivery 3 — planned activities (dates to be set when announced)
 

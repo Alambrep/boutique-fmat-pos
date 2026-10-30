@@ -67,7 +67,7 @@ Words in the UI follow the users' language, not internal jargon (heuristic 2 `[R
 | ID | Guideline | Origin |
 |---|---|---|
 | G-04 | No technical terms on the screens used to sell; error messages without codes. | NFR-02, NFR-07; heuristics 2 and 9 `[R35]` |
-| G-05 | All UI text in Spanish. The prototype addresses the user as **tú** — *pending the author's confirmation*; how the staff expect to be addressed is not known. | NFR-12 |
+| G-05 | All UI text in Spanish. The prototype addresses the user as **tú** (author's decision, 2026-10-29); how the staff expect to be addressed is not known. | NFR-12 |
 
 ## 2. Organization of each screen
 
@@ -159,8 +159,8 @@ The heuristic evaluation (T-22, conditional) and the usability test (T-24) check
 | Receipt content (VAT breakdown, invoice) | Q-05 | Products, total, payment method, point, seller and time; no VAT line |
 | Product code format | Q-08 | Sample codes that imitate the client's example (P010203) |
 | Availability label for charge-only profiles | Q-14 | Shown, as a proposal (FR-31) |
-| Meaning of *C.P.* and help text for that field | Q-04 | Label exactly as the client wrote it; no help text |
+| Meaning of *C.P.* and help text for that field | Q-04 | Label exactly as the client wrote it; no help text. On 2026-10-29 the author, a UADY student, reported not knowing what *Interuady* or *C.P.* mean (informal) |
 | Personal or shared accounts | Q-11 | Sign-in with user and password; *Entrar con otra cuenta* |
 | Stock that Central Administration sells from | Q-02 | CDU stock, provisional |
 | List of UADY units for Interuady | DI-08 (client) | Three sample units and *Otra* |
-| *Tú* or *usted* | Author | *Tú* |
+| *Tú* or *usted* | Author | *Tú* — confirmed by the author on 2026-10-29 |

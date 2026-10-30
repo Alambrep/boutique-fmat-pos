@@ -21,7 +21,7 @@ The delivery 1 map is kept as it was delivered: [RUBRIC-MAP.md at the close of d
 
 | Rubric item | Where to find it | Status |
 |---|---|---|
-| **2a — Prototype development** | [Prototype v1](design/prototype/v1/) — clickable, 16 screens, [screenshots](design/prototype/v1/README.md#screens), [checks](design/prototype/v1/README.md#checks) | v1 done; author's review pending (T-20) |
+| **2a — Prototype development** | [Prototype v1](design/prototype/v1/) — clickable, 16 screens, [screenshots](design/prototype/v1/README.md#screens), [checks](design/prototype/v1/README.md#checks) | v1 done and reviewed by the author (T-20) |
 | **2b — Design guidelines** (organization of elements, information architecture) | [Guidelines](design/guidelines.md): [§1 information architecture](design/guidelines.md#1-information-architecture), [§2 organization of each screen](design/guidelines.md#2-organization-of-each-screen), [§3 components](design/guidelines.md#3-components), [§4 low-fidelity conventions](design/guidelines.md#4-low-fidelity-visual-conventions) | Done (T-19) |
 | **2c — Evolution of prototypes** (optional) | Issues found in v1: [B-1, B-2](design/prototype/v1/README.md#issues-noticed-while-building-v1); v2 _pending (T-23)_ | In progress |
 | **2d — Interaction design** (key interactions, standardized, linked to FR and usability NFR) | [Interaction design](design/interaction-design.md): [format](design/interaction-design.md#format) and [summary](design/interaction-design.md#summary) of IX-01…IX-07 | Done (T-21) |
@@ -30,8 +30,8 @@ The delivery 1 map is kept as it was delivered: [RUBRIC-MAP.md at the close of d
 
 | Rubric item | Where to find it | Status |
 |---|---|---|
-| **3a — Method, results and how they were used** | _Pending (T-22, conditional)_ | Planned |
-| **3b — Tool or protocol** | _Pending (T-22, conditional)_ | Planned |
+| **3a — Method, results and how they were used** | Not done | Optional; T-22 cancelled by the author on 2026-10-29 to finish the mandatory items ([schedule](docs/00-management/schedule.md#5-delivery-2--plan-due-2026-10-31)) |
+| **3b — Tool or protocol** | Not done | Same |
 
 ## 4. Usability test sketch
 

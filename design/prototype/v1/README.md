@@ -1,6 +1,6 @@
 # Low-fidelity prototype — version 1
 
-> **Task:** T-20 · **Rubric criterion (delivery 2):** 2a · **Built:** 2026-10-29 by the AI assistant from the author's instructions · **Author's review:** pending (checkpoint A of the [schedule](../../../docs/00-management/schedule.md#5-delivery-2--plan-due-2026-10-31))
+> **Task:** T-20 · **Rubric criterion (delivery 2):** 2a · **Built:** 2026-10-29 by the AI assistant from the author's instructions · **Author's review:** 2026-10-29, no changes requested ([logbook](../../../docs/00-management/logbook/2026-10-29.md#authors-review-of-prototype-v1-2217))
 >
 > Clickable, low-fidelity prototype of the point of sale. It follows the [design guidelines](../../guidelines.md) and implements the screens of the [screen catalogue](../../screens.md). It is built from the [proto-personas](../../../docs/03-user-modeling/proto-personas.md) and [scenarios](../../../docs/03-user-modeling/scenarios.md), which are **hypotheses** (no field research yet); every design choice that rests on a hypothesis cites it.
 
