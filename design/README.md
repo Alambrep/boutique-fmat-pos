@@ -1,10 +1,13 @@
 # Design
 
-Delivery 1 has **no design artifacts**: the rubric for delivery 1 does not ask for a prototype, and the design work starts once user research is available (see the [schedule](../docs/00-management/schedule.md)).
+Design artifacts start in delivery 2. Field research is blocked (see the [validation plan](../docs/02-research/validation-plan.md#7-delivery-2-status-of-the-activities)), so the design starts from the proto-personas and scenarios, which are hypotheses.
 
-| Artifact | Link | Delivery |
-|---|---|---|
-| Figma file (low-fidelity prototype) | _To be added_ | 2 |
-| Iterated prototype | _To be added_ | 3 |
+| Artifact | What it contains | Rubric (delivery 2) | Task |
+|---|---|---|---|
+| [Design guidelines](guidelines.md) | Information architecture per profile, organization of each screen, components, low-fidelity conventions (G-01…G-22) | 2b | T-19 |
+| [Screen catalogue](screens.md) | SCR-01…SCR-16 with the requirements each one implements; source of the requirements → design traceability | 1d | T-18 |
+| [Interaction design](interaction-design.md) | Key interactions IX-01…IX-07: essential use case, task flow, errors, usability NFRs | 2d | T-21 |
+| [Prototype v1](prototype/v1/) | Clickable low-fidelity prototype (one HTML file) and its screens | 2a | T-20 |
+| Prototype v2 and evolution log | _Pending_ | 2c | T-23 |
 
-Export the screens you present (PNG or PDF) to this folder so they are versioned alongside the process.
+The prototype is built as HTML in the repository instead of Figma (author's decision of 2026-10-27), so it opens on a real phone and every version is kept in the history.

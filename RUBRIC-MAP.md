@@ -12,19 +12,19 @@ The delivery 1 map is kept as it was delivered: [RUBRIC-MAP.md at the close of d
 
 | Rubric item | Where to find it | Status |
 |---|---|---|
-| **1a — Changes in requirements** (clarity of the FR/NFR language) | _Pending (T-16)_ | In progress |
+| **1a — Changes in requirements** (clarity of the FR/NFR language) | _Pending (T-16)_ | Planned (moved to 2026-10-30) |
 | **1b — FR ↔ NFR mapping, particularly usability** | _Pending (T-17)_ | Planned |
 | **1c — Usability attributes in the NFRs, system level or per requirement** | _Pending (T-16)_ | Planned |
-| **1d — Traceability from requirements to design** | _Pending (T-18)_ | Planned |
+| **1d — Traceability from requirements to design** | [Screen catalogue](design/screens.md) (SCR-01…SCR-16 with their FR/NFR) · [Requirements → screens → interactions](docs/04-requirements/traceability-matrix.md#5-requirements--design-screens-and-interactions) (generated) · [Annotations in the prototype](design/prototype/v1/README.md#how-to-open-it) (`?f&notas`) | Done (T-18): 38 of 39 FR have a screen; `tools/trace.py --check` verifies that the prototype declares the same requirements |
 
 ## 2. Interface prototyping
 
 | Rubric item | Where to find it | Status |
 |---|---|---|
-| **2a — Prototype development** | _Pending (T-20)_ | Planned |
-| **2b — Design guidelines** (organization of elements, information architecture) | _Pending (T-19)_ | Planned |
-| **2c — Evolution of prototypes** (optional) | _Pending (T-23)_ | Planned |
-| **2d — Interaction design** (key interactions, standardized, linked to FR and usability NFR) | _Pending (T-21)_ | Planned |
+| **2a — Prototype development** | [Prototype v1](design/prototype/v1/) — clickable, 16 screens, [screenshots](design/prototype/v1/README.md#screens), [checks](design/prototype/v1/README.md#checks) | v1 done; author's review pending (T-20) |
+| **2b — Design guidelines** (organization of elements, information architecture) | [Guidelines](design/guidelines.md): [§1 information architecture](design/guidelines.md#1-information-architecture), [§2 organization of each screen](design/guidelines.md#2-organization-of-each-screen), [§3 components](design/guidelines.md#3-components), [§4 low-fidelity conventions](design/guidelines.md#4-low-fidelity-visual-conventions) | Done (T-19) |
+| **2c — Evolution of prototypes** (optional) | Issues found in v1: [B-1, B-2](design/prototype/v1/README.md#issues-noticed-while-building-v1); v2 _pending (T-23)_ | In progress |
+| **2d — Interaction design** (key interactions, standardized, linked to FR and usability NFR) | [Interaction design](design/interaction-design.md): [format](design/interaction-design.md#format) and [summary](design/interaction-design.md#summary) of IX-01…IX-07 | Done (T-21) |
 
 ## 3. Inspection methods (optional)
 
