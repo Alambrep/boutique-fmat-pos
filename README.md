@@ -23,7 +23,7 @@
 
 | Delivery 2 criterion | Main evidence |
 |---|---|
-| 1 — Evolution of the requirements | [Requirements → design traceability](docs/04-requirements/traceability-matrix.md#5-requirements--design-screens-and-interactions) and [screen catalogue](design/screens.md); revision of FR and NFR in progress |
+| 1 — Evolution of the requirements | [Change log](docs/04-requirements/changes.md), [usability specification](docs/04-requirements/non-functional-requirements.md#0-usability-specification), [FR ↔ NFR map](docs/04-requirements/traceability-matrix.md#6-functional--non-functional-requirements), [requirements → design](docs/04-requirements/traceability-matrix.md#5-requirements--design-screens-and-interactions) |
 | 2 — Interface prototyping | [Prototype v1](design/prototype/v1/), [design guidelines](design/guidelines.md), [interaction design](design/interaction-design.md); v2 in progress |
 | 3 — Inspection methods (optional) | Planned (T-22, conditional) |
 | 4 — Usability test sketch | Planned (T-24) |
@@ -184,7 +184,8 @@ boutique-fmat-pos/
 │   ├── 04-requirements/
 │   │   ├── functional-requirements.md
 │   │   ├── non-functional-requirements.md
-│   │   └── traceability-matrix.md
+│   │   ├── traceability-matrix.md
+│   │   └── changes.md                       # requirements change log between deliveries
 │   ├── 05-presentation/
 │   │   └── README.md                        # link to the delivery video
 │   └── references.md                        # external sources [Rn], verified
@@ -199,6 +200,7 @@ boutique-fmat-pos/
 └── tools/
     ├── metrics.py                           # computes the contribution metrics from git and the artifacts
     ├── trace.py                             # regenerates the traceability views and checks coverage
+    ├── req_diff.py                          # lists requirement statements changed since a tag (e.g. delivery-1)
     └── prototype/                           # Playwright scripts: flow checks and screenshots of the prototype
 ```
 
