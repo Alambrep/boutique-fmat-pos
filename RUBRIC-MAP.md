@@ -37,10 +37,10 @@ The delivery 1 map is kept as it was delivered: [RUBRIC-MAP.md at the close of d
 
 | Rubric item | Where to find it | Status |
 |---|---|---|
-| **4a — Selection of priority usability NFRs** | _Pending (T-24)_ | Planned |
-| **4b — Test planning** (participants, tasks and scenarios, times, instruments) | _Pending (T-24)_ | Planned |
-| **4c — Metrics with unacceptable / acceptable / excellent levels** | _Pending (T-24)_ | Planned |
-| **4d — Protocol that would allow a pilot** | _Pending (T-24)_; pilot _(T-25, conditional)_ | Planned |
+| **4a — Selection of priority usability NFRs** | [Protocol §2](docs/06-evaluation/usability-test/protocol.md#2-selected-usability-nfrs-4a): three objective criteria applied to every NFR; 8 selected, the rest with the reason | Done (T-24) |
+| **4b — Test planning** (participants, tasks and scenarios, times, instruments) | [§3 participants](docs/06-evaluation/usability-test/protocol.md#3-participants-4b) · [§4 tasks and scenarios](docs/06-evaluation/usability-test/protocol.md#4-tasks-and-scenarios-4b) · [§5 times](docs/06-evaluation/usability-test/protocol.md#5-time-estimates-4b) · [§6 procedure](docs/06-evaluation/usability-test/protocol.md#6-procedure-facilitator-script) · instruments: [Spanish materials](docs/06-evaluation/usability-test/es/README.md), [observation sheet](docs/06-evaluation/usability-test/observation-sheet.md) | Done (T-24), except the SUS text (pending, see below) |
+| **4c — Metrics with unacceptable / acceptable / excellent levels** | [Protocol §7](docs/06-evaluation/usability-test/protocol.md#7-metrics-and-levels-4c): 9 quantitative metrics with three levels, qualitative measures | Done (T-24) |
+| **4d — Protocol that would allow a pilot** | [Usability test protocol](docs/06-evaluation/usability-test/protocol.md), [§9 pilot](docs/06-evaluation/usability-test/protocol.md#9-pilot-4d); task paths checked in the prototype by [`tasks.js`](tools/prototype/tasks.js) | Ready, except the Spanish SUS text, which must be copied verbatim from its source `[R42]`; pilot (T-25) cancelled |
 
 ## 5. Teamwork (individual project)
 

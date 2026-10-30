@@ -26,7 +26,7 @@
 | 1 — Evolution of the requirements | [Change log](docs/04-requirements/changes.md), [usability specification](docs/04-requirements/non-functional-requirements.md#0-usability-specification), [FR ↔ NFR map](docs/04-requirements/traceability-matrix.md#6-functional--non-functional-requirements), [requirements → design](docs/04-requirements/traceability-matrix.md#5-requirements--design-screens-and-interactions) |
 | 2 — Interface prototyping | [Prototype v1](design/prototype/v1/), [design guidelines](design/guidelines.md), [interaction design](design/interaction-design.md); v2 in progress |
 | 3 — Inspection methods (optional) | Planned (T-22, conditional) |
-| 4 — Usability test sketch | Planned (T-24) |
+| 4 — Usability test sketch | [Usability test protocol](docs/06-evaluation/usability-test/protocol.md) and [Spanish materials](docs/06-evaluation/usability-test/es/README.md) |
 | 5 — Teamwork (individual) | [Task log](docs/00-management/task-log.md), [logbook](docs/00-management/logbook/), [schedule](docs/00-management/schedule.md), [contribution metrics](docs/00-management/contribution-metrics.md) |
 | 6 — Presentation | [Video](docs/05-presentation/README.md) — pending |
 
@@ -67,9 +67,10 @@ Recommended order (follows the product process):
 6. [Functional requirements](docs/04-requirements/functional-requirements.md), [non-functional requirements](docs/04-requirements/non-functional-requirements.md) and [traceability matrix](docs/04-requirements/traceability-matrix.md).
 7. [Research and validation plan](docs/02-research/validation-plan.md) and [instruments](docs/02-research/instruments/) — what gets validated in delivery 2, and how.
 8. [Management](docs/00-management/): [schedule](docs/00-management/schedule.md), [meeting log](docs/00-management/meetings.md), [logbook](docs/00-management/logbook/), [task log](docs/00-management/task-log.md) and [contribution metrics](docs/00-management/contribution-metrics.md).
-9. [Design](design/README.md) (delivery 2): [guidelines](design/guidelines.md), [screen catalogue](design/screens.md), [interaction design](design/interaction-design.md) and [prototype](design/prototype/v1/).
-10. [Presentation video](docs/05-presentation/README.md).
-11. [References](docs/references.md) — every external source used, with how to verify it.
+9. [Usability test protocol](docs/06-evaluation/usability-test/protocol.md) (delivery 2).
+10. [Design](design/README.md) (delivery 2): [guidelines](design/guidelines.md), [screen catalogue](design/screens.md), [interaction design](design/interaction-design.md) and [prototype](design/prototype/v1/).
+11. [Presentation video](docs/05-presentation/README.md).
+12. [References](docs/references.md) — every external source used, with how to verify it.
 
 ## 3. Delivery 1 approach
 
@@ -186,6 +187,8 @@ boutique-fmat-pos/
 │   │   ├── non-functional-requirements.md
 │   │   ├── traceability-matrix.md
 │   │   └── changes.md                       # requirements change log between deliveries
+│   ├── 06-evaluation/
+│   │   └── usability-test/                  # protocol, observation sheet, es/ participant materials (delivery 2)
 │   ├── 05-presentation/
 │   │   └── README.md                        # link to the delivery video
 │   └── references.md                        # external sources [Rn], verified
@@ -201,7 +204,7 @@ boutique-fmat-pos/
     ├── metrics.py                           # computes the contribution metrics from git and the artifacts
     ├── trace.py                             # regenerates the traceability views and checks coverage
     ├── req_diff.py                          # lists requirement statements changed since a tag (e.g. delivery-1)
-    └── prototype/                           # Playwright scripts: flow checks and screenshots of the prototype
+    └── prototype/                           # Playwright scripts: flow checks, test-task paths and screenshots of the prototype
 ```
 
 ## 7. Delivery 1 deliverables
