@@ -90,6 +90,15 @@ Total estimated: **25.0 h**; without the conditional tasks (T-22, T-25): **21.0 
 
 Cut order: **T-25 → T-22 → T-15 (reduced)**. A cut task is closed as *Cancelled* in the task log, with the reason.
 
+**Progress against this plan**
+
+| Date | Planned | Actual |
+|---|---|---|
+| Tue 2026-10-27 | Issues, T-14, T-15 | Done as planned; T-15 waits for the author's review of the Spanish versions ([logbook](logbook/2026-10-27.md)) |
+| Wed 2026-10-28 | T-15, T-16, T-17, T-19 | **No work session.** The day's tasks moved |
+| Thu 2026-10-29 | T-18, T-20, T-21 | T-19 (moved from Wednesday), T-20 (v1, author's review pending), T-18 and T-21 done ([logbook](logbook/2026-10-29.md)). T-16 and T-17 move to Friday |
+| Fri 2026-10-30 | T-22, T-23, T-24, T-25, T-27 | Now also T-16 and T-17. Checkpoint A applies: if the author has not reviewed prototype v1 by the end of 2026-10-29, T-22 is cancelled |
+
 ## 6. Delivery 3 — planned activities (dates to be set when announced)
 
 The final delivery rubric ([original](../../client/originals/Rubric_Final_Delivery-HCI.pdf)) asks for a summary of the changes across the three deliveries, the product by user-centred design phase with the transition between stages and prototypes, the usability tests in detail (materials, evidence, analysis, results), lessons learned, the presentation and teamwork. Delivery 2 artifacts are built so they can be reused: requirement change log, versioned prototypes with an evolution log, and a test protocol that can be run as is.
