@@ -1,6 +1,6 @@
 # References
 
-> Every source below was opened and checked against the statement it supports on **2026-09-28**, by the AI assistant at the author's request, with a summary given to the author; sources were re-checked on **2026-09-29** after two reviews by Claude in separate conversations (R10 attribution and R32 title corrected; R12 DOI and the official publication of R18 added; a proposed Android startup-time benchmark could not be confirmed and was not added). R35–R40 and the SC 1.4.1 use of R3 were opened and checked on **2026-10-29**, and R41 on **2026-10-30**, by the AI assistant, for the delivery 2 design work; an NN/g article on error messages was considered but not added, because the accessible text did not contain the statements needed (heuristic 9 of R35 is cited instead).
+> Every source below was opened and checked against the statement it supports on **2026-09-28**, by the AI assistant at the author's request, with a summary given to the author; sources were re-checked on **2026-09-29** after two reviews by Claude in separate conversations (R10 attribution and R32 title corrected; R12 DOI and the official publication of R18 added; a proposed Android startup-time benchmark could not be confirmed and was not added). R35–R40 and the SC 1.4.1 use of R3 were opened and checked on **2026-10-29**, and R41, R42 and the scoring and grade statements of R5 on **2026-10-30**, by the AI assistant, for the delivery 2 design work; an NN/g article on error messages was considered but not added, because the accessible text did not contain the statements needed (heuristic 9 of R35 is cited instead).
 >
 > **How to verify a citation:** open the link, search the page (Ctrl+F) for the keyword given in the "Where to look" column, and confirm the statement matches.
 
@@ -12,7 +12,7 @@
 | R2 | ISO 9241-11:2018. *Ergonomics of human-system interaction — Part 11: Usability: Definitions and concepts.* https://www.iso.org/standard/63500.html — definition as reproduced by NIST CSRC Glossary: https://csrc.nist.gov/glossary/term/usability | Definition of usability as effectiveness, efficiency and satisfaction for specified users, goals and context of use. | "specified users" (NIST page) |
 | R3 | W3C. *Web Content Accessibility Guidelines (WCAG) 2.2*, Success Criterion 1.4.3 Contrast (Minimum), Level AA. https://www.w3.org/TR/WCAG22/ | Minimum contrast of 4.5:1 for normal text and 3:1 for large text (NFR-10). SC 1.4.1 Use of Color (Level A): color is not the only visual means of conveying information (design guidelines; checked in https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html). | "1.4.3", "1.4.1" |
 | R4 | Android Developers. *Make apps more accessible.* https://developer.android.com/guide/topics/ui/accessibility/apps | Recommended touch target of at least 48 dp × 48 dp (NFR-09). | "48dp" |
-| R5 | Sauro, J. *Measuring Usability with the System Usability Scale (SUS).* MeasuringU. https://measuringu.com/sus/ | Average SUS score of 68, based on 500 evaluations and more than 5,000 users (NFR-08). | "68" |
+| R5 | Sauro, J. *Measuring Usability with the System Usability Scale (SUS).* MeasuringU. https://measuringu.com/sus/ | Average SUS score of 68, based on 500 evaluations and more than 5,000 users (NFR-08). Scoring: odd items minus 1, 5 minus even items, sum × 2.5; a score above 80.3 is an A, the top 10% of scores (usability test levels; checked 2026-10-30). | "68", "80.3" |
 
 ## User modeling and Lean UX
 
@@ -88,6 +88,12 @@
 | ID | Reference | Supports | Where to look |
 |---|---|---|---|
 | R41 | NASA. (n.d.). *Appendix C: How to Write a Good Requirement.* https://www.nasa.gov/reference/appendix-c-how-to-write-a-good-requirement/ (accessed 2026-10-30) | Requirements use *shall*, express one thought per statement (one subject and one predicate), can be tested, demonstrated, inspected or analyzed, and avoid unverifiable terms such as *easy*, *adequate*, *user-friendly*, *usable*, *fast*, *quickly*, and ambiguous ones such as *etc.* and *and/or* (requirements change log, writing rules). | "user-friendly" |
+
+## Usability testing (delivery 2)
+
+| ID | Reference | Supports | Where to look |
+|---|---|---|---|
+| R42 | Sevilla-Gonzalez, M. del R., Moreno Loaeza, L., Lazaro-Carrera, L. S., Bourguet Ramirez, B., Vázquez Rodríguez, A., Peralta-Pedrero, M. L., & Almeda-Valdes, P. (2020). Spanish Version of the System Usability Scale for the Assessment of Electronic Tools: Development and Validation. *JMIR Human Factors, 7*(4), e21161. https://doi.org/10.2196/21161 — open access: https://pmc.ncbi.nlm.nih.gov/articles/PMC7773510 (accessed 2026-10-30) | Spanish version of the SUS, developed and validated with participants in Mexico City (Cronbach's α = .812); the questionnaire is in its Multimedia Appendix 2 (usability test, NFR-08). | "Cronbach" |
 
 ## Interface and interaction design (delivery 2)
 
