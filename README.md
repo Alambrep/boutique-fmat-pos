@@ -12,7 +12,7 @@
 | **Branch** | [`second-delivery`](https://github.com/Alambrep/boutique-fmat-pos/tree/second-delivery) |
 | **Status** | In progress — milestone [Delivery 2](https://github.com/Alambrep/boutique-fmat-pos/milestone/2) |
 | **Previous delivery** | Delivery 1 — tag [`delivery-1`](https://github.com/Alambrep/boutique-fmat-pos/releases/tag/delivery-1) |
-| **Design** | [Clickable low-fidelity prototype v1](design/prototype/v1/) — open it online on a phone: https://alambrep.github.io/boutique-fmat-pos/design/prototype/v1/ — and its screens; [design folder](design/README.md) |
+| **Design** | [Clickable low-fidelity prototype v2](design/prototype/v2/) — open it online on a phone: https://alambrep.github.io/boutique-fmat-pos/design/prototype/v2/ — its screens, and [how it evolved from v1](design/prototype-evolution.md); [design folder](design/README.md) |
 | **Video / presentation** | [Delivery 1 video](https://youtu.be/kahF-t9Y5TM); delivery 2 video pending — both listed in [`docs/05-presentation/`](docs/05-presentation/README.md) |
 
 ---
@@ -24,7 +24,7 @@
 | Delivery 2 criterion | Main evidence |
 |---|---|
 | 1 — Evolution of the requirements | [Change log](docs/04-requirements/changes.md), [usability specification](docs/04-requirements/non-functional-requirements.md#0-usability-specification), [FR ↔ NFR map](docs/04-requirements/traceability-matrix.md#6-functional--non-functional-requirements), [requirements → design](docs/04-requirements/traceability-matrix.md#5-requirements--design-screens-and-interactions) |
-| 2 — Interface prototyping | [Prototype v1](design/prototype/v1/), [design guidelines](design/guidelines.md), [interaction design](design/interaction-design.md); v2 in progress |
+| 2 — Interface prototyping | [Prototypes v1 and v2](design/README.md), [evolution](design/prototype-evolution.md), [design guidelines](design/guidelines.md), [interaction design](design/interaction-design.md) |
 | 3 — Inspection methods (optional) | Planned (T-22, conditional) |
 | 4 — Usability test sketch | [Usability test protocol](docs/06-evaluation/usability-test/protocol.md) and [Spanish materials](docs/06-evaluation/usability-test/es/README.md) |
 | 5 — Teamwork (individual) | [Task log](docs/00-management/task-log.md), [logbook](docs/00-management/logbook/), [schedule](docs/00-management/schedule.md), [contribution metrics](docs/00-management/contribution-metrics.md) |
@@ -197,7 +197,8 @@ boutique-fmat-pos/
 │   ├── guidelines.md                        # design guidelines G-xx
 │   ├── screens.md                           # screen catalogue SCR-xx (source of requirements → design)
 │   ├── interaction-design.md                # key interactions IX-xx
-│   └── prototype/v1/                        # clickable prototype (index.html) and screens/
+│   ├── prototype-evolution.md               # what changed between prototype versions and why
+│   └── prototype/v1/, prototype/v2/         # clickable prototypes (index.html) and screens/
 ├── src/
 │   └── README.md                            # reserved for later deliveries
 └── tools/

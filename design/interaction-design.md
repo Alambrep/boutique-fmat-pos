@@ -1,6 +1,6 @@
 # Interaction design — key interactions
 
-> **Task:** T-21 · **Rubric criterion (delivery 2):** 2d · **Prototype version:** [v1](prototype/v1/)
+> **Task:** T-21 · **Rubric criterion (delivery 2):** 2d · **Prototype version:** [v2](prototype/v2/) (the flows are the same in v1; in v2 the payment methods of SCR-04 are always visible)
 >
 > The key interactions of the system: the essential ones (selling, the daily task of the primary persona) and the most complex ones (Interuady data, out-of-stock sales without internet, products with variants). Each one is specified in the same format, linked to the functional requirements it implements and the usability non-functional requirements it must meet, so it also works as a traceability tool for the NFRs `[rubric 2d]`. [`tools/trace.py`](../tools/trace.py) reads the summary table below and generates the view [requirements → screens → interactions](../docs/04-requirements/traceability-matrix.md#5-requirements--design-screens-and-interactions).
 

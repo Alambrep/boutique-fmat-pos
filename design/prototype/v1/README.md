@@ -2,6 +2,8 @@
 
 > **Task:** T-20 · **Rubric criterion (delivery 2):** 2a · **Built:** 2026-10-29 by the AI assistant from the author's instructions · **Author's review:** 2026-10-29, no changes requested ([logbook](../../../docs/00-management/logbook/2026-10-29.md#authors-review-of-prototype-v1-2217))
 >
+> **Superseded by [v2](../v2/)** on 2026-10-31 (one change, see the [prototype evolution](../../prototype-evolution.md)); kept unchanged as the record of the first version.
+>
 > Clickable, low-fidelity prototype of the point of sale. It follows the [design guidelines](../../guidelines.md) and implements the screens of the [screen catalogue](../../screens.md). It is built from the [proto-personas](../../../docs/03-user-modeling/proto-personas.md) and [scenarios](../../../docs/03-user-modeling/scenarios.md), which are **hypotheses** (no field research yet); every design choice that rests on a hypothesis cites it.
 
 ## How to open it
@@ -26,7 +28,7 @@ The UI text is in Spanish `[NFR-12]`; the code and comments are in English.
 | Inventory per warehouse with items to review; new product with variants | P-02 | S-04, S-05 | IX-06 |
 | Accounts receivable with filters; note detail by profile | P-03 (also P-01, P-02) | S-06 | IX-07 |
 
-**Not included in v1:** desktop layout of the query views (FR-37, *Could*); editing an existing product (FR-09 covers it; only creation is prototyped); deferred requirements FR-D1…FR-D6. Requirements without a screen are listed in the [screen catalogue](../../screens.md#requirements-not-in-prototype-v1).
+**Not included in v1:** desktop layout of the query views (FR-37, *Could*); editing an existing product (FR-09 covers it; only creation is prototyped); deferred requirements FR-D1…FR-D6. Requirements without a screen are listed in the [screen catalogue](../../screens.md#requirements-not-in-prototype-v1-or-v2).
 
 **Simulated, not real:** internet and synchronization (switched in the facilitator panel), the printer, the barcode scanner and the camera, the photos (drawings). Reloading the page resets all data.
 

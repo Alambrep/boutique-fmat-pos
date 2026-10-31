@@ -2,7 +2,7 @@
 
 > **Task:** T-24 · **Rubric criteria (delivery 2):** 4a–4d · **Status:** ready for a pilot; **not run in delivery 2** (the pilot, T-25, was cancelled at checkpoint B of the [schedule](../../00-management/schedule.md#5-delivery-2--plan-due-2026-10-31)). It is the protocol for the usability tests of delivery 3.
 >
-> Facilitator and author: Alan Pérez. Participant-facing materials are in Spanish in [`es/`](es/README.md); this document is the English reference. Prototype under test: [current version](../../../design/README.md) (v1 at the time of writing), online at https://alambrep.github.io/boutique-fmat-pos/design/prototype/v1/.
+> Facilitator and author: Alan Pérez. Participant-facing materials are in Spanish in [`es/`](es/README.md); this document is the English reference. Prototype under test: the current version — [v2](../../../design/prototype/v2/) since 2026-10-31 — online at https://alambrep.github.io/boutique-fmat-pos/design/prototype/v2/.
 
 ## 1. Purpose and limits
 

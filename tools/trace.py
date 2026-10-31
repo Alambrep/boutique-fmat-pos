@@ -38,7 +38,7 @@ DEF = ROOT / "docs/01-definition/project-definition.md"
 MATRIX = ROOT / "docs/04-requirements/traceability-matrix.md"
 SCREENS = ROOT / "design/screens.md"
 IXDOC = ROOT / "design/interaction-design.md"
-PROTOTYPE = ROOT / "design/prototype/v1/index.html"  # current prototype version
+PROTOTYPE = ROOT / "design/prototype/v2/index.html"  # current prototype version
 
 ID = r"(CR|PRJ|H|Q|DI)-(\d+)(?:\s*…\s*(?:CR|PRJ|H|Q|DI)-(\d+))?"
 

@@ -1,6 +1,6 @@
 # Design guidelines
 
-> **Task:** T-19 · **Rubric criterion (delivery 2):** 2b · **Status:** v1, applied in [prototype v1](prototype/v1/) — will be revised after the inspection and the usability test.
+> **Task:** T-19 · **Rubric criterion (delivery 2):** 2b · **Status:** applied in prototypes [v1](prototype/v1/) and [v2](prototype/v2/) — will be revised after the usability test.
 >
 > Rules the interface follows. Each guideline `G-xx` cites where it comes from: a requirement (`FR`, `NFR`), the client (`CR`, `PRJ`), a hypothesis (`H`) or a verified source `[Rn]` in [`references.md`](../docs/references.md). Guidelines that rest only on a hypothesis or on the author's convention say so. Screens are identified as `SCR-xx` in the [screen catalogue](screens.md).
 
@@ -122,7 +122,7 @@ Reference viewport for the low-fidelity prototype: **360 × 640 CSS px**, a smal
 | Bottom sheet | SCR-03 | Choice that belongs to the current screen (size or color); closes with *Cancelar* | G-15 |
 | Quantity stepper | SCR-04 | − value +; buttons 48 px; − at 1 asks *¿Quitar…?* | G-08, G-14 |
 | Primary button | Action area | Full width, 56 px, one per screen; disabled look keeps the label readable | G-06, G-12 |
-| Choice button | SCR-04 | Large stacked buttons for the three payment methods | G-11 |
+| Choice button | SCR-04 | Three buttons for the payment methods, side by side in the action area so they are always visible (v2, issue B-1) | G-07, G-11 |
 | Field | Forms | Label above; required data marked; message under the field | G-13 |
 | Dialog | Exceptional decisions | States the consequence; destructive option labeled with its verb (*Quitar*, *Agregar de todos modos*) | G-14 |
 | Toast | Feedback | Short, disappears; never the only place for important information | G-09 |

@@ -1,6 +1,6 @@
 # Screen catalogue
 
-> **Task:** T-18 · **Rubric criterion (delivery 2):** 1d · **Prototype version:** [v1](prototype/v1/)
+> **Task:** T-18 · **Rubric criterion (delivery 2):** 1d · **Prototype version:** [v2](prototype/v2/) (current; the screens and their requirements are the same in v1)
 >
 > Every screen of the prototype has an identifier `SCR-xx` and cites the requirements it implements. This table is the **source** of the requirements → design traceability: [`tools/trace.py`](../tools/trace.py) reads it, checks that the prototype's screens declare exactly the same requirements (`data-reqs` attribute of each screen in `index.html`), checks that every *Must* functional requirement has a screen, and generates the view [requirements → screens → interactions](../docs/04-requirements/traceability-matrix.md#5-requirements--design-screens-and-interactions). Key interactions (`IX-xx`) are in [`interaction-design.md`](interaction-design.md).
 
@@ -11,7 +11,7 @@
 | SCR-01 | Iniciar sesión | All | FR-01, FR-02, FR-30 | NFR-12 | S-08 | *Entrar* | Q-11 |
 | SCR-02 | Vender | P-01 (start), P-02 (start), P-03 | FR-03, FR-13, FR-14, FR-15, FR-27, FR-28, FR-29, FR-31 | NFR-02, NFR-03, NFR-09, NFR-11, NFR-25 | S-01, S-03, S-08 | *Cobrar* | Q-02, Q-14 |
 | SCR-03 | Elegir talla o color *(sheet)* | P-01, P-02, P-03 | FR-13, FR-31 | NFR-09 | S-07 | One option per size or color | Q-14 |
-| SCR-04 | Resumen de la venta | P-01, P-02, P-03 | FR-16, FR-17, FR-33 | NFR-03, NFR-11, NFR-28 | S-01, S-03, S-07 | Choose how the customer pays (three choice buttons) | — |
+| SCR-04 | Resumen de la venta | P-01, P-02, P-03 | FR-16, FR-17, FR-33 | NFR-03, NFR-11, NFR-28 | S-01, S-03, S-07 | Choose how the customer pays (three buttons, fixed at the bottom from v2) | — |
 | SCR-05 | Pago en efectivo | P-01, P-02, P-03 | FR-18, FR-22 | NFR-03, NFR-04 | S-01 | *Confirmar venta* | — |
 | SCR-06 | Pago con tarjeta | P-01, P-02, P-03 | FR-19, FR-22 | NFR-21 | S-03 | *Sí, aprobado: confirmar venta* | Q-06 (H-10) |
 | SCR-07 | Pago con Interuady | P-01, P-02, P-03 | FR-20, FR-21, FR-39 | NFR-06, NFR-07, NFR-22 | S-02 | *Confirmar venta* | Q-04 |
@@ -25,9 +25,9 @@
 | SCR-15 | Cuentas por cobrar | All; P-03 (start) | FR-25 | NFR-27 | S-06 | Open a note (list) | Q-09 |
 | SCR-16 | Detalle de la nota | All; personal details only for P-02, P-03 | FR-24, FR-26 | NFR-20 | S-06 | — (read only) | — |
 
-Usability NFRs that apply to **every** screen (NFR-09 touch targets, NFR-10 contrast, NFR-12 Spanish, NFR-02 plain language on sales screens) are applied through the [design guidelines](guidelines.md) and checked on all screens (see the [prototype checks](prototype/v1/README.md#checks)); the table lists them only where a screen is designed specifically around them.
+Usability NFRs that apply to **every** screen (NFR-09 touch targets, NFR-10 contrast, NFR-12 Spanish, NFR-02 plain language on sales screens) are applied through the [design guidelines](guidelines.md) and checked on all screens (see the prototype checks of [v1](prototype/v1/README.md#checks) and [v2](prototype/v2/README.md#checks-2026-10-31)); the table lists them only where a screen is designed specifically around them.
 
-## Requirements not in prototype v1
+## Requirements not in prototype v1 or v2
 
 | Requirement | Priority | Reason |
 |---|---|---|

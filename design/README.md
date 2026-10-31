@@ -8,6 +8,7 @@ Design artifacts start in delivery 2. Field research is blocked (see the [valida
 | [Screen catalogue](screens.md) | SCR-01…SCR-16 with the requirements each one implements; source of the requirements → design traceability | 1d | T-18 |
 | [Interaction design](interaction-design.md) | Key interactions IX-01…IX-07: essential use case, task flow, errors, usability NFRs | 2d | T-21 |
 | [Prototype v1](prototype/v1/) | Clickable low-fidelity prototype (one HTML file) and its screens | 2a | T-20 |
-| Prototype v2 and evolution log | _Pending_ | 2c | T-23 |
+| [Prototype v2](prototype/v2/) (current) — online: https://alambrep.github.io/boutique-fmat-pos/design/prototype/v2/ | v1 with issue B-1 fixed | 2a, 2c | T-23 |
+| [Prototype evolution](prototype-evolution.md) | What changed between versions, why, and what was decided not to change | 2c | T-23 |
 
 The prototype is built as HTML in the repository instead of Figma (author's decision of 2026-10-27), so it opens on a real phone and every version is kept in the history.
