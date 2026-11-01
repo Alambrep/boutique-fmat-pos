@@ -1,26 +1,38 @@
 # Boutique FMAT — Offline Point of Sale and Inventory for Mobile Devices
 
 > Project for the **Human-Computer Interaction** course (B.Sc. in Software Engineering, FMAT-UADY).
-> **Delivery 1:** project definition, hypothesis-based user modeling and initial requirements.
+> **Delivery 1 (delivered):** project definition, hypothesis-based user modeling and initial requirements.
+> **Delivery 2 (delivered 2026-10-31):** requirements evolution, design guidelines, low-fidelity prototype, interaction design and usability test protocol.
 
 | | |
 |---|---|
 | **Author** | Alan Pérez (individual work) |
 | **Client** | Course professor (Boutique FMAT-UADY) |
-| **Current delivery** | 1 of 3 — due 2026-09-30 |
-| **Branch** | [`first-delivery`](https://github.com/Alambrep/boutique-fmat-pos/tree/first-delivery) |
-| **Status** | Delivered — tag [`delivery-1`](https://github.com/Alambrep/boutique-fmat-pos/releases/tag/delivery-1) |
-| **Design (Figma)** | No design artifacts in delivery 1; the low-fidelity prototype starts in delivery 2 |
-| **Video / presentation** | [Delivery 1 video](https://youtu.be/kahF-t9Y5TM) — also listed in [`docs/05-presentation/`](docs/05-presentation/README.md) |
+| **Current delivery** | 2 of 3 — delivered 2026-10-31 |
+| **Branch** | [`second-delivery`](https://github.com/Alambrep/boutique-fmat-pos/tree/second-delivery) |
+| **Status** | Delivered — tag [`delivery-2`](https://github.com/Alambrep/boutique-fmat-pos/releases/tag/delivery-2), milestone [Delivery 2](https://github.com/Alambrep/boutique-fmat-pos/milestone/2?closed=1) |
+| **Previous delivery** | Delivery 1 — tag [`delivery-1`](https://github.com/Alambrep/boutique-fmat-pos/releases/tag/delivery-1) |
+| **Design** | [Clickable low-fidelity prototype v2](design/prototype/v2/) — open it online on a phone: https://alambrep.github.io/boutique-fmat-pos/design/prototype/v2/ — its screens, and [how it evolved from v1](design/prototype-evolution.md); [design folder](design/README.md) |
+| **Video / presentation** | [Delivery 2 video](https://youtu.be/mztWLFfF07M) · [Delivery 1 video](https://youtu.be/kahF-t9Y5TM) — both listed in [`docs/05-presentation/`](docs/05-presentation/README.md) |
 
 ---
 
 ## For the evaluator
 
-**Start here: [RUBRIC-MAP.md](RUBRIC-MAP.md)** — every item of the rubric with a direct link to the section that covers it, and the known gaps of this delivery. Summary:
+**Start here: [RUBRIC-MAP.md](RUBRIC-MAP.md)** — every item of the delivery 2 rubric with a direct link to the section that covers it. Summary:
 
-| Criterion | Main evidence |
+| Delivery 2 criterion | Main evidence |
 |---|---|
+| 1 — Evolution of the requirements | [Change log](docs/04-requirements/changes.md), [usability specification](docs/04-requirements/non-functional-requirements.md#0-usability-specification), [FR ↔ NFR map](docs/04-requirements/traceability-matrix.md#6-functional--non-functional-requirements), [requirements → design](docs/04-requirements/traceability-matrix.md#5-requirements--design-screens-and-interactions) |
+| 2 — Interface prototyping | [Prototypes v1 and v2](design/README.md), [evolution](design/prototype-evolution.md), [design guidelines](design/guidelines.md), [interaction design](design/interaction-design.md) |
+| 3 — Inspection methods (optional) | Planned (T-22, conditional) |
+| 4 — Usability test sketch | [Usability test protocol](docs/06-evaluation/usability-test/protocol.md) and [Spanish materials](docs/06-evaluation/usability-test/es/README.md) |
+| 5 — Teamwork (individual) | [Task log](docs/00-management/task-log.md), [logbook](docs/00-management/logbook/), [schedule](docs/00-management/schedule.md), [contribution metrics](docs/00-management/contribution-metrics.md) |
+| 6 — Presentation | [Delivery 2 video](https://youtu.be/mztWLFfF07M) |
+
+Delivery 1 evidence (definition, research plan, user modeling) remains in place; its map is linked from [RUBRIC-MAP.md](RUBRIC-MAP.md).
+
+---|---|
 | 1 — Definition of the project | [Project definition](docs/01-definition/project-definition.md) |
 | 2 — User research process | [Validation plan](docs/02-research/validation-plan.md), [instruments](docs/02-research/instruments/), [desk research results](docs/02-research/results/desk-research.md), [hypotheses](docs/02-research/hypotheses.md), [schedule](docs/00-management/schedule.md), this README |
 | 3 — User modeling | [Proto-personas](docs/03-user-modeling/proto-personas.md), [scenarios](docs/03-user-modeling/scenarios.md) |
@@ -55,8 +67,10 @@ Recommended order (follows the product process):
 6. [Functional requirements](docs/04-requirements/functional-requirements.md), [non-functional requirements](docs/04-requirements/non-functional-requirements.md) and [traceability matrix](docs/04-requirements/traceability-matrix.md).
 7. [Research and validation plan](docs/02-research/validation-plan.md) and [instruments](docs/02-research/instruments/) — what gets validated in delivery 2, and how.
 8. [Management](docs/00-management/): [schedule](docs/00-management/schedule.md), [meeting log](docs/00-management/meetings.md), [logbook](docs/00-management/logbook/), [task log](docs/00-management/task-log.md) and [contribution metrics](docs/00-management/contribution-metrics.md).
-9. [Presentation video](docs/05-presentation/README.md).
-10. [References](docs/references.md) — every external source used, with how to verify it.
+9. [Usability test protocol](docs/06-evaluation/usability-test/protocol.md) (delivery 2).
+10. [Design](design/README.md) (delivery 2): [guidelines](design/guidelines.md), [screen catalogue](design/screens.md), [interaction design](design/interaction-design.md) and [prototype](design/prototype/v1/).
+11. [Presentation video](docs/05-presentation/README.md).
+12. [References](docs/references.md) — every external source used, with how to verify it.
 
 ## 3. Delivery 1 approach
 
@@ -116,8 +130,12 @@ Rule: **nothing is presented as a finding** until a `V-xx` activity confirms it;
 | `RQ-x` | Research question (validation plan) |
 | `DI-xx` | Design implication derived from a scenario |
 | `FR-Dx` | Deferred functional requirement (depends on an open question) |
+| `G-xx` | Design guideline (delivery 2) |
+| `SCR-xx` | Screen of the prototype (delivery 2) |
+| `IX-xx` | Key interaction (delivery 2) |
+| `B-x` | Issue noticed in a prototype version, candidate for the next one |
 
-Traceability rule: **every `P`, `S`, `FR` and `NFR` cites at least one `H`, `CR` or `PRJ`.** The views are generated by [`tools/trace.py`](tools/trace.py), which also checks that every client requirement and design implication is covered. The full matrix is in [`traceability-matrix.md`](docs/04-requirements/traceability-matrix.md).
+Traceability rule: **every `P`, `S`, `FR` and `NFR` cites at least one `H`, `CR` or `PRJ`.** The views are generated by [`tools/trace.py`](tools/trace.py), which also checks that every client requirement and design implication is covered. From delivery 2 the chain continues to the design: every screen `SCR` and interaction `IX` cites the `FR` and `NFR` it implements, and the script checks that the prototype declares the same requirements and that every *Must* requirement has a screen. The full matrix is in [`traceability-matrix.md`](docs/04-requirements/traceability-matrix.md).
 
 ```mermaid
 flowchart LR
@@ -126,6 +144,7 @@ flowchart LR
   P --> S["S<br/>Scenarios"]
   S --> R["FR / NFR<br/>Requirements"]
   CR --> R
+  R --> D["SCR / IX<br/>Screens and interactions (D2)"]
   H --> V["V<br/>Validation (D2)"]
   V -. confirms or refutes .-> H
 ```
@@ -141,8 +160,9 @@ boutique-fmat-pos/
 │       └── task.md                          # template for every task (T-xx)
 ├── client/
 │   ├── client-requirements.md               # CR-xx, PRJ-xx and open questions Q-xx
-│   ├── rubric-delivery-1.md             # rubric transcription
-│   └── originals/                           # documents exactly as delivered by the client
+│   ├── rubric-delivery-1.md                 # rubric transcription, delivery 1
+│   ├── rubric-delivery-2.md                 # rubric transcription, delivery 2
+│   └── originals/                           # documents exactly as delivered by the client (incl. the three rubrics)
 ├── docs/
 │   ├── 00-management/
 │   │   ├── schedule.md
@@ -165,17 +185,27 @@ boutique-fmat-pos/
 │   ├── 04-requirements/
 │   │   ├── functional-requirements.md
 │   │   ├── non-functional-requirements.md
-│   │   └── traceability-matrix.md
+│   │   ├── traceability-matrix.md
+│   │   └── changes.md                       # requirements change log between deliveries
+│   ├── 06-evaluation/
+│   │   └── usability-test/                  # protocol, observation sheet, es/ participant materials (delivery 2)
 │   ├── 05-presentation/
 │   │   └── README.md                        # link to the delivery video
 │   └── references.md                        # external sources [Rn], verified
 ├── design/
-│   └── README.md                            # links to Figma, sketches and wireframes
+│   ├── README.md                            # index of the design artifacts
+│   ├── guidelines.md                        # design guidelines G-xx
+│   ├── screens.md                           # screen catalogue SCR-xx (source of requirements → design)
+│   ├── interaction-design.md                # key interactions IX-xx
+│   ├── prototype-evolution.md               # what changed between prototype versions and why
+│   └── prototype/v1/, prototype/v2/         # clickable prototypes (index.html) and screens/
 ├── src/
 │   └── README.md                            # reserved for later deliveries
 └── tools/
     ├── metrics.py                           # computes the contribution metrics from git and the artifacts
-    └── trace.py                             # regenerates the traceability views and checks coverage
+    ├── trace.py                             # regenerates the traceability views and checks coverage
+    ├── req_diff.py                          # lists requirement statements changed since a tag (e.g. delivery-1)
+    └── prototype/                           # Playwright scripts: flow checks, test-task paths and screenshots of the prototype
 ```
 
 ## 7. Delivery 1 deliverables
@@ -203,7 +233,7 @@ boutique-fmat-pos/
 Although this is an individual project, the process leaves verifiable evidence in the repository:
 
 - **Branches:** `main` holds the approved version of each delivery. Each delivery is developed in its own branch (`first-delivery`, `second-delivery`, `third-delivery`) and closed with a Pull Request to `main` and a tag (`delivery-1`, `delivery-2`, `delivery-3`).
-- **Tasks:** every task is an *issue* created from the [`task.md`](.github/ISSUE_TEMPLATE/task.md) template, with a `T-xx` identifier, the `delivery-1` label and the rubric criterion it addresses. All belong to the "Delivery 1" *milestone*.
+- **Tasks:** every task is an *issue* created from the [`task.md`](.github/ISSUE_TEMPLATE/task.md) template, with a `T-xx` identifier, the delivery label (`delivery-1`, `delivery-2`…), the rubric criterion it addresses and, from delivery 2 on, estimated hours set before work starts. Each delivery has its own *milestone*. Tasks that are done only if time allows carry the `conditional` label.
 - **Commits:** [Conventional Commits](https://www.conventionalcommits.org/) format, referencing the task:
 
   ```
@@ -217,6 +247,7 @@ Although this is an individual project, the process leaves verifiable evidence i
   | `chore` | structure, templates | | `usr` | proto-personas and scenarios |
   | `feat` / `fix` | code (later deliveries) | | `req` | requirements |
   | | | | `mgmt` / `pres` | management / presentation |
+  | | | | `ui` | interface design and prototype (from delivery 2) |
 
   Example: `docs(req): add NFR-01 to NFR-08 by usability attribute (T-07)`
 
@@ -237,17 +268,23 @@ Although this is an individual project, the process leaves verifiable evidence i
 
 ## 9. Open questions for the client
 
-The client's document leaves several points undefined (meaning of *CDU* and *C.P.*, how 4 profiles map to 3 warehouses, VAT and invoicing, transfers between warehouses, cancellations, among others). They are numbered `Q-01…Q-16` in [`client/client-requirements.md`](client/client-requirements.md#open-questions-for-the-client). Until they are answered, the artifacts that depend on them rely on an explicit hypothesis.
+The client's document leaves several points undefined (meaning of *CDU* and *C.P.*, how 4 profiles map to 3 warehouses, VAT and invoicing, transfers between warehouses, cancellations, among others). They are numbered `Q-01…Q-17` in [`client/client-requirements.md`](client/client-requirements.md#open-questions-for-the-client). Until they are answered, the artifacts that depend on them rely on an explicit hypothesis. They were sent to the client on 2026-09-30, with a reminder on 2026-10-19; no answer yet ([communications](docs/00-management/meetings.md#communications-with-the-client)).
 
 ## 10. Known limitations of this delivery
 
 - Proto-personas and scenarios are based on **hypotheses**, not field data.
 - Non-functional requirements have **tentative targets**; they will be adjusted after validation.
-- There is no clickable prototype yet.
+- The low-fidelity prototype (delivery 2) is designed from hypotheses; photos are drawings, and internet, printer, scanner and camera are simulated.
 
 ## 11. Language
 
-Repository content is written in English. Client documents in `client/originals/` are kept in their original language (Spanish); proper names (warehouses, profiles, *Interuady*) are kept in Spanish.
+Repository content is written in English. Exceptions, kept in Spanish because Spanish speakers use them:
+
+- Client documents in `client/originals/` and the author's messages to the client, quoted verbatim in the [meeting log](docs/00-management/meetings.md#communications-with-the-client).
+- The user interface text of the prototype (`NFR-12`).
+- Participant-facing research and test materials, kept in folders named `es/` (from delivery 2). Each one has an English reference version next to it.
+
+Proper names (warehouses, profiles, *Interuady*) are kept in Spanish.
 
 ## 12. AI assistance statement
 
@@ -267,11 +304,11 @@ Rules followed:
 
 - The AI does not produce findings. Everything not stated by the client is labeled as a hypothesis (`H-xx`) until it is validated with real users.
 - The AI does not invent statistics, quotes or sources. A claim that could not be verified is not included.
-- Work done by the assistant is not presented as the author's; the author's own contribution is measured in [`contribution-metrics.md`](docs/00-management/contribution-metrics.md#2-author-attributable-metrics).
+- Work done by the assistant is not presented as the author's; the author's own contribution is measured in [`contribution-metrics.md`](docs/00-management/contribution-metrics.md#3-author-attributable-metrics).
 
 ## 13. Tools
 
-GitHub (repository, *issues*, *milestones*), Figma (design), Markdown + Mermaid (documentation), Claude (AI assistant; see §12).
+GitHub (repository, *issues*, *milestones*), HTML/CSS/JavaScript (low-fidelity prototype, from delivery 2, instead of Figma), Playwright (prototype checks), Markdown + Mermaid (documentation), Claude (AI assistant; see §12).
 
 ---
 

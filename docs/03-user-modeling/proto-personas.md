@@ -95,7 +95,7 @@ Profile of each user class, before turning them into proto-personas. Everything 
 | Current process | Uses notebooks or spreadsheets; recorded stock does not always match physical stock. | H-04 |
 | Device | Phone at the warehouse; a computer may be available (not confirmed, Q-12). | PRJ-01, Q-12 |
 | Follow-up | May be responsible for following up on Interuady accounts receivable. | H-13, Q-09 |
-| CDU counter | Assumed to also attend customers at the CDU point. | H-17, Q-11 |
+| CDU counter | Assumed to also attend customers at the CDU point. | H-17, Q-11, Q-17 |
 | Scenarios | S-04, S-05 | — |
 
 **Goals**
@@ -147,6 +147,6 @@ Profile of each user class, before turning them into proto-personas. Everything 
 | Social Sciences Campus `[CR-03]` | P-01 |
 | Exact Sciences Campus `[CR-04]` | P-01 |
 
-The CDU profile maps only to P-02 on the assumption that the person who manages inventory also sells at CDU `[H-17]`. If CDU has a separate front-desk seller, that person matches P-01 but would receive modify permissions through the CDU profile `[CR-01]`; this would require either a fifth profile or restricting the CDU sales screen, to be discussed with the client (Q-11).
+The CDU profile maps only to P-02 on the assumption that the person who manages inventory also sells at CDU `[H-17]`. If CDU has a separate front-desk seller, that person matches P-01 but would receive modify permissions through the CDU profile `[CR-01]`; this would require either a fifth profile or restricting the CDU sales screen, to be discussed with the client (Q-11, Q-17).
 
 All four client profiles are covered. P-01 represents both satellite profiles because they have identical permissions `[CR-03, CR-04]`; this will be revisited if validation shows different contexts at each point.
