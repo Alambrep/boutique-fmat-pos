@@ -14,4 +14,4 @@ The [device and connectivity checklist](../device-connectivity-checklist.md) (V-
 
 - The English version is the reference: question numbers and hypothesis labels are the same in both, so notes can be analyzed against the English plan.
 - If a question changes, both versions change in the same commit.
-- Translated by the AI assistant from the English reference versions on 2026-10-27; **review by the author: pending**, to be done before the first field session.
+- Translated by the AI assistant from the English reference versions on 2026-10-27. **Reviewed by the author on 2026-10-31:** interviews may be audio-recorded with explicit consent, to save time for both sides (transcribed afterwards); observation at the boutique stays without any recording, as reserved as possible. The guides keep addressing participants as *usted* (no change requested).

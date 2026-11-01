@@ -55,7 +55,7 @@ Proto-personas, scenarios and requirements that trace to an updated hypothesis a
 
 - **Informed consent:** each participant is told the purpose, that participation is voluntary and that they can stop at any time; consent is recorded before starting (script in each guide).
 - **Anonymization:** participants are identified by codes (e.g. `SEL-01`, `CDU-01`); no names are stored in the repository.
-- **No photos or recordings of people** without explicit consent; photos of the points of sale are taken without people.
+- **No photos or recordings of people** without explicit consent; photos of the points of sale are taken without people. Observation (V-01) is never recorded. Interviews (V-02…V-04) and usability test sessions (V-07) may be **audio-recorded** with explicit consent; recordings stay in the researcher's private files, are deleted once transcribed, transcripts use participant codes, and neither audio nor transcripts go into the repository (author's decision, 2026-10-31).
 - **Records:** only aggregated or anonymized data is copied from current records; Interuady notes are never copied with personal data.
 - **Framework:** UADY handles personal data under the law for public-sector entities `[R17, R18, R19]`; the research follows the same data minimization principle.
 

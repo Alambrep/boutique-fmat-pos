@@ -3,6 +3,8 @@
 > Contextual inquiry at the points of sale. Administered in Spanish; this English text is the reference version; the Spanish version used in the field is [`es/guia-observacion.md`](es/guia-observacion.md). Hypotheses: H-01, H-03, H-04, H-05, H-06, H-08, H-09, H-14.
 
 ## Before starting (consent script)
+No audio, photos or video are recorded during observation: it happens at a workplace with customers present, so it is kept as reserved as possible (author's decision, 2026-10-31). Interviews may be audio-recorded with consent (see the interview guides).
+
 "I am a Software Engineering student at FMAT working on a course project to improve the boutique's sales and inventory system. I would like to observe how sales are done here for about 30 minutes and ask a few questions. The notes are used only for this course project; I will not record your name, photos or audio, and the notes identify you only by a code. The notes are kept in my private files until the course ends and then deleted; only anonymized summaries go into the project repository. You can stop at any time without giving a reason. If you have questions later, you can contact me or the course professor. Is that OK?"
 
 - [ ] Consent given (yes/no) · Participant code: `SEL-__` · Point: ______ · Date/time: ______

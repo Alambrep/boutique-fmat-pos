@@ -3,7 +3,7 @@
 > Filled in by the facilitator, one sheet per participant, following the [protocol](protocol.md). Kept privately during the test; only anonymized summaries go into `results/`.
 
 **Participant code:** `PRX-__` / `SEL-__` · **Group:** A / B · **Real seller or proxy:** ______ · **Date and time:** ______
-**Phone (model, OS):** ______ · **Prototype version:** ______ · **Recruitment criteria met (pre-test questionnaire):** yes / no
+**Phone (model, OS):** ______ · **Prototype version:** ______ · **Recruitment criteria met (pre-test questionnaire):** yes / no · **Audio recorded:** yes / no · **Screen recorded:** yes / no
 
 ## Tasks
 

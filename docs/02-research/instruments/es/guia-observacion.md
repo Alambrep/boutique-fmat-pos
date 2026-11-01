@@ -4,6 +4,8 @@
 
 ## Antes de empezar (guion de consentimiento)
 
+En la observación no se graba audio ni video ni se toman fotos de personas: es un lugar de trabajo con clientes presentes, así que se hace de la forma más reservada posible. Las entrevistas sí se pueden grabar en audio con consentimiento (ver las guías de entrevista).
+
 "Soy estudiante de Ingeniería de Software en la FMAT y estoy haciendo un proyecto de una materia para mejorar el sistema de ventas e inventario de la boutique. Me gustaría observar durante unos 30 minutos cómo se hacen las ventas aquí y hacerle algunas preguntas. Las notas se usan solo para este proyecto; no voy a registrar su nombre, ni tomar fotos ni grabar audio, y en las notas usted aparece solo con un código. Las notas se guardan en mis archivos privados hasta que termine el curso y después se borran; al repositorio del proyecto solo van resúmenes anónimos. Puede detenerse cuando quiera, sin dar explicaciones. Si después tiene preguntas, puede contactarme a mí o al profesor de la materia. ¿Está de acuerdo?"
 
 - [ ] Consentimiento dado (sí/no) · Código del participante: `SEL-__` · Punto: ______ · Fecha y hora: ______

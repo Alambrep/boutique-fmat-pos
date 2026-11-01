@@ -88,7 +88,7 @@ Estimates by the author for planning; the pilot replaces them with measured time
 ## 6. Procedure (facilitator script)
 
 1. **Prepare:** open the prototype on the test phone and reload it; sign in as `luis` (group A) or as `daniela` / `martha` (group B, before each task); have a stopwatch, the observation sheet and the printed or on-screen materials. Record the phone model (the reference is a low-end Android phone; if another phone is used, say so in the results).
-2. **Consent** ([`es/consentimiento.md`](es/consentimiento.md)): read it, answer questions, record consent. No audio or video recording; a screen recording only if the participant agrees separately.
+2. **Consent** ([`es/consentimiento.md`](es/consentimiento.md)): read it, answer questions, record consent. **Audio** of the session is recorded (voice only, so nothing said while thinking aloud is lost) if the participant agrees; no video of the person; a screen recording only with separate consent. If the participant does not agree to audio, the facilitator takes notes only (author's decision, 2026-10-31).
 3. **Pre-test questionnaire** ([`es/cuestionario-previo.md`](es/cuestionario-previo.md)).
 4. **Demonstration (group A, ≤ 2 min):** show the sales screen, the search field and the status at the top; add one product, open *Cobrar* to show the summary, and go back without paying. Do not show any payment method.
 5. **Tasks:** read each card; start the stopwatch when the participant first touches the screen; ask them to think aloud. Do not help. If the participant asks, answer *"¿Qué harías si yo no estuviera?"*. Give help only when they ask twice or the stop time is reached, and mark the task as *assisted*. Stop the stopwatch when the success criterion is met or the participant says they finished.
@@ -153,4 +153,4 @@ Every change made after the pilot is listed here, with its date, before the firs
 
 ## 10. Ethics and data
 
-The rules of the [validation plan §4](../../02-research/validation-plan.md#4-ethics-and-personal-data) apply: informed consent before starting, voluntary participation, codes instead of names, no recordings of people without explicit consent, notes kept privately and only anonymized summaries in the repository. Participants enter only the fictional data on the task cards; no real personal data is typed into the prototype.
+The rules of the [validation plan §4](../../02-research/validation-plan.md#4-ethics-and-personal-data) apply: informed consent before starting, voluntary participation, codes instead of names, no recordings of people without explicit consent, notes kept privately and only anonymized summaries in the repository. Audio recordings are kept in the facilitator's private files, deleted once transcribed, and transcripts use the participant's code only; no audio or transcript is added to the repository. Participants enter only the fictional data on the task cards; no real personal data is typed into the prototype.

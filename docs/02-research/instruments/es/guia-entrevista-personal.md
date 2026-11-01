@@ -2,9 +2,12 @@
 
 > Entrevista semiestructurada, 30–45 min, con personal de CDU, de Administración Central y con el cliente. Versión en español para usar en campo. Referencia en inglés: [staff-interview-guide.md](../staff-interview-guide.md).
 
-## Guion de consentimiento
+## Guion de consentimiento (entrevistas)
+Se lee en voz alta antes de empezar. A diferencia de la observación, la entrevista se puede **grabar en audio**, solo con consentimiento explícito.
 
-El mismo de la [guía de observación](guia-observacion.md). Código del participante: `CDU-__` / `ADM-__` / `CLI-01` · Fecha: ______
+"Soy estudiante de Ingeniería de Software en la FMAT y estoy haciendo un proyecto de una materia para mejorar el sistema de ventas e inventario de la boutique. Me gustaría hacerle algunas preguntas sobre su trabajo; dura entre 30 y 45 minutos. Sus respuestas se usan solo para este proyecto. Si está de acuerdo, me gustaría grabar **solo el audio** de la entrevista, para no tener que escribir todo mientras platicamos; si prefiere que no grabe, solo tomo notas. No voy a registrar su nombre: en las notas y en la transcripción aparece solo con un código. La grabación se guarda en mis archivos privados y se borra en cuanto termine de transcribirla; las notas se borran al terminar el curso. En el repositorio del proyecto solo quedan resúmenes anónimos. Puede detenerse, o pedirme que pare la grabación, cuando quiera y sin dar explicaciones. Si después tiene preguntas, puede contactarme a mí o al profesor de la materia. ¿Está de acuerdo?"
+
+- [ ] Consentimiento para la entrevista (sí/no) · [ ] Consentimiento para grabar audio (sí/no) · Código del participante: `CDU-__` / `ADM-__` / `CLI-01` · Fecha: ______
 
 ## A. Proceso actual de inventario — CDU (H-04, H-07, H-17)
 
