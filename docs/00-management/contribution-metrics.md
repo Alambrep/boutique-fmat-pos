@@ -22,42 +22,46 @@ The metric is the **share of the completed work owned by each team member**, wei
 
 ## 1. Contribution per delivery
 
-Computed by `tools/metrics.py` from the task log.
+Computed by `tools/metrics.py` from the task log at the close of delivery 2.
 
 | Member | Delivery 1 | Delivery 2 | Delivery 3 |
 |---|---|---|---|
-| Alan Pérez | 100% (13 of 13 tasks) | 100% (11.5 of 11.5 h) | — |
+| Alan Pérez | 100% (13 of 13 tasks) | 100% (21.0 of 21.0 h) | — |
 
-**Delivery 2 progress** (recomputed at the close of the delivery):
+**Delivery 2 progress at close:**
 
 | Metric | Value |
 |---|---|
-| Tasks | 15 (7 completed, 3 in progress, 3 planned, 2 cancelled) |
-| Progress | 11.5 of 21.0 estimated hours completed (**55%**), excluding cancelled tasks |
-| Actual hours logged in delivery 2 tasks | ≈ 3.0 h |
+| Tasks | 15 (13 completed, 2 cancelled) |
+| Progress | 21.0 of 21.0 estimated hours completed (**100%**), excluding cancelled tasks |
+| Actual hours logged in delivery 2 tasks | ≈ 4.0 h |
+
+Actual hours equal the sum of the session hours in the [logbook](logbook/) (0.8 + 1.2 + 0.7 + 1.3 h); the time the author spent recording the video is not logged.
 
 ## 2. Quantitative metrics
 
-### 2.1 Current snapshot
+### 2.1 Snapshot at the close of delivery 2
 
-Snapshot: commit `95aa112` (2026-10-30 17:07, UTC−6)
+Produced by `tools/metrics.py`, excluding the commit that updates this file.
+
+Snapshot: commit `58c2701` (2026-10-31 20:47, UTC−6)
 
 | Metric | Value |
 |---|---|
-| Commits (without merges) | **97** (Delivery 1: 74, Delivery 2: 23); merge commits: 2 |
-| Commits per day | 13 on 2026-09-28, 55 on 2026-09-29, 6 on 2026-09-30, 8 on 2026-10-27, 9 on 2026-10-29, 6 on 2026-10-30 |
-| Commits by type | `docs`: 62 · `fix`: 24 · `feat`: 4 · `chore`: 4 · `design`: 3 |
-| Lines added / removed | **+5,926 / −915** |
-| Words in Markdown documents | ≈ 49,800 |
+| Commits (without merges) | **105** (Delivery 1: 74, Delivery 2: 31); merge commits: 2 |
+| Commits per day | 13 on 2026-09-28, 55 on 2026-09-29, 6 on 2026-09-30, 8 on 2026-10-27, 9 on 2026-10-29, 8 on 2026-10-30, 6 on 2026-10-31 |
+| Commits by type | `docs`: 68 · `fix`: 24 · `feat`: 5 · `design`: 4 · `chore`: 4 |
+| Lines added / removed | **+7,032 / −1,025** |
+| Words in Markdown documents | ≈ 54,500 |
 | Traceable items | 18 CR, 3 PRJ, 17 Q, 17 H, 3 P, 8 S, 32 DI, 39 FR, 6 deferred FR, 28 NFR, 8 V, 42 references, 22 G, 16 SCR, 7 IX |
-| Commits co-authored with the AI assistant | 97 of 97 |
-| Rework commits (`fix`) | 24 of 97 |
+| Commits co-authored with the AI assistant | 105 of 105 |
+| Rework commits (`fix`) | 24 of 105 |
 
 Commits per task:
 
-| Task | T-01 | T-02 | T-03 | T-04 | T-05 | T-06 | T-07 | T-08 | T-09 | T-10 | T-11 | T-12 | T-13 | T-14 | T-15 | T-16 | T-17 | T-18 | T-19 | T-20 | T-21 | T-22 | T-24 | T-25 | T-26 | T-28 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Commits referencing it | 12 | 8 | 7 | 6 | 4 | 6 | 6 | 6 | 7 | 3 | 8 | 7 | 2 | 4 | 4 | 2 | 2 | 2 | 3 | 4 | 2 | 2 | 2 | 1 | 5 | 1 |
+| Task | T-01 | T-02 | T-03 | T-04 | T-05 | T-06 | T-07 | T-08 | T-09 | T-10 | T-11 | T-12 | T-13 | T-14 | T-15 | T-16 | T-17 | T-18 | T-19 | T-20 | T-21 | T-22 | T-23 | T-24 | T-25 | T-26 | T-27 | T-28 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Commits referencing it | 12 | 8 | 7 | 6 | 4 | 6 | 6 | 6 | 7 | 3 | 8 | 7 | 2 | 4 | 6 | 2 | 2 | 2 | 3 | 4 | 2 | 2 | 2 | 4 | 1 | 8 | 1 | 2 |
 
 ### 2.2 Delivery 1 snapshot, as delivered
 
@@ -89,13 +93,13 @@ A commit can reference more than one task.
 
 Commits and lines measure the joint output of the author and the AI assistant (every commit is co-authored). The counts below measure what only the author can do: direct the work, supply facts that no document contains, and ask for the work to be reviewed. They show direction and oversight, not authorship of the text.
 
-| Metric | Delivery 1 | Delivery 2 (so far) | How it is counted |
+| Metric | Delivery 1 | Delivery 2 | How it is counted |
 |---|---|---|
-| Direction decisions | **15** | **14** | Rows of the decisions tables (§4) |
-| Facts supplied by the author that no document contained | **6**: the author's real name; the date and setting of the project brief (2026-08-14, in person); location and connectivity of the boutique's point at FMAT; the original client document and rubric; the presentation format (video); the delivery date (2026-09-30) | **7**: delivery 2 date and video limit; the text and screenshots of both messages to the client; the time of the reminder and the date of the in-person attempt; the delivery 2 and final rubrics; the number of proxy participants available; not knowing the terms *Interuady* and *C.P.*; the result of the test on his iPhone | README header, [meeting log](meetings.md), `client/originals/`, [schedule](schedule.md), [logbook](logbook/) |
+| Direction decisions | **15** | **17** | Rows of the decisions tables (§4) |
+| Facts supplied by the author that no document contained | **6**: the author's real name; the date and setting of the project brief (2026-08-14, in person); location and connectivity of the boutique's point at FMAT; the original client document and rubric; the presentation format (video); the delivery date (2026-09-30) | **8**: delivery 2 date and video limit; the text and screenshots of both messages to the client; the time of the reminder and the date of the in-person attempt; the delivery 2 and final rubrics; the number of proxy participants available; not knowing the terms *Interuady* and *C.P.*; the result of the test on his iPhone; the questionnaire file of the validated Spanish SUS | README header, [meeting log](meetings.md), `client/originals/`, [schedule](schedule.md), [logbook](logbook/) |
 | Reviews of the whole repository requested by the author | **2** (2026-09-29 17:39 and 18:33, both by Claude in separate conversations; the second in nine steps) | — | [Logbook 2026-09-29](logbook/2026-09-29.md) |
-| Reviews and tests done by the author | — | **2**: review of prototype v1 (2026-10-29); test on an iPhone 14 Pro Max (2026-10-30) | [Logbook 2026-10-29](logbook/2026-10-29.md), [prototype README](../../design/prototype/v1/README.md#test-on-a-real-phone) |
-| Actions outside the repository | — | **3**: reminder to the client (2026-10-19), attempt to meet him in person (2026-10-26), enabling GitHub Pages (2026-10-30) | [Meeting log](meetings.md#communications-with-the-client), [logbook](logbook/) |
+| Reviews and tests done by the author | — | **3**: review of prototype v1 (2026-10-29); test on an iPhone 14 Pro Max (2026-10-30); review of the requirements changes and the Spanish materials (2026-10-31) | [Logbook 2026-10-29](logbook/2026-10-29.md), [prototype README](../../design/prototype/v1/README.md#test-on-a-real-phone) |
+| Actions outside the repository | — | **4**: reminder to the client (2026-10-19), attempt to meet him in person (2026-10-26), enabling GitHub Pages (2026-10-30), recording and publishing the video (2026-10-31) | [Meeting log](meetings.md#communications-with-the-client), [logbook](logbook/) |
 | Review proposals not applied or adapted after checking them against the files and sources | **12** | — | Listed with their reasons in the [logbook](logbook/2026-09-29.md); the checks were done with the AI assistant and the author received a summary after each step |
 
 ## 4. Author decisions
@@ -140,6 +144,9 @@ Because the AI assistant co-authored every commit, the author's contribution is 
 | 2026-10-29 22:17 | Cancel T-22 (inspection) | Rubric item 3 not done |
 | 2026-10-30 16:39 | Enable GitHub Pages and test the prototype on his phone | Online link; phone test |
 | 2026-10-30 16:53 | Accept that the keyboard covers the primary button while typing (B-3) | Recorded, not fixed |
+| 2026-10-31 17:28 | Fix B-1 in v2; keep B-2 because the full status text is clearer for new users | [Prototype evolution](../../design/prototype-evolution.md) |
+| 2026-10-31 19:30 | Record audio, with consent, in usability tests and interviews; never record the observation at the boutique | Consent scripts, validation plan §4, protocol §10 |
+| 2026-10-31 19:30 | Move field research to delivery 3 and contact the client again by email and in person | [Logbook 2026-10-31](logbook/2026-10-31.md) |
 
 ## 5. How to recompute
 
