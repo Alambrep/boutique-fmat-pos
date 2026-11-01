@@ -56,4 +56,4 @@ Scale: Needs much improvement (1) · Minimal (2) · Fair (3) · Good (4) · Exce
 ## Notes for this project
 
 - **Individual project:** "balanced participation" (6a) and "100% divided among the team members" (5b) apply to a single member, Alan Pérez.
-- **Presentation format:** video of at most 5 minutes; the script is not kept in the repository.
+- **Presentation format:** video of at most 5 minutes.

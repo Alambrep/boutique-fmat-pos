@@ -117,7 +117,7 @@ Because the AI assistant co-authored every commit, the author's contribution is 
 | 2026-09-28 23:31 | Mention open questions in the video and send them to the client after the delivery | Presentation content; Q-01…Q-12 kept open |
 | 2026-09-28 23:41 | Provide prior knowledge about connectivity at the FMAT point | Evidence log entry for H-03 |
 | 2026-09-28 23:47 | Back every decision with verified, reliable sources | `references.md` (R1–R34 as of 2026-09-29) |
-| 2026-09-29 00:10 | Deliver the presentation as a video; keep the script out of the repository | `docs/05-presentation/` |
+| 2026-09-29 00:10 | Deliver the presentation as a video | `docs/05-presentation/` |
 | 2026-09-29 17:39 | Request an independent review of the whole repository against the rubric | Review findings (contradictions, unlabeled assumptions, outdated metrics) |
 | 2026-09-29 17:48 | Apply the review's critical and quick fixes; skip optional items; provide the date and setting of the project brief | FR-30…FR-34, H-15, H-16, Q-13, Q-14, S-07, [meeting log](meetings.md) |
 | 2026-09-29 18:20 | Keep the existing repository mentions of the presentation video; do not rewrite history to remove them | No history rewrite |

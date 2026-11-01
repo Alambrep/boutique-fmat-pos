@@ -49,7 +49,7 @@ Owner of every task: **Alan Pérez** (individual project). Status values: **Comp
 | T-25 | Pilot with 2 proxies *(conditional)* | Alan Pérez | 4d | **Cancelled** (checkpoint B, 2026-10-30 14:00: protocol and v2 not ready) | 2.0 | 0 | Consent; anonymized; reported as a pilot; protocol adjustments recorded | [#27](https://github.com/Alambrep/boutique-fmat-pos/issues/27) |
 | T-26 | Logbook and task tracking | Alan Pérez | 5a | Completed | 1.0 | ≈ 0.4 | This table current; one logbook entry per session | [#28](https://github.com/Alambrep/boutique-fmat-pos/issues/28) |
 | T-27 | Contribution metric | Alan Pérez | 5b | Completed | 1.0 | ≈ 0.1 | Metric and parameters described; % per delivery; recomputed at close | [#29](https://github.com/Alambrep/boutique-fmat-pos/issues/29) |
-| T-28 | Video and closing | Alan Pérez | 6a–6c | Completed | 2.5 | ≈ 0.6 (slides, script and closing; recording time not logged) | Video ≤ 5 min; rubric map complete; PR with merge commit; tag `delivery-2` | [#30](https://github.com/Alambrep/boutique-fmat-pos/issues/30) |
+| T-28 | Video and closing | Alan Pérez | 6a–6c | Completed | 2.5 | ≈ 0.6 (slides and closing; recording time not logged) | Video ≤ 5 min; rubric map complete; PR with merge commit; tag `delivery-2` | [#30](https://github.com/Alambrep/boutique-fmat-pos/issues/30) |
 
 Commits per task are listed in each issue's *Evidence* section and regenerated here at the close of the delivery.
 
