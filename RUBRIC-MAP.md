@@ -2,7 +2,7 @@
 
 Where each item of the [delivery 2 rubric](client/rubric-delivery-2.md) ([original](client/originals/Rubric_2nd_Delivery-HCI.pdf)) is covered in this repository. Every link opens the exact section. Items still in progress show the task (`T-xx`) that will cover them.
 
-**Author:** Alan Pérez · **Branch:** [`second-delivery`](https://github.com/Alambrep/boutique-fmat-pos/tree/second-delivery) · **Due:** 2026-10-31 · **Video:** _pending (T-28)_
+**Author:** Alan Pérez · **Branch:** [`second-delivery`](https://github.com/Alambrep/boutique-fmat-pos/tree/second-delivery) · **Delivered:** 2026-10-31 · **Tag:** [`delivery-2`](https://github.com/Alambrep/boutique-fmat-pos/releases/tag/delivery-2) · **Video:** [youtu.be/mztWLFfF07M](https://youtu.be/mztWLFfF07M)
 
 The delivery 1 map is kept as it was delivered: [RUBRIC-MAP.md at the close of delivery 1](https://github.com/Alambrep/boutique-fmat-pos/blob/76fe116/RUBRIC-MAP.md).
 
@@ -46,16 +46,23 @@ The delivery 1 map is kept as it was delivered: [RUBRIC-MAP.md at the close of d
 
 | Rubric item | Where to find it | Status |
 |---|---|---|
-| **5a — Logbook and task tracking** (task, owner, status, definition of done) | [Task log](docs/00-management/task-log.md) · [Logbook](docs/00-management/logbook/) · [Schedule §5](docs/00-management/schedule.md#5-delivery-2--plan-due-2026-10-31) · [GitHub issues, milestone "Delivery 2"](https://github.com/Alambrep/boutique-fmat-pos/milestone/2) | In progress (T-26) |
+| **5a — Logbook and task tracking** (task, owner, status, definition of done) | [Task log](docs/00-management/task-log.md) · [Logbook](docs/00-management/logbook/) · [Schedule §5](docs/00-management/schedule.md#5-delivery-2--plan-due-2026-10-31) · [GitHub issues, milestone "Delivery 2"](https://github.com/Alambrep/boutique-fmat-pos/milestone/2) | Done (T-26) |
 | **5b — Contribution metric, parameters and % per delivery** | [Contribution metrics](docs/00-management/contribution-metrics.md): [§0 metric and parameters](docs/00-management/contribution-metrics.md#0-how-individual-contribution-is-measured), [§1 % per delivery and progress](docs/00-management/contribution-metrics.md#1-contribution-per-delivery), [§3 author-attributable work](docs/00-management/contribution-metrics.md#3-author-attributable-metrics); computed by [`tools/metrics.py`](tools/metrics.py) | Done (T-27); recomputed at close |
 
 ## 6. Progress presentation
 
 | Rubric item | Where to find it | Status |
 |---|---|---|
-| **6a–6c — Material, content, time (≤ 5 min)** | _Pending (T-28)_ | Planned |
+| **6a–6c — Material, content, time (≤ 5 min)** | [Video](https://youtu.be/mztWLFfF07M) · [presentation folder](docs/05-presentation/README.md): slides in English following the rubric's order, repository URL on the first and last slides | Done (T-28) |
 
 ---
+
+## Known gaps of this delivery
+
+- **No field research yet:** the client has not answered the requests for permission (2026-09-30, 2026-10-19, in person 2026-10-26). Instruments are ready and reviewed; fieldwork moves to delivery 3.
+- **Inspection (3a, 3b) not done:** optional; cancelled at a planned checkpoint to finish the mandatory items.
+- **Usability test not run:** delivery 2 asks for the sketch; the pilot (T-25) was cancelled at checkpoint B and the protocol is ready for delivery 3.
+- **Prototype built from proto-personas:** every design choice that rests on a hypothesis cites it.
 
 ## Context for the evaluator
 

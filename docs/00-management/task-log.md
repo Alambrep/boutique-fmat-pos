@@ -44,12 +44,12 @@ Owner of every task: **Alan Pérez** (individual project). Status values: **Comp
 | T-20 | Low-fidelity prototype v1 | Alan Pérez | 2a | Completed | 3.0 | ≈ 0.9 | Key flows of P-01, P-02, P-03; SCR-xx IDs citing FR/NFR; runs on a phone; author's review logged | [#22](https://github.com/Alambrep/boutique-fmat-pos/issues/22) |
 | T-21 | Interaction design | Alan Pérez | 2d | Completed | 1.5 | ≈ 0.1 | IX-xx flows with errors and recovery, linked to FR/NFR | [#23](https://github.com/Alambrep/boutique-fmat-pos/issues/23) |
 | T-22 | Heuristic evaluation *(conditional)* | Alan Pérez | 3a, 3b | **Cancelled** (author, 2026-10-29: optional in the rubric; time needed for mandatory tasks) | 2.0 | 0 | Protocol and form; findings per evaluator, consolidated with severity; each linked to its effect | [#24](https://github.com/Alambrep/boutique-fmat-pos/issues/24) |
-| T-23 | Prototype v2 and evolution log | Alan Pérez | 2c | Completed | 1.0 | ≈ 0.2 | v1 and v2 available; change, reason and source per change | [#25](https://github.com/Alambrep/boutique-fmat-pos/issues/25) |
+| T-23 | Prototype v2 and evolution log | Alan Pérez | 2c | Completed | 1.0 | ≈ 0.3 | v1 and v2 available; change, reason and source per change | [#25](https://github.com/Alambrep/boutique-fmat-pos/issues/25) |
 | T-24 | Usability test protocol | Alan Pérez | 4a–4d | Completed | 2.5 | ≈ 0.2 | NFRs selected with reason; participants, tasks, times, instruments; metrics with three levels; pilot-ready | [#26](https://github.com/Alambrep/boutique-fmat-pos/issues/26) |
 | T-25 | Pilot with 2 proxies *(conditional)* | Alan Pérez | 4d | **Cancelled** (checkpoint B, 2026-10-30 14:00: protocol and v2 not ready) | 2.0 | 0 | Consent; anonymized; reported as a pilot; protocol adjustments recorded | [#27](https://github.com/Alambrep/boutique-fmat-pos/issues/27) |
-| T-26 | Logbook and task tracking | Alan Pérez | 5a | In progress | 1.0 | ≈ 0.3 so far | This table current; one logbook entry per session | [#28](https://github.com/Alambrep/boutique-fmat-pos/issues/28) |
-| T-27 | Contribution metric | Alan Pérez | 5b | In progress (defined; recomputed at close) | 1.0 | ≈ 0.05 so far | Metric and parameters described; % per delivery; recomputed at close | [#29](https://github.com/Alambrep/boutique-fmat-pos/issues/29) |
-| T-28 | Video and closing | Alan Pérez | 6a–6c | Planned | 2.5 | | Video ≤ 5 min; rubric map complete; PR with merge commit; tag `delivery-2` | [#30](https://github.com/Alambrep/boutique-fmat-pos/issues/30) |
+| T-26 | Logbook and task tracking | Alan Pérez | 5a | Completed | 1.0 | ≈ 0.4 | This table current; one logbook entry per session | [#28](https://github.com/Alambrep/boutique-fmat-pos/issues/28) |
+| T-27 | Contribution metric | Alan Pérez | 5b | Completed | 1.0 | ≈ 0.1 | Metric and parameters described; % per delivery; recomputed at close | [#29](https://github.com/Alambrep/boutique-fmat-pos/issues/29) |
+| T-28 | Video and closing | Alan Pérez | 6a–6c | Completed | 2.5 | ≈ 0.6 (slides, script and closing; recording time not logged) | Video ≤ 5 min; rubric map complete; PR with merge commit; tag `delivery-2` | [#30](https://github.com/Alambrep/boutique-fmat-pos/issues/30) |
 
 Commits per task are listed in each issue's *Evidence* section and regenerated here at the close of the delivery.
 

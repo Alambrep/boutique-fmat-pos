@@ -2,18 +2,18 @@
 
 > Project for the **Human-Computer Interaction** course (B.Sc. in Software Engineering, FMAT-UADY).
 > **Delivery 1 (delivered):** project definition, hypothesis-based user modeling and initial requirements.
-> **Delivery 2 (in progress):** requirements evolution, design guidelines, low-fidelity prototype, interaction design and usability test protocol.
+> **Delivery 2 (delivered 2026-10-31):** requirements evolution, design guidelines, low-fidelity prototype, interaction design and usability test protocol.
 
 | | |
 |---|---|
 | **Author** | Alan Pérez (individual work) |
 | **Client** | Course professor (Boutique FMAT-UADY) |
-| **Current delivery** | 2 of 3 — due 2026-10-31 |
+| **Current delivery** | 2 of 3 — delivered 2026-10-31 |
 | **Branch** | [`second-delivery`](https://github.com/Alambrep/boutique-fmat-pos/tree/second-delivery) |
-| **Status** | In progress — milestone [Delivery 2](https://github.com/Alambrep/boutique-fmat-pos/milestone/2) |
+| **Status** | Delivered — tag [`delivery-2`](https://github.com/Alambrep/boutique-fmat-pos/releases/tag/delivery-2), milestone [Delivery 2](https://github.com/Alambrep/boutique-fmat-pos/milestone/2?closed=1) |
 | **Previous delivery** | Delivery 1 — tag [`delivery-1`](https://github.com/Alambrep/boutique-fmat-pos/releases/tag/delivery-1) |
 | **Design** | [Clickable low-fidelity prototype v2](design/prototype/v2/) — open it online on a phone: https://alambrep.github.io/boutique-fmat-pos/design/prototype/v2/ — its screens, and [how it evolved from v1](design/prototype-evolution.md); [design folder](design/README.md) |
-| **Video / presentation** | [Delivery 1 video](https://youtu.be/kahF-t9Y5TM); delivery 2 video pending — both listed in [`docs/05-presentation/`](docs/05-presentation/README.md) |
+| **Video / presentation** | [Delivery 2 video](https://youtu.be/mztWLFfF07M) · [Delivery 1 video](https://youtu.be/kahF-t9Y5TM) — both listed in [`docs/05-presentation/`](docs/05-presentation/README.md) |
 
 ---
 
@@ -28,7 +28,7 @@
 | 3 — Inspection methods (optional) | Planned (T-22, conditional) |
 | 4 — Usability test sketch | [Usability test protocol](docs/06-evaluation/usability-test/protocol.md) and [Spanish materials](docs/06-evaluation/usability-test/es/README.md) |
 | 5 — Teamwork (individual) | [Task log](docs/00-management/task-log.md), [logbook](docs/00-management/logbook/), [schedule](docs/00-management/schedule.md), [contribution metrics](docs/00-management/contribution-metrics.md) |
-| 6 — Presentation | [Video](docs/05-presentation/README.md) — pending |
+| 6 — Presentation | [Delivery 2 video](https://youtu.be/mztWLFfF07M) |
 
 Delivery 1 evidence (definition, research plan, user modeling) remains in place; its map is linked from [RUBRIC-MAP.md](RUBRIC-MAP.md).
 
